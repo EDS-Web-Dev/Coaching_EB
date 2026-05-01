@@ -49,7 +49,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2 group">
             <Mountain className="w-7 h-7 text-orange" strokeWidth={1.5} />
             <span className="font-oswald text-xl font-bold uppercase tracking-wider text-white">
-              Trail<span className="text-orange">Master</span>
+              Coach<span className="text-orange"> Eric</span>
             </span>
           </Link>
 

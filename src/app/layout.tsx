@@ -20,8 +20,8 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "TrailMaster Coaching — Coach Trail & Running",
-    template: "%s | TrailMaster Coaching",
+    default: "Coach Eric — Coach Trail & Running",
+    template: "%s | Coach Eric",
   },
   description:
     "Coaching Trail & Running personnalisé. Programmes pour débutants, reprise après blessure et performance ultra. Dépassez vos limites, quel que soit le terrain.",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    siteName: "TrailMaster Coaching",
+    siteName: "Coach Eric",
   },
 };
 

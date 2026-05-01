@@ -1,6 +1,6 @@
 export const testimonials = [
   {
-    text: "Après ma rupture des ligaments, je pensais ne plus jamais courir en montagne. Grâce au programme de réathlétisation de TrailMaster, j'ai fini mon premier 40km 1 an après.",
+    text: "Après ma rupture des ligaments, je pensais ne plus jamais courir en montagne. Grâce au programme de réathlétisation de Coach Eric, j'ai fini mon premier 40km 1 an après.",
     author: "Marc D.",
     meta: "Finisher Marathon du Mont-Blanc",
     initials: "MD",

@@ -4,7 +4,7 @@ import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contactez TrailMaster Coaching pour un appel découverte gratuit et démarrer votre programme personnalisé.",
+  description: "Contactez Coach Eric Coaching pour un appel découverte gratuit et démarrer votre programme personnalisé.",
 };
 
 export default function ContactPage() {

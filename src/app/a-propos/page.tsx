@@ -65,7 +65,7 @@ export default function AProposPage() {
                 <div className="absolute inset-0 rounded-full border-4 border-orange scale-105" />
                 <Image
                   src="https://www.mountaineering.scot/assets/contentfiles/media-upload/Introduction_to_Outdoor_Bouldering_2026.png"
-                  alt="Votre coach TrailMaster"
+                  alt="Votre coach Coach Eric"
                   fill
                   className="rounded-full object-cover"
                   sizes="(max-width: 768px) 288px, 384px"
@@ -81,7 +81,7 @@ export default function AProposPage() {
             {/* Text */}
             <div>
               <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-orange">
-                Votre Coach TrailMaster
+                Votre Coach Coach Eric
               </span>
               <h2 className="font-oswald font-bold text-forest text-4xl sm:text-5xl mt-2 mb-6">
                 L&apos;HUMAIN DERRIÈRE L&apos;EXPERT
@@ -159,7 +159,7 @@ export default function AProposPage() {
                   { year: "2014", title: "Premier marathon — 2h58", desc: "Duis aute irure dolor in reprehenderit in voluptate velit esse." },
                   { year: "2016", title: "Transition vers le trail ultra", desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem." },
                   { year: "2018", title: "Diplôme d'État BPJEPS", desc: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur." },
-                  { year: "2019", title: "Création TrailMaster Coaching", desc: "Nam libero tempore cum soluta nobis est eligendi optio." },
+                  { year: "2019", title: "Création Coach Eric Coaching", desc: "Nam libero tempore cum soluta nobis est eligendi optio." },
                 ].map((item) => (
                   <div key={item.year} className="relative">
                     <div className="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-orange border-2 border-white shadow" />

@@ -59,7 +59,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Mountain className="w-6 h-6 text-orange" strokeWidth={1.5} />
               <span className="font-oswald text-lg font-bold uppercase tracking-wider text-white">
-                Trail<span className="text-orange">Master</span>
+                Coach<span className="text-orange"> Eric</span>
               </span>
             </Link>
             <p className="text-sm leading-relaxed mb-5 max-w-xs">
@@ -141,7 +141,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
-          <span>© 2026 TrailMaster Coaching — Tous droits réservés</span>
+          <span>© 2026 Coach Eric — Tous droits réservés</span>
           <div className="flex gap-4">
             <a href="#" className="hover:text-white/70 transition-colors">Mentions légales</a>
             <a href="#" className="hover:text-white/70 transition-colors">Confidentialité</a>
