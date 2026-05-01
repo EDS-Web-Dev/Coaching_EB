@@ -148,7 +148,7 @@ export default function Footer() {
           </div>
           <span>
             Site développé par{" "}
-            <a href="https://eds-web.fr" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-orange/80 font-semibold transition-colors">
+            <a href="https://eds-web.dev/" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-orange/80 font-semibold transition-colors">
               EDS Web
             </a>
           </span>
