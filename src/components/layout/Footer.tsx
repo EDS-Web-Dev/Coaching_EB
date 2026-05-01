@@ -141,11 +141,17 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
-          <span>© 2024 TrailMaster Coaching — Tous droits réservés</span>
+          <span>© 2026 TrailMaster Coaching — Tous droits réservés</span>
           <div className="flex gap-4">
             <a href="#" className="hover:text-white/70 transition-colors">Mentions légales</a>
             <a href="#" className="hover:text-white/70 transition-colors">Confidentialité</a>
           </div>
+          <span>
+            Site développé par{" "}
+            <a href="https://eds-web.fr" target="_blank" rel="noopener noreferrer" className="text-orange hover:text-orange/80 font-semibold transition-colors">
+              EDS Web
+            </a>
+          </span>
         </div>
       </div>
     </footer>
