@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Colors */
+  --color-forest: #1B4332;
+  --color-forest-dark: #0D2B1F;
+  --color-forest-light: #2D6A4F;
+  --color-orange: #FF7043;
+  --color-orange-hover: #E64A19;
+  --color-off-white: #F8F9FA;
+  --color-anthracite: #212529;
+
+  /* Fonts */
+  --font-oswald: var(--font-oswald);
+  --font-montserrat: var(--font-montserrat);
+
+  /* Border radius */
+  --radius-card: 12px;
+  --radius-card-lg: 24px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  background-color: #F8F9FA;
+  color: #212529;
+  overflow-x: hidden;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-oswald), 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Topo SVG background utility */
+.topo-texture {
+  position: relative;
+}
+.topo-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Cellipse cx='400' cy='400' rx='380' ry='200'/%3E%3Cellipse cx='400' cy='400' rx='320' ry='160'/%3E%3Cellipse cx='400' cy='400' rx='260' ry='125'/%3E%3Cellipse cx='400' cy='400' rx='200' ry='92'/%3E%3Cellipse cx='400' cy='400' rx='140' ry='60'/%3E%3Cellipse cx='400' cy='400' rx='80' ry='30'/%3E%3Cellipse cx='200' cy='250' rx='180' ry='100'/%3E%3Cellipse cx='200' cy='250' rx='135' ry='72'/%3E%3Cellipse cx='200' cy='250' rx='90' ry='46'/%3E%3Cellipse cx='620' cy='580' rx='200' ry='110'/%3E%3Cellipse cx='620' cy='580' rx='150' ry='78'/%3E%3Cellipse cx='620' cy='580' rx='100' ry='48'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 500px 500px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+.topo-texture > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F8F9FA; }
+::-webkit-scrollbar-thumb { background: #1B4332; border-radius: 3px; }
