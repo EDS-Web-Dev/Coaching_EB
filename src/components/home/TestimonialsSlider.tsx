@@ -45,7 +45,7 @@ export default function TestimonialsSlider() {
   };
 
   return (
-    <section className="py-24 bg-forest-dark topo-texture overflow-hidden">
+    <section className="py-24 bg-forest topo-texture overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="flex items-center gap-4 mb-12">
