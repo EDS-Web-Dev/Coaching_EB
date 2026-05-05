@@ -15,13 +15,6 @@ export default function ToolsPreview() {
   return (
     <section className="py-24 bg-off-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center gap-4 mb-12">
-          <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
-          <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-forest">
-            DES OUTILS DIGITAUX POUR VOTRE PROGRESSION
-          </h2>
-        </div>
-
         <div className="flex justify-center">
           {tools.map((t) => (
             <div
