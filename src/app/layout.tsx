@@ -3,6 +3,7 @@ import { Oswald, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import BackToTop from "@/components/shared/BackToTop";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -44,6 +45,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );

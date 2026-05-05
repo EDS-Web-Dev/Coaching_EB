@@ -47,12 +47,23 @@ export default function TestimonialsSlider() {
   return (
     <section className="py-24 bg-forest topo-texture overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Header */}
-        <div className="flex items-center gap-4 mb-12">
-          <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
-          <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-white">
-            ILS ONT FRANCHI LA LIGNE
-          </h2>
+
+        {/* Header row */}
+        <div className="flex items-end justify-between mb-14">
+          <div className="flex items-center gap-4">
+            <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
+            <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-white">
+              ILS ONT FRANCHI LA LIGNE
+            </h2>
+          </div>
+          {/* Slide counter */}
+          <div className="hidden sm:flex items-center gap-2 font-oswald text-white/30 text-lg">
+            <span className="text-orange font-bold text-2xl">
+              {String(current + 1).padStart(2, "0")}
+            </span>
+            <span>/</span>
+            <span>{String(count).padStart(2, "0")}</span>
+          </div>
         </div>
 
         {/* Slider */}
@@ -69,26 +80,36 @@ export default function TestimonialsSlider() {
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
             {testimonials.map((t, i) => (
-              <div key={i} className="min-w-full px-0 md:px-16">
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
-                  {/* Stars */}
-                  <div className="flex gap-1 mb-4">
-                    {Array.from({ length: t.rating }).map((_, si) => (
-                      <Star key={si} className="w-4 h-4 fill-orange text-orange" />
-                    ))}
-                  </div>
-                  {/* Quote mark */}
-                  <div className="font-oswald text-6xl text-white/20 leading-none mb-4 select-none">"</div>
-                  <blockquote className="font-montserrat text-white/85 text-lg md:text-xl leading-relaxed italic mb-8">
-                    &ldquo;{t.text}&rdquo;
-                  </blockquote>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-forest-light to-orange flex items-center justify-center flex-shrink-0">
-                      <span className="font-oswald font-bold text-white text-sm">{t.initials}</span>
+              <div key={i} className="min-w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-0 max-w-4xl">
+                  {/* Orange left border accent */}
+                  <div className="hidden lg:block w-1 bg-orange rounded-full mr-10 flex-shrink-0" />
+
+                  <div>
+                    {/* Stars */}
+                    <div className="flex gap-1 mb-6">
+                      {Array.from({ length: t.rating }).map((_, si) => (
+                        <Star key={si} className="w-4 h-4 fill-orange text-orange" />
+                      ))}
                     </div>
-                    <div>
-                      <div className="font-oswald font-bold text-white uppercase tracking-wide">{t.author}</div>
-                      <div className="font-montserrat text-sm text-white/50">{t.meta}</div>
+
+                    {/* Large decorative quote */}
+                    <div className="font-oswald text-8xl text-orange leading-none mb-2 select-none">"</div>
+
+                    {/* Quote text */}
+                    <blockquote className="font-montserrat text-white/90 text-xl md:text-2xl leading-relaxed font-light mb-10">
+                      {t.text}
+                    </blockquote>
+
+                    {/* Author */}
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange/60 to-orange flex items-center justify-center flex-shrink-0">
+                        <span className="font-oswald font-bold text-white text-sm">{t.initials}</span>
+                      </div>
+                      <div className="border-l border-white/20 pl-4">
+                        <div className="font-oswald font-bold text-white uppercase tracking-wide text-lg">{t.author}</div>
+                        <div className="font-montserrat text-sm text-white/50">{t.meta}</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -98,37 +119,38 @@ export default function TestimonialsSlider() {
         </div>
 
         {/* Controls */}
-        <div className="flex items-center justify-center gap-4 mt-8">
+        <div className="flex items-center gap-6 mt-12">
           <button
             onClick={() => { goTo(current - 1); resetAuto(); }}
-            className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-all duration-200"
+            className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-all duration-200"
             aria-label="Précédent"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
+          <button
+            onClick={() => { goTo(current + 1); resetAuto(); }}
+            className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-all duration-200"
+            aria-label="Suivant"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
 
-          <div className="flex gap-2">
+          {/* Progress dots */}
+          <div className="flex gap-2 ml-2">
             {testimonials.map((_, i) => (
               <button
                 key={i}
                 onClick={() => { goTo(i); resetAuto(); }}
                 aria-label={`Slide ${i + 1}`}
                 className={clsx(
-                  "h-2 rounded-full transition-all duration-300",
-                  i === current ? "bg-orange w-6" : "bg-white/25 w-2 hover:bg-white/50"
+                  "h-1 rounded-full transition-all duration-300",
+                  i === current ? "bg-orange w-8" : "bg-white/20 w-4 hover:bg-white/40"
                 )}
               />
             ))}
           </div>
-
-          <button
-            onClick={() => { goTo(current + 1); resetAuto(); }}
-            className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-all duration-200"
-            aria-label="Suivant"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
         </div>
+
       </div>
     </section>
   );
