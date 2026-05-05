@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import PricingGrid from "@/components/offers/PricingGrid";
 import FaqAccordion from "@/components/offers/FaqAccordion";
 import CtaStrip from "@/components/home/CtaStrip";
-import VMACalculator from "@/components/tools/VMACalculator";
 
 export const metadata: Metadata = {
   title: "Nos Offres",
@@ -28,7 +27,6 @@ export default function OffresPage() {
       </section>
 
       <PricingGrid />
-      <VMACalculator />
       <FaqAccordion />
       <CtaStrip />
     </>

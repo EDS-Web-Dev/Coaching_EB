@@ -79,7 +79,7 @@ export default function Navbar() {
             href="/contact"
             className="hidden md:inline-flex items-center gap-2 bg-orange hover:bg-orange-hover text-white font-montserrat font-bold text-xs uppercase tracking-widest px-5 py-2.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-orange/30"
           >
-            Démarrer →
+            Se lancer →
           </Link>
 
           {/* Hamburger */}
@@ -115,7 +115,7 @@ export default function Navbar() {
           onClick={() => setMobileOpen(false)}
           className="mt-4 bg-orange text-white font-montserrat font-bold text-sm uppercase tracking-widest px-8 py-3 rounded-full"
         >
-          Démarrer →
+          Se lancer →
         </Link>
       </div>
     </>

@@ -17,7 +17,7 @@ export default function PricingGrid() {
         <div className="flex items-center gap-4 mb-4">
           <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
           <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-forest">
-            NOS FORMULES DE COACHING
+            MES FORMULES DE COACHING
           </h2>
         </div>
         <p className="font-montserrat text-anthracite/60 text-sm mb-12 ml-5">
@@ -60,10 +60,6 @@ export default function PricingGrid() {
                 {pack.description}
               </p>
 
-              <div className="flex items-baseline gap-1 mb-1">
-                <span className="font-oswald font-bold text-5xl text-anthracite">{pack.price}€</span>
-                <span className="font-montserrat text-sm text-anthracite/50">/mois</span>
-              </div>
               {pack.featured && (
                 <p className="font-montserrat text-xs text-orange font-semibold mb-5">Le plus choisi</p>
               )}

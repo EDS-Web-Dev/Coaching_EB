@@ -10,9 +10,9 @@ const navLinks = [
 ];
 
 const packLinks = [
-  { href: "/offres#sente", label: "Pack Sente — 49€/mois" },
-  { href: "/offres#crete", label: "Pack Crête — 89€/mois" },
-  { href: "/offres#sommet", label: "Pack Sommet — 149€/mois" },
+  { href: "/offres#sente", label: "Pack Sente" },
+  { href: "/offres#crete", label: "Pack Crête" },
+  { href: "/offres#sommet", label: "Pack Sommet" },
   { href: "/contact", label: "Programme Sur Mesure" },
 ];
 
@@ -62,8 +62,11 @@ export default function Footer() {
                 Coach<span className="text-orange"> Eric</span>
               </span>
             </Link>
-            <p className="text-sm leading-relaxed mb-5 max-w-xs">
+            <p className="text-sm leading-relaxed mb-3 max-w-xs">
               Coaching Trail & Running personnalisé. De la reprise en douceur à l&apos;ultra-performance, votre potentiel n&apos;attend que vous.
+            </p>
+            <p className="text-xs text-white/40 mb-5 flex items-center gap-1">
+              📍 Basé au <span className="text-white/70 font-semibold">Maroc</span>
             </p>
             <div className="flex gap-3">
               {socialLinks.map(({ label, href, icon }) => (
@@ -116,27 +119,12 @@ export default function Footer() {
             <h4 className="font-oswald text-sm font-semibold uppercase tracking-widest text-white mb-4">
               Contact
             </h4>
-            <ul className="space-y-2.5 text-sm">
-              <li>
-                <a href="mailto:contact@trailmaster.fr" className="hover:text-orange transition-colors duration-200">
-                  contact@trailmaster.fr
-                </a>
-              </li>
-              <li>
-                <a href="tel:+33600000000" className="hover:text-orange transition-colors duration-200">
-                  +33 6 00 00 00 00
-                </a>
-              </li>
-              <li className="text-white/50">Alpes, France</li>
-              <li className="pt-2">
-                <Link
-                  href="/contact"
-                  className="inline-block bg-orange text-white font-montserrat font-bold text-xs uppercase tracking-widest px-4 py-2 rounded-full hover:bg-orange-hover transition-colors"
-                >
-                  Appel découverte gratuit →
-                </Link>
-              </li>
-            </ul>
+            <Link
+              href="/contact"
+              className="inline-block bg-orange text-white font-montserrat font-bold text-xs uppercase tracking-widest px-4 py-2 rounded-full hover:bg-orange-hover transition-colors"
+            >
+              Envoyer un message →
+            </Link>
           </div>
         </div>
 
