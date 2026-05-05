@@ -14,6 +14,7 @@ const packLinks = [
   { href: "/offres#crete", label: "Pack Crête" },
   { href: "/offres#sommet", label: "Pack Sommet" },
   { href: "/contact", label: "Programme Sur Mesure" },
+  { href: "/offres#entreprise", label: "Coaching Entreprise" },
 ];
 
 const socialLinks = [

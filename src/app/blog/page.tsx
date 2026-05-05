@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Clock, ArrowRight } from "lucide-react";
 import { blogPosts } from "@/lib/data";
+import SocialBanner from "@/components/blog/SocialBanner";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -23,6 +24,8 @@ export default function BlogPage() {
           </p>
         </div>
       </section>
+
+      <SocialBanner />
 
       <section className="py-24 bg-off-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
