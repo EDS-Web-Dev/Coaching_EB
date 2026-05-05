@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PricingGrid from "@/components/offers/PricingGrid";
+import EnterpriseSection from "@/components/offers/EnterpriseSection";
 import FaqAccordion from "@/components/offers/FaqAccordion";
 import CtaStrip from "@/components/home/CtaStrip";
 
@@ -27,6 +28,7 @@ export default function OffresPage() {
       </section>
 
       <PricingGrid />
+      <EnterpriseSection />
       <FaqAccordion />
       <CtaStrip />
     </>
