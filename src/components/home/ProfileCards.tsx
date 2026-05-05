@@ -13,7 +13,7 @@ const profiles = [
   },
   {
     id: "sante",
-    title: "REPRISE / SANTÉ",
+    title: "REPRISE",
     subtitle: "Revenir plus fort après une blessure.",
     description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.",
     image: "https://www.bone-joint.com/wp-content/uploads/sites/393/2025/06/A-physiotherapist-is-applying-kinesio-tape-to-a-patients-knee-during-a-rehabilitation-session-for-a-sports-injury.jpg.webp",

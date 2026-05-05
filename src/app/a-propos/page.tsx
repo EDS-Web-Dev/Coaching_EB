@@ -73,7 +73,7 @@ export default function AProposPage() {
               </div>
               {/* Badge */}
               <div className="absolute bottom-4 right-4 md:right-0 bg-orange text-white rounded-[12px] px-5 py-3 shadow-xl text-center">
-                <div className="font-oswald font-bold text-3xl leading-none">15+</div>
+                <div className="font-oswald font-bold text-3xl leading-none">8+</div>
                 <div className="font-montserrat text-xs mt-0.5">Ans d&apos;expérience</div>
               </div>
             </div>

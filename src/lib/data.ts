@@ -41,7 +41,7 @@ export const packs = [
     tier: "Niveau 1",
     name: "Pack Sente",
     icon: "leaf",
-    price: 49,
+    //price: 49,
     description: "Planification mensuelle, 1 appel de suivi. Idéal pour débuter.",
     features: [
       "Plan d'entraînement mensuel personnalisé",
@@ -57,7 +57,7 @@ export const packs = [
     tier: "Niveau 2",
     name: "Pack Crête",
     icon: "mountain",
-    price: 89,
+    //price: 89,
     description: "Plan dynamique via App, Suivi hebdomadaire, Conseils nutrition.",
     features: [
       "Tout ce qui est inclus dans Sente",
@@ -76,7 +76,7 @@ export const packs = [
     tier: "Niveau 3",
     name: "Pack Sommet",
     icon: "summit",
-    price: 149,
+    //price: 149,
     description: "Suivi quotidien, Analyse vidéo, Préparation mentale complète.",
     features: [
       "Tout ce qui est inclus dans Crête",

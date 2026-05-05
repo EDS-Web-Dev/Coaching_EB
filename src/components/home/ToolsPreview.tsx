@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Calculator, Smartphone, TrendingUp } from "lucide-react";
+import { Calculator } from "lucide-react";
 
 const tools = [
   {
@@ -8,20 +8,6 @@ const tools = [
     description: "Un module interactif sur le site pour définir vos allures cibles instantanément.",
     href: "/outils/calculateur-vma",
     cta: "Calculer ma VMA →",
-  },
-  {
-    icon: Smartphone,
-    title: "SYNC. APPLICATION",
-    description: "Vos entraînements se synchronisent directement sur votre montre GPS.",
-    href: "/offres",
-    cta: "Voir les offres →",
-  },
-  {
-    icon: TrendingUp,
-    title: "SUIVI DATA",
-    description: "Analyse précise de votre charge d'entraînement pour éviter le surentraînement.",
-    href: "/offres",
-    cta: "En savoir plus →",
   },
 ];
 
@@ -36,11 +22,11 @@ export default function ToolsPreview() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="flex justify-center">
           {tools.map((t) => (
             <div
               key={t.title}
-              className="bg-white rounded-[12px] p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group border-b-4 border-transparent hover:border-forest"
+              className="bg-white rounded-[12px] p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group border-b-4 border-transparent hover:border-forest w-full max-w-sm"
             >
               <div className="w-14 h-14 bg-orange/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange/20 transition-colors">
                 <t.icon className="w-7 h-7 text-orange" strokeWidth={1.5} />

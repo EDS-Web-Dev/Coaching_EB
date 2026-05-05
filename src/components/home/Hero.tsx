@@ -41,10 +41,6 @@ export default function Hero() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}
         >
-          <span className="inline-flex items-center gap-2 bg-orange/20 border border-orange/40 text-orange text-xs font-montserrat font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-            ★ Coach Certifié Trail & Running
-          </span>
-
           <h1 className="font-oswald font-bold text-white leading-tight mb-3">
             <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
               DÉPASSEZ VOS LIMITES,
@@ -58,12 +54,16 @@ export default function Hero() {
             Coaching personnalisé pour traileurs et runners, de la reprise en douceur à l&apos;ultra-performance.
           </p>
 
+          <p className="font-montserrat text-white/50 text-sm mb-6">
+            📍 Basé au <span className="text-orange font-semibold">Maroc</span>
+          </p>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/offres"
               className="inline-flex items-center justify-center gap-2 bg-orange hover:bg-orange-hover text-white font-montserrat font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-xl shadow-orange/40"
             >
-              DÉCOUVRIR MES PROGRAMMES
+              DÉCOUVRIR MES OFFRES
             </Link>
             <Link
               href="/a-propos"
