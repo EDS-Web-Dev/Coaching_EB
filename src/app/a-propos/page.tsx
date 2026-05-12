@@ -43,13 +43,14 @@ export default function AProposPage() {
   return (
     <>
       {/* Page hero */}
-      <section className="relative pt-32 pb-40 bg-forest topo-texture text-center">
-        <div className="max-w-2xl mx-auto px-4">
-          <span className="inline-block font-montserrat text-xs font-bold uppercase tracking-widest text-orange mb-4">
+      <section className="relative pt-32 pb-40 text-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/fond a propos.jpg')" }} />
+        <div className="relative z-10 max-w-2xl mx-auto px-4">
+          <span className="inline-block font-montserrat text-xl font-black uppercase tracking-widest text-orange mb-4">
             Le Coach
           </span>
-          <h1 className="font-oswald font-bold text-white text-5xl sm:text-6xl mb-4">À PROPOS</h1>
-          <p className="font-montserrat text-white/70 text-base">
+          <h1 className="font-oswald font-bold text-white text-5xl sm:text-6xl mb-4" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.8)" }}>À PROPOS</h1>
+          <p className="font-montserrat text-white text-base font-semibold" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.8)" }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
           </p>
         </div>
@@ -61,17 +62,12 @@ export default function AProposPage() {
           <div className="relative w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72">
             <div className="absolute inset-0 rounded-full border-4 border-orange scale-105 shadow-2xl" />
             <Image
-              src="https://www.mountaineering.scot/assets/contentfiles/media-upload/Introduction_to_Outdoor_Bouldering_2026.png"
+              src="/images/profil.jpg"
               alt="Votre coach Coach Eric"
               fill
               className="rounded-full object-cover"
               sizes="(max-width: 768px) 208px, 288px"
             />
-          </div>
-          {/* Badge */}
-          <div className="absolute -bottom-2 -right-4 bg-orange text-white rounded-[12px] px-4 py-2 shadow-xl text-center">
-            <div className="font-oswald font-bold text-2xl leading-none">8+</div>
-            <div className="font-montserrat text-xs mt-0.5">Ans d&apos;expérience</div>
           </div>
         </div>
       </div>
