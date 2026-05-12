@@ -23,14 +23,9 @@ export default function Hero() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center scale-105"
-        style={{
-          backgroundImage:
-            "url('https://images.findarace.com/production/organisers/300662/gallery/TRAIL-RUNNING-IN-THE-FOREST-OF-DEAN-1.png?w=1600&auto=compress%2Cformat&fit=crop&dm=1769415326&s=3876962e58d61a22e43cc3af8efdb606')",
-        }}
+        style={{ backgroundImage: "url('/images/paysage.jpg')" }}
       />
-      {/* Gradient — strong left side for legibility */}
-      <div className="absolute inset-0 bg-gradient-to-r from-forest-dark/95 via-forest-dark/70 to-forest-dark/20" />
-      <div className="absolute inset-0 bg-gradient-to-t from-forest-dark/80 via-transparent to-forest-dark/30" />
+
 
       {/* Topo texture */}
       <div
@@ -53,7 +48,7 @@ export default function Hero() {
             )}
           >
             <span className="w-2 h-2 rounded-full bg-orange animate-pulse" />
-            <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-white/60">
+            <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-white bg-forest-dark/50 backdrop-blur-sm rounded-full px-3 py-1">
               📍 Coaching Trail & Running — Basé au{" "}
               <span className="text-orange">Maroc</span>
             </span>
@@ -89,7 +84,7 @@ export default function Hero() {
           {/* Subtitle */}
           <p
             className={cls(
-              "font-montserrat text-white/70 text-base sm:text-lg leading-relaxed font-light mb-10 ml-6 max-w-xl transition-all duration-700 delay-200",
+              "font-montserrat text-white text-base sm:text-lg leading-relaxed font-semibold mb-10 ml-6 max-w-xl transition-all duration-700 delay-200",
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             )}
           >
@@ -119,25 +114,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Stats bar — bottom */}
-      <div
-        className={cls(
-          "relative z-10 border-t border-white/10 bg-forest-dark/60 backdrop-blur-sm transition-all duration-700 delay-500",
-          visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-        )}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-wrap justify-center sm:justify-start gap-x-12 gap-y-4">
-          {stats.map(({ value, label }, i) => (
-            <div key={label} className="flex items-center gap-4">
-              {i > 0 && <div className="hidden sm:block w-px h-8 bg-white/15" />}
-              <div>
-                <div className="font-oswald text-2xl font-bold text-white leading-none">{value}</div>
-                <div className="font-montserrat text-xs uppercase tracking-widest text-white/40 mt-0.5">{label}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+
 
       {/* Scroll hint */}
       <a
