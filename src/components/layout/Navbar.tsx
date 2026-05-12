@@ -40,7 +40,7 @@ export default function Navbar() {
       <header
         className={clsx(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          scrolled || !isHome ? "py-3" : "py-5",
+          scrolled || !isHome ? "py-5" : "py-7",
           navBg
         )}
       >
@@ -54,7 +54,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {links.map((l) => (
               <Link
                 key={l.href}
@@ -77,14 +77,14 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="hidden md:inline-flex items-center gap-2 bg-orange hover:bg-orange-hover text-white font-montserrat font-bold text-xs uppercase tracking-widest px-5 py-2.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-orange/30"
+            className="hidden lg:inline-flex items-center gap-2 bg-orange hover:bg-orange-hover text-white font-montserrat font-bold text-xs uppercase tracking-widest px-5 py-2.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-orange/30"
           >
             Se lancer →
           </Link>
 
           {/* Hamburger */}
           <button
-            className="md:hidden text-white p-1"
+            className="lg:hidden text-orange p-1"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu"
           >
@@ -96,7 +96,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         className={clsx(
-          "fixed inset-0 z-40 bg-forest-dark flex flex-col items-center justify-center gap-8 transition-opacity duration-300 md:hidden",
+          "fixed inset-0 z-40 bg-forest-dark flex flex-col items-center justify-center gap-8 transition-opacity duration-300 lg:hidden",
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >
