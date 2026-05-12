@@ -43,7 +43,7 @@ export default function AProposPage() {
   return (
     <>
       {/* Page hero */}
-      <section className="relative py-32 bg-forest topo-texture text-center">
+      <section className="relative pt-32 pb-40 bg-forest topo-texture text-center">
         <div className="max-w-2xl mx-auto px-4">
           <span className="inline-block font-montserrat text-xs font-bold uppercase tracking-widest text-orange mb-4">
             Le Coach
@@ -55,68 +55,67 @@ export default function AProposPage() {
         </div>
       </section>
 
-      {/* Split layout — fidèle à la maquette */}
-      <section className="py-24 bg-off-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Portrait avec bord arrondi organique + anneau orange */}
-            <div className="relative flex justify-center">
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
-                <div className="absolute inset-0 rounded-full border-4 border-orange scale-105" />
-                <Image
-                  src="https://www.mountaineering.scot/assets/contentfiles/media-upload/Introduction_to_Outdoor_Bouldering_2026.png"
-                  alt="Votre coach Coach Eric"
-                  fill
-                  className="rounded-full object-cover"
-                  sizes="(max-width: 768px) 288px, 384px"
-                />
-              </div>
-              {/* Badge */}
-              <div className="absolute bottom-4 right-4 md:right-0 bg-orange text-white rounded-[12px] px-5 py-3 shadow-xl text-center">
-                <div className="font-oswald font-bold text-3xl leading-none">8+</div>
-                <div className="font-montserrat text-xs mt-0.5">Ans d&apos;expérience</div>
-              </div>
-            </div>
+      {/* Photo centrée à cheval entre hero et section bio */}
+      <div className="flex justify-center -mt-24 relative z-10 mb-0">
+        <div className="relative">
+          <div className="relative w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72">
+            <div className="absolute inset-0 rounded-full border-4 border-orange scale-105 shadow-2xl" />
+            <Image
+              src="https://www.mountaineering.scot/assets/contentfiles/media-upload/Introduction_to_Outdoor_Bouldering_2026.png"
+              alt="Votre coach Coach Eric"
+              fill
+              className="rounded-full object-cover"
+              sizes="(max-width: 768px) 208px, 288px"
+            />
+          </div>
+          {/* Badge */}
+          <div className="absolute -bottom-2 -right-4 bg-orange text-white rounded-[12px] px-4 py-2 shadow-xl text-center">
+            <div className="font-oswald font-bold text-2xl leading-none">8+</div>
+            <div className="font-montserrat text-xs mt-0.5">Ans d&apos;expérience</div>
+          </div>
+        </div>
+      </div>
 
-            {/* Text */}
-            <div>
-              <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-orange">
-                Votre Coach Coach Eric
-              </span>
-              <h2 className="font-oswald font-bold text-forest text-4xl sm:text-5xl mt-2 mb-6">
-                L&apos;HUMAIN DERRIÈRE L&apos;EXPERT
-              </h2>
-              <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
-                Passionné de montagne et de physiologie, je vous accompagne avec une approche scientifique et bienveillante. Mon but ? Vous faire progresser durablement.
-              </p>
-              <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-              </p>
-              <p className="font-montserrat text-anthracite/70 leading-relaxed mb-6">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              </p>
+      {/* Bio */}
+      <section className="pt-12 pb-24 bg-off-white">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
+          <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-orange">
+            Votre Coach
+          </span>
+          <h2 className="font-oswald font-bold text-forest text-4xl sm:text-5xl mt-2 mb-6">
+            L&apos;HUMAIN DERRIÈRE L&apos;EXPERT
+          </h2>
+          <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
+            Passionné de montagne et de physiologie, je vous accompagne avec une approche scientifique et bienveillante. Mon but ? Vous faire progresser durablement.
+          </p>
+          <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+          <p className="font-montserrat text-anthracite/70 leading-relaxed mb-8">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
 
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Diplômé d'État en Sport",
-                  "+15 ans d'expérience en Ultra",
-                  "Expert en réathlétisation",
-                  "Certifié préparation mentale",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 font-montserrat text-sm text-anthracite/80">
-                    <Check className="w-5 h-5 text-orange flex-shrink-0" strokeWidth={2.5} />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+          <ul className="space-y-3 mb-10 inline-block text-left">
+            {[
+              "Diplômé d'État en Sport",
+              "+15 ans d'expérience en Ultra",
+              "Expert en réathlétisation",
+              "Certifié préparation mentale",
+            ].map((item) => (
+              <li key={item} className="flex items-center gap-3 font-montserrat text-sm text-anthracite/80">
+                <Check className="w-5 h-5 text-orange flex-shrink-0" strokeWidth={2.5} />
+                {item}
+              </li>
+            ))}
+          </ul>
 
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hover text-white font-montserrat font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-orange/30"
-              >
-                Travailler avec moi →
-              </Link>
-            </div>
+          <div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hover text-white font-montserrat font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-orange/30"
+            >
+              Travailler avec moi →
+            </Link>
           </div>
         </div>
       </section>
