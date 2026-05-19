@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Check } from "lucide-react";
 import CtaStrip from "@/components/home/CtaStrip";
 
 export const metadata: Metadata = {
@@ -11,32 +10,33 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    title: "Rigueur",
+    title: "Rigueur et régularité",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
     emoji: "🎯",
   },
   {
-    title: "Passion",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+    title: "Plaisir",
+    description: "Te faire progresser en prenant un maximum de plaisir, avec un minimum de souffrance.",
     emoji: "🔥",
   },
   {
-    title: "Nature",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
+    title: "Partage",
+    description: ".",
     emoji: "🏔️",
   },
   {
     title: "Progressivité",
-    description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+    description: "Je privilégie une approche progressive pour limiter les risques de blessure et construire des bases solides.",
     emoji: "📈",
   },
 ];
 
 const palmares = [
-  { year: "2023", title: "UTMB — Top 50", detail: "170km · 10 000m D+" },
-  { year: "2022", title: "Trail des Écrins — Podium", detail: "80km · 5 200m D+" },
-  { year: "2021", title: "Marathon des Sables — Finisher", detail: "250km · Sahara" },
-  { year: "2020", title: "Grand Raid de la Réunion", detail: "165km · 9 600m D+" },
+  { year: "2016-2017-2019", title: "Marathon de Paris", detail: "42,195 km" },
+  { year: "2019", title: "Marathon de New-York", detail: "42,195 km" },
+  { year: "2025", title: "Traversée Nord de l'Echappée Belle", detail: "Trail · 96km · 7200 D+" },
+  { year: "2025", title: "Grand Raid de la Réunion", detail: "Trail · 198km · 11 000m D+" },
+  { year: "2026", title: "Tamuda Bay Eco-triathlon", detail: "Distance Olympique" },
 ];
 
 export default function AProposPage() {
@@ -44,14 +44,14 @@ export default function AProposPage() {
     <>
       {/* Page hero */}
       <section className="relative pt-32 pb-40 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/fond a propos.jpg')" }} />
+        <div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/images/Tizi%20N%27Oucheg.jpg')", backgroundPosition: "center 70%" }} />
         <div className="relative z-10 max-w-2xl mx-auto px-4">
-          <span className="inline-block font-montserrat text-xl font-black uppercase tracking-widest text-orange mb-4">
-            Le Coach
+          <span className="inline-block font-montserrat text-2xl font-black uppercase tracking-widest text-orange mb-4">
+            La philosophie du Coach
           </span>
-          <h1 className="font-oswald font-bold text-white text-5xl sm:text-6xl mb-4" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.8)" }}>À PROPOS</h1>
-          <p className="font-montserrat text-white text-base font-semibold" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.8)" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
+
+          <p className="font-montserrat text-white text-2xl font-black" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.8)" }}>
+            "Kiffer sa life"
           </p>
         </div>
       </section>
@@ -60,7 +60,7 @@ export default function AProposPage() {
       <div className="flex justify-center -mt-24 relative z-10 mb-0">
         <div className="relative">
           <div className="relative w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72">
-            <div className="absolute inset-0 rounded-full border-4 border-orange scale-105 shadow-2xl" />
+            <div className="absolute inset-0 rounded-full border-4 border-orange scale-102 shadow-2xl" />
             <Image
               src="/images/profil.jpg"
               alt="Votre coach Coach Eric"
@@ -76,34 +76,23 @@ export default function AProposPage() {
       <section className="pt-12 pb-24 bg-off-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
           <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-orange">
-            Votre Coach
+            Qui je suis ?
           </span>
-          <h2 className="font-oswald font-bold text-forest text-4xl sm:text-5xl mt-2 mb-6">
-            L&apos;HUMAIN DERRIÈRE L&apos;EXPERT
+          <h2 className="font-oswald font-bold text-forest text-4xl sm:text-5xl mt-2 mb-6 leading-snug">
+          Coach autodidacte, passionné avant tout
           </h2>
           <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
-            Passionné de montagne et de physiologie, je vous accompagne avec une approche scientifique et bienveillante. Mon but ? Vous faire progresser durablement.
+          Je cours depuis maintenant plus de 13 ans. Pourtant, au départ, je détestais la course à pied… jusqu’à ce qu’elle devienne une véritable passion.
           </p>
           <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          J’ai commencé par des 10 km, puis des semi-marathons, avant de me lancer sur marathon. Progressivement, j’ai évolué vers le trail, jusqu’à devenir ultra-traileur et atteindre un objectif marquant : être finisher de la mythique Diagonale des Fous en 2025.
           </p>
           <p className="font-montserrat text-anthracite/70 leading-relaxed mb-8">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Au fil des années, ma passion m’a poussé à me former en continu : écoute de podcasts spécialisés, formations en ligne, apprentissage constant… sans oublier l’expérience acquise sur le terrain, aussi bien sur route qu’en trail.
           </p>
-
-          <ul className="space-y-3 mb-10 inline-block text-left">
-            {[
-              "Diplômé d'État en Sport",
-              "+15 ans d'expérience en Ultra",
-              "Expert en réathlétisation",
-              "Certifié préparation mentale",
-            ].map((item) => (
-              <li key={item} className="flex items-center gap-3 font-montserrat text-sm text-anthracite/80">
-                <Check className="w-5 h-5 text-orange flex-shrink-0" strokeWidth={2.5} />
-                {item}
-              </li>
-            ))}
-          </ul>
+          <p className="font-montserrat text-anthracite/70 leading-relaxed mb-8">
+          C’est naturellement que j’ai commencé à accompagner des proches et des amis. Leurs progrès et leurs retours positifs m’ont donné envie d’aller plus loin et aujourd’hui, je mets mon expérience à ton service pour t’aider à atteindre tes objectifs, quels qu’ils soient.
+          </p>
 
           <div>
             <Link
@@ -150,11 +139,12 @@ export default function AProposPage() {
               </div>
               <div className="relative pl-6 border-l-2 border-gradient-to-b from-orange to-forest space-y-8" style={{ borderImage: "linear-gradient(to bottom, #FF7043, #1B4332) 1" }}>
                 {[
-                  { year: "2009", title: "Première course officielle 10km", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-                  { year: "2014", title: "Premier marathon — 2h58", desc: "Duis aute irure dolor in reprehenderit in voluptate velit esse." },
-                  { year: "2016", title: "Transition vers le trail ultra", desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem." },
-                  { year: "2018", title: "Diplôme d'État BPJEPS", desc: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur." },
-                  { year: "2019", title: "Création Coach Eric Coaching", desc: "Nam libero tempore cum soluta nobis est eligendi optio." },
+                  { year: "2013", title: "Premier semi marathon", desc: "Semi Marathon de CAsablanca." },
+                  { year: "2015", title: "Premier trail", desc: "NOMADS RUN - 21km" },
+                  { year: "2016", title: "Premier marathon", desc: "Marathon de Paris" },
+                  { year: "2018", title: "Première course de désert", desc: "Race Desert Marathon - 3 étapes - 100km." },
+                  { year: "2026", title: "Premier Triathlon", desc: "Tamuda Bay Eco-Triathlon." },
+                  { year: "2026", title: "Création Coach Eric Coaching", desc: "Nam libero tempore cum soluta nobis est eligendi optio." },
                 ].map((item) => (
                   <div key={item.year} className="relative">
                     <div className="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-orange border-2 border-white shadow" />
