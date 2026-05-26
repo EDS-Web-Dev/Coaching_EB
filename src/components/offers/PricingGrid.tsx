@@ -20,9 +20,6 @@ export default function PricingGrid() {
             MES FORMULES DE COACHING
           </h2>
         </div>
-        <p className="font-montserrat text-anthracite/60 text-sm mb-12 ml-5">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Choisissez l&apos;altitude qui vous correspond.
-        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           {packs.map((pack) => (
@@ -92,20 +89,6 @@ export default function PricingGrid() {
           ))}
         </div>
 
-        {/* Guarantee */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-3 bg-white border border-gray-100 rounded-2xl px-8 py-4 shadow-sm">
-            <span className="text-2xl">🏔️</span>
-            <div className="text-left">
-              <div className="font-oswald font-semibold text-forest uppercase tracking-wide text-sm">
-                Satisfait ou Remboursé — 14 jours
-              </div>
-              <div className="font-montserrat text-xs text-anthracite/50 mt-0.5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
