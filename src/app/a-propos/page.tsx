@@ -5,6 +5,7 @@ import { Target, Flame, Users, TrendingUp, Trophy, GraduationCap, CheckCheck, ty
 import CtaStrip from "@/components/home/CtaStrip";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import { AnimatedStagger, AnimatedStaggerItem } from "@/components/shared/AnimatedStagger";
+import QuotesSlider from "@/components/shared/QuotesSlider";
 
 export const metadata: Metadata = {
   title: "À Propos",
@@ -137,6 +138,8 @@ export default function AProposPage() {
           </div>
         </AnimatedSection>
       </section>
+
+      <QuotesSlider />
 
       {/* Values */}
       <section className="py-24 bg-forest topo-texture">
