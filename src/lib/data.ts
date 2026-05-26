@@ -116,6 +116,16 @@ export const faqItems = [
   },
 ];
 
+export const quotes = [
+  { text: "Certains veulent que ça arrive. D'autres aimeraient que ça arrive. Et les autres font que ça arrive.", author: "Michael Jordan" },
+  { text: "Si tu veux courir, cours un kilomètre. Si tu veux changer ta vie, cours un marathon.", author: "Emil Zátopek" },
+  { text: "Toute chose longue et difficile n'est que la somme de choses courtes et faciles.", author: "René Descartes" },
+  { text: "Là où il y a une volonté, il y a un chemin.", author: null },
+  { text: "Les deux guerriers les plus puissants sont la patience et le temps.", author: "Léon Tolstoï" },
+  { text: "Never run faster than your guardian angel can fly.", author: null },
+  { text: "If your dreams don't scare you, they are not big enough.", author: "Ellen Johnson Sirleaf" },
+];
+
 export const blogPosts = [
   {
     slug: "periodisation-trail-ultra",

@@ -4,6 +4,7 @@ import TestimonialsSlider from "@/components/home/TestimonialsSlider";
 import VMACalculator from "@/components/tools/VMACalculator";
 import EnterpriseTeaser from "@/components/home/EnterpriseTeaser";
 import CtaStrip from "@/components/home/CtaStrip";
+import QuotesSlider from "@/components/shared/QuotesSlider";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <ProfileCards />
       <EnterpriseTeaser />
       <TestimonialsSlider />
+      <QuotesSlider />
       <VMACalculator />
       <CtaStrip />
     </>
