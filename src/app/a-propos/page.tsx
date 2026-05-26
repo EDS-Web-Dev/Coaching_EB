@@ -1,33 +1,36 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Target, Flame, Users, TrendingUp, Trophy, GraduationCap, CheckCheck, type LucideIcon } from "lucide-react";
 import CtaStrip from "@/components/home/CtaStrip";
+import AnimatedSection from "@/components/shared/AnimatedSection";
+import { AnimatedStagger, AnimatedStaggerItem } from "@/components/shared/AnimatedStagger";
 
 export const metadata: Metadata = {
   title: "À Propos",
   description: "Découvrez votre coach Trail & Running certifié, sa philosophie et son parcours sportif.",
 };
 
-const values = [
+const values: { title: string; description: string; icon: LucideIcon }[] = [
   {
     title: "Rigueur et régularité",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
-    emoji: "🎯",
+    description: "La rigueur et la régularité font partie des piliers de la progression.",
+    icon: Target,
   },
   {
     title: "Plaisir",
     description: "Te faire progresser en prenant un maximum de plaisir, avec un minimum de souffrance.",
-    emoji: "🔥",
+    icon: Flame,
   },
   {
     title: "Partage",
-    description: ".",
-    emoji: "🏔️",
+    description: "C'est la volonté de partager ma passion du running et du trail qui me pousse à me lancer dans le coaching.",
+    icon: Users,
   },
   {
     title: "Progressivité",
     description: "Je privilégie une approche progressive pour limiter les risques de blessure et construire des bases solides.",
-    emoji: "📈",
+    icon: TrendingUp,
   },
 ];
 
@@ -39,59 +42,89 @@ const palmares = [
   { year: "2026", title: "Tamuda Bay Eco-triathlon", detail: "Distance Olympique" },
 ];
 
+const formations = [
+  {
+    provider: "France Université Numérique",
+    courses: [
+      "L'entraînement en trail et ultra trail — épisode 1",
+      "L'entraînement en trail et ultra trail — épisode 2",
+    ],
+  },
+  {
+    provider: "Pierre Joly",
+    courses: ["Les bases de la préparation mentale"],
+  },
+  {
+    provider: "Nolio",
+    courses: ["Développement de la force et de la pliométrie chez le coureur"],
+  },
+];
+
+const parcours = [
+  { year: "2013", title: "Premier semi marathon", desc: "Semi Marathon de Casablanca." },
+  { year: "2015", title: "Premier trail", desc: "NOMADS RUN - 21km" },
+  { year: "2016", title: "Premier marathon", desc: "Marathon de Paris" },
+  { year: "2018", title: "Première course de désert", desc: "Race Desert Marathon - 3 étapes - 100km." },
+  { year: "2026", title: "Premier Triathlon", desc: "Tamuda Bay Eco-Triathlon." },
+  { year: "2026", title: "Création Coach Eric Coaching", desc: "Nam libero tempore cum soluta nobis est eligendi optio." },
+];
+
 export default function AProposPage() {
   return (
     <>
       {/* Page hero */}
       <section className="relative pt-32 pb-40 text-center overflow-hidden">
         <div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/images/Tizi%20N%27Oucheg.jpg')", backgroundPosition: "center 70%" }} />
-        <div className="relative z-10 max-w-2xl mx-auto px-4">
+        <AnimatedSection className="relative z-10 max-w-2xl mx-auto px-4">
           <span className="inline-block font-montserrat text-2xl font-black uppercase tracking-widest text-orange mb-4">
             La philosophie du Coach
           </span>
-
           <p className="font-montserrat text-white text-2xl font-black" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.8)" }}>
-            "Kiffer sa life"
+            &quot;Kiffer sa life&quot;
           </p>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Photo centrée à cheval entre hero et section bio */}
       <div className="flex justify-center -mt-24 relative z-10 mb-0">
-        <div className="relative">
-          <div className="relative w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72">
-            <div className="absolute inset-0 rounded-full border-4 border-orange scale-102 shadow-2xl" />
-            <Image
-              src="/images/profil.jpg"
-              alt="Votre coach Coach Eric"
-              fill
-              className="rounded-full object-cover"
-              sizes="(max-width: 768px) 208px, 288px"
-            />
+        <AnimatedSection delay={0.15}>
+          <div className="relative">
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80">
+              <div className="absolute inset-0 rounded-full border-[5px] border-orange shadow-2xl z-10 pointer-events-none" />
+              <div className="absolute inset-0 rounded-full overflow-hidden">
+                <Image
+                  src="/images/Profil pic.JPG"
+                  alt="Photo de profil du coach Eric"
+                  fill
+                  className="object-cover scale-125"
+                  sizes="(max-width: 768px) 208px, 288px"
+                />
+              </div>
+            </div>
           </div>
-        </div>
+        </AnimatedSection>
       </div>
 
       {/* Bio */}
       <section className="pt-12 pb-24 bg-off-white">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
+        <AnimatedSection className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
           <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-orange">
             Qui je suis ?
           </span>
           <h2 className="font-oswald font-bold text-forest text-4xl sm:text-5xl mt-2 mb-6 leading-snug">
-          Coach autodidacte, passionné avant tout
+            Coach autodidacte, passionné avant tout
           </h2>
           <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
-          Je cours depuis maintenant plus de 13 ans. Pourtant, au départ, je détestais la course à pied… jusqu’à ce qu’elle devienne une véritable passion.
+            Je cours depuis maintenant plus de 13 ans. Pourtant, au départ, je détestais la course à pied… jusqu&apos;à ce qu&apos;elle devienne une véritable passion.
           </p>
           <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
-          J’ai commencé par des 10 km, puis des semi-marathons, avant de me lancer sur marathon. Progressivement, j’ai évolué vers le trail, jusqu’à devenir ultra-traileur et atteindre un objectif marquant : être finisher de la mythique Diagonale des Fous en 2025.
+            J&apos;ai commencé par des 10 km, puis des semi-marathons, avant de me lancer sur marathon. Progressivement, j&apos;ai évolué vers le trail, jusqu&apos;à devenir ultra-traileur et atteindre un objectif marquant : être finisher de la mythique Diagonale des Fous en 2025.
           </p>
           <p className="font-montserrat text-anthracite/70 leading-relaxed mb-8">
-          Au fil des années, ma passion m’a poussé à me former en continu : écoute de podcasts spécialisés, formations en ligne, apprentissage constant… sans oublier l’expérience acquise sur le terrain, aussi bien sur route qu’en trail.
+            Au fil des années, ma passion m&apos;a poussé à me former en continu : écoute de podcasts spécialisés, formations en ligne, apprentissage constant… sans oublier l&apos;expérience acquise sur le terrain, aussi bien sur route qu&apos;en trail.
           </p>
           <p className="font-montserrat text-anthracite/70 leading-relaxed mb-8">
-          C’est naturellement que j’ai commencé à accompagner des proches et des amis. Leurs progrès et leurs retours positifs m’ont donné envie d’aller plus loin et aujourd’hui, je mets mon expérience à ton service pour t’aider à atteindre tes objectifs, quels qu’ils soient.
+            C&apos;est naturellement que j&apos;ai commencé à accompagner des proches et des amis. Leurs progrès et leurs retours positifs m&apos;ont donné envie d&apos;aller plus loin et aujourd&apos;hui, je mets mon expérience à ton service pour t&apos;aider à atteindre tes objectifs, quels qu&apos;ils soient.
           </p>
 
           <div>
@@ -102,91 +135,126 @@ export default function AProposPage() {
               Travailler avec moi →
             </Link>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Values */}
       <section className="py-24 bg-forest topo-texture">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center gap-4 mb-12">
+          <AnimatedSection className="flex items-center gap-4 mb-12">
             <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
             <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-white">MES VALEURS</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((v) => (
-              <div
-                key={v.title}
-                className="bg-white/8 border border-white/12 rounded-[12px] p-6 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="text-3xl mb-4">{v.emoji}</div>
-                <h3 className="font-oswald font-bold text-white text-xl uppercase mb-2">{v.title}</h3>
-                <p className="font-montserrat text-white/60 text-sm leading-relaxed">{v.description}</p>
-              </div>
-            ))}
-          </div>
+          </AnimatedSection>
+          <AnimatedStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map((v) => {
+              const Icon = v.icon;
+              return (
+                <AnimatedStaggerItem key={v.title}>
+                  <div className="bg-white/8 border border-white/12 rounded-[12px] p-6 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1 h-full">
+                    <div className="w-10 h-10 rounded-xl bg-orange/20 flex items-center justify-center mb-4">
+                      <Icon className="w-5 h-5 text-orange" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="font-oswald font-bold text-white text-xl uppercase mb-2">{v.title}</h3>
+                    <p className="font-montserrat text-white/60 text-sm leading-relaxed">{v.description}</p>
+                  </div>
+                </AnimatedStaggerItem>
+              );
+            })}
+          </AnimatedStagger>
         </div>
       </section>
 
-      {/* Palmarès */}
+      {/* Palmarès + Parcours */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Timeline parcours */}
             <div>
-              <div className="flex items-center gap-4 mb-10">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
                 <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
                 <h2 className="font-oswald text-3xl font-bold text-forest">PARCOURS</h2>
-              </div>
-              <div className="relative pl-6 border-l-2 border-gradient-to-b from-orange to-forest space-y-8" style={{ borderImage: "linear-gradient(to bottom, #FF7043, #1B4332) 1" }}>
-                {[
-                  { year: "2013", title: "Premier semi marathon", desc: "Semi Marathon de CAsablanca." },
-                  { year: "2015", title: "Premier trail", desc: "NOMADS RUN - 21km" },
-                  { year: "2016", title: "Premier marathon", desc: "Marathon de Paris" },
-                  { year: "2018", title: "Première course de désert", desc: "Race Desert Marathon - 3 étapes - 100km." },
-                  { year: "2026", title: "Premier Triathlon", desc: "Tamuda Bay Eco-Triathlon." },
-                  { year: "2026", title: "Création Coach Eric Coaching", desc: "Nam libero tempore cum soluta nobis est eligendi optio." },
-                ].map((item) => (
-                  <div key={item.year} className="relative">
-                    <div className="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-orange border-2 border-white shadow" />
-                    <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-widest mb-1">
-                      {item.year}
+              </AnimatedSection>
+              <div className="relative pl-6 border-l-2 space-y-8" style={{ borderImage: "linear-gradient(to bottom, #FF7043, #1B4332) 1" }}>
+                {parcours.map((item) => (
+                  <AnimatedSection key={item.title} direction="left">
+                    <div className="relative">
+                      <div className="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-orange border-2 border-white shadow" />
+                      <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-widest mb-1">
+                        {item.year}
+                      </div>
+                      <h4 className="font-oswald font-semibold text-forest uppercase text-base mb-1">
+                        {item.title}
+                      </h4>
+                      <p className="font-montserrat text-sm text-anthracite/60">{item.desc}</p>
                     </div>
-                    <h4 className="font-oswald font-semibold text-forest uppercase text-base mb-1">
-                      {item.title}
-                    </h4>
-                    <p className="font-montserrat text-sm text-anthracite/60">{item.desc}</p>
-                  </div>
+                  </AnimatedSection>
                 ))}
               </div>
             </div>
 
             {/* Palmarès */}
             <div>
-              <div className="flex items-center gap-4 mb-10">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
                 <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
                 <h2 className="font-oswald text-3xl font-bold text-forest">PALMARÈS</h2>
-              </div>
-              <div className="space-y-4">
+              </AnimatedSection>
+              <AnimatedStagger className="space-y-4">
                 {palmares.map((p) => (
-                  <div
-                    key={p.title}
-                    className="flex items-center gap-4 bg-off-white border border-gray-100 rounded-[12px] p-5 hover:shadow-md transition-shadow"
-                  >
-                    <div className="w-12 h-12 bg-orange/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-xl">⭐</span>
-                    </div>
-                    <div>
-                      <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-wider mb-0.5">
-                        {p.year}
+                  <AnimatedStaggerItem key={p.title}>
+                    <div className="flex items-center gap-4 bg-off-white border border-gray-100 rounded-[12px] p-5 hover:shadow-md transition-shadow">
+                      <div className="w-12 h-12 bg-orange/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Trophy className="w-5 h-5 text-orange" strokeWidth={1.5} />
                       </div>
-                      <div className="font-oswald font-semibold text-forest uppercase text-base">{p.title}</div>
-                      <div className="font-montserrat text-xs text-anthracite/50">{p.detail}</div>
+                      <div>
+                        <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-wider mb-0.5">
+                          {p.year}
+                        </div>
+                        <div className="font-oswald font-semibold text-forest uppercase text-base">{p.title}</div>
+                        <div className="font-montserrat text-xs text-anthracite/50">{p.detail}</div>
+                      </div>
                     </div>
-                  </div>
+                  </AnimatedStaggerItem>
                 ))}
-              </div>
+              </AnimatedStagger>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Formations */}
+      <section className="py-24 bg-off-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <AnimatedSection className="flex items-center gap-4 mb-12">
+            <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
+            <div>
+              <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-forest">FORMATIONS</h2>
+              <p className="font-montserrat text-sm text-anthracite/50 mt-1">Formations en ligne effectuées</p>
+            </div>
+          </AnimatedSection>
+          <AnimatedStagger className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {formations.map((f) => (
+              <AnimatedStaggerItem key={f.provider}>
+                <div className="bg-white border border-gray-100 rounded-[12px] p-6 shadow-sm h-full">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-9 h-9 rounded-lg bg-forest/10 flex items-center justify-center flex-shrink-0">
+                      <GraduationCap className="w-4 h-4 text-forest" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="font-oswald font-bold text-forest text-base uppercase leading-tight">
+                      {f.provider}
+                    </h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {f.courses.map((course) => (
+                      <li key={course} className="flex items-start gap-2">
+                        <CheckCheck className="w-4 h-4 text-orange flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                        <span className="font-montserrat text-sm text-anthracite/70 leading-snug">{course}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </AnimatedStaggerItem>
+            ))}
+          </AnimatedStagger>
         </div>
       </section>
 
