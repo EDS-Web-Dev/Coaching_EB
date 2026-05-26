@@ -13,15 +13,10 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <section className="relative py-32 bg-forest topo-texture text-center">
-        <div className="max-w-2xl mx-auto px-4">
-          <span className="inline-block font-montserrat text-xs font-bold uppercase tracking-widest text-orange mb-4">
-            Ressources
-          </span>
-          <h1 className="font-oswald font-bold text-white text-5xl sm:text-6xl mb-4">BLOG</h1>
-          <p className="font-montserrat text-white/70 text-base">
-            Conseils entraînement, nutrition, récupération et performance par votre coach.
-          </p>
+      <section className="relative min-h-[40vh] flex items-center justify-center text-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/images/blog.JPG')", backgroundPosition: "center 80%" }} />
+        <div className="relative z-10 max-w-2xl mx-auto px-4">
+          <h1 className="font-oswald font-bold text-orange text-5xl sm:text-6xl">BLOG</h1>
         </div>
       </section>
 
