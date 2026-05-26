@@ -13,17 +13,12 @@ export default function OffresPage() {
   return (
     <>
       {/* Page hero */}
-      <section className="relative py-32 bg-forest topo-texture text-center">
-        <div className="max-w-2xl mx-auto px-4">
-          <span className="inline-block font-montserrat text-xs font-bold uppercase tracking-widest text-orange mb-4">
-            Programmes
-          </span>
-          <h1 className="font-oswald font-bold text-white text-5xl sm:text-6xl mb-4">
+      <section className="relative min-h-[40vh] flex items-center justify-center text-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/images/montagnes.JPG')", backgroundPosition: "center 15%" }} />
+        <div className="relative z-10 max-w-2xl mx-auto px-4">
+          <h1 className="font-oswald font-bold text-orange text-5xl sm:text-6xl">
             NOS OFFRES
           </h1>
-          <p className="font-montserrat text-white/70 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Choisissez l&apos;altitude qui vous correspond.
-          </p>
         </div>
       </section>
 
