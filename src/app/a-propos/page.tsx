@@ -67,7 +67,7 @@ const parcours = [
   { year: "2016", title: "Premier marathon", desc: "Marathon de Paris" },
   { year: "2018", title: "Première course de désert", desc: "Race Desert Marathon - 3 étapes - 100km." },
   { year: "2026", title: "Premier Triathlon", desc: "Tamuda Bay Eco-Triathlon." },
-  { year: "2026", title: "Création Coach Eric Coaching", desc: "Nam libero tempore cum soluta nobis est eligendi optio." },
+  { year: "2026", title: "Création Coach Eric Coaching", desc: "" },
 ];
 
 export default function AProposPage() {
@@ -188,7 +188,7 @@ export default function AProposPage() {
                       <h4 className="font-oswald font-semibold text-forest uppercase text-base mb-1">
                         {item.title}
                       </h4>
-                      <p className="font-montserrat text-sm text-anthracite/60">{item.desc}</p>
+                      {item.desc && <p className="font-montserrat text-sm text-anthracite/60">{item.desc}</p>}
                     </div>
                   </AnimatedSection>
                 ))}
