@@ -48,9 +48,14 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <Mountain className="w-7 h-7 text-orange" strokeWidth={1.5} />
-            <span className="font-oswald text-xl font-bold uppercase tracking-wider text-white">
-              Coach<span className="text-orange"> Eric</span>
-            </span>
+            <div className="flex flex-col leading-tight">
+              <span className="font-oswald text-xl font-bold uppercase tracking-wider text-white">
+                KTL <span className="text-orange">Coaching</span>
+              </span>
+              <span className="font-montserrat text-xs text-white font-bold tracking-widest italic">
+                Kiffe ta life
+              </span>
+            </div>
           </Link>
 
           {/* Desktop nav */}

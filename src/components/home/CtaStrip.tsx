@@ -17,9 +17,6 @@ export default function CtaStrip() {
         <h2 className="font-oswald font-bold text-white text-4xl sm:text-5xl mb-4">
           PRÊT À FRANCHIR LA CRÊTE ?
         </h2>
-        <p className="font-montserrat text-white/85 text-base mb-8 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Contactez-moi pour un appel découverte gratuit de 20 minutes.
-        </p>
         <Link
           href="/contact"
           className="inline-flex items-center gap-2 bg-white text-orange font-montserrat font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-full hover:bg-off-white transition-all duration-200 hover:-translate-y-0.5 shadow-xl"

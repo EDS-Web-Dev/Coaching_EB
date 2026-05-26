@@ -34,6 +34,12 @@ export default function QuotesSlider() {
     <section className="py-20 bg-forest-dark topo-texture overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
 
+        {/* Titre */}
+        <div className="flex items-center justify-center gap-4 mb-10">
+          <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
+          <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-orange">MES CITATIONS PRÉFÉRÉES</h2>
+        </div>
+
         {/* Guillemet décoratif */}
         <div className="font-oswald text-8xl text-orange leading-none select-none mb-2">&ldquo;</div>
 
