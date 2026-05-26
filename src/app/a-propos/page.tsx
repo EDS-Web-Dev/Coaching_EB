@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Target, Flame, Users, TrendingUp, Trophy, GraduationCap, CheckCheck, type LucideIcon } from "lucide-react";
+import { Target, Flame, Users, TrendingUp, GraduationCap, CheckCheck, type LucideIcon } from "lucide-react";
 import CtaStrip from "@/components/home/CtaStrip";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import { AnimatedStagger, AnimatedStaggerItem } from "@/components/shared/AnimatedStagger";
@@ -168,11 +168,13 @@ export default function AProposPage() {
       </section>
 
       {/* Palmarès + Parcours */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/images/fondpalmares.jpg')", backgroundPosition: "30% center" }} />
+        <div className="absolute inset-0 bg-white/70" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Timeline parcours */}
-            <div>
+            <div className="lg:pl-[25%]">
               <AnimatedSection className="flex items-center gap-4 mb-10">
                 <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
                 <h2 className="font-oswald text-3xl font-bold text-forest">PARCOURS</h2>
@@ -196,29 +198,27 @@ export default function AProposPage() {
             </div>
 
             {/* Palmarès */}
-            <div>
+            <div className="lg:pl-[30%]">
               <AnimatedSection className="flex items-center gap-4 mb-10">
                 <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
                 <h2 className="font-oswald text-3xl font-bold text-forest">PALMARÈS</h2>
               </AnimatedSection>
-              <AnimatedStagger className="space-y-4">
+              <div className="relative pl-6 border-l-2 space-y-8" style={{ borderImage: "linear-gradient(to bottom, #FF7043, #1B4332) 1" }}>
                 {palmares.map((p) => (
-                  <AnimatedStaggerItem key={p.title}>
-                    <div className="flex items-center gap-4 bg-off-white border border-gray-100 rounded-[12px] p-5 hover:shadow-md transition-shadow">
-                      <div className="w-12 h-12 bg-orange/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Trophy className="w-5 h-5 text-orange" strokeWidth={1.5} />
+                  <AnimatedSection key={p.title} direction="right">
+                    <div className="relative">
+                      <div className="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-orange border-2 border-white shadow" />
+                      <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-widest mb-1">
+                        {p.year}
                       </div>
-                      <div>
-                        <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-wider mb-0.5">
-                          {p.year}
-                        </div>
-                        <div className="font-oswald font-semibold text-forest uppercase text-base">{p.title}</div>
-                        <div className="font-montserrat text-xs text-anthracite/50">{p.detail}</div>
-                      </div>
+                      <h4 className="font-oswald font-semibold text-forest uppercase text-base mb-1">
+                        {p.title}
+                      </h4>
+                      {p.detail && <p className="font-montserrat text-sm text-anthracite/60">{p.detail}</p>}
                     </div>
-                  </AnimatedStaggerItem>
+                  </AnimatedSection>
                 ))}
-              </AnimatedStagger>
+              </div>
             </div>
           </div>
         </div>
