@@ -5,7 +5,6 @@ const navLinks = [
   { href: "/", label: "Accueil" },
   { href: "/a-propos", label: "À Propos" },
   { href: "/offres", label: "Nos Offres" },
-  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -20,7 +19,7 @@ const packLinks = [
 const socialLinks = [
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/ericbitsch/",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
         <rect x="2" y="2" width="20" height="20" rx="5" />
@@ -40,7 +39,7 @@ const socialLinks = [
   },
   {
     label: "YouTube",
-    href: "#",
+    href: "https://www.youtube.com/@ericbitsch7489",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
         <rect x="2" y="5" width="20" height="14" rx="3" />

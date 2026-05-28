@@ -128,13 +128,65 @@ export default function AProposPage() {
             C&apos;est naturellement que j&apos;ai commencé à accompagner des proches et des amis. Leurs progrès et leurs retours positifs m&apos;ont donné envie d&apos;aller plus loin et aujourd&apos;hui, je mets mon expérience à ton service pour t&apos;aider à atteindre tes objectifs, quels qu&apos;ils soient.
           </p>
 
-          <div>
+          <div className="flex flex-col items-center gap-6">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hover text-white font-montserrat font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-orange/30"
             >
               Travailler avec moi →
             </Link>
+
+            {/* Réseaux sociaux */}
+            <div className="flex items-center gap-8 pt-2">
+              {[
+                {
+                  label: "Instagram",
+                  href: "https://www.instagram.com/ericbitsch/",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
+                      <rect x="2" y="2" width="20" height="20" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Strava",
+                  href: "#",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
+                      <path d="M15 3l-4 9h3l-4 9 9-12h-4z" strokeLinejoin="round" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "YouTube",
+                  href: "https://www.youtube.com/@ericbitsch7489",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
+                      <rect x="2" y="5" width="20" height="14" rx="3" />
+                      <polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none" />
+                    </svg>
+                  ),
+                },
+              ].map(({ label, href, icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex flex-col items-center gap-2 group"
+                >
+                  <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-anthracite/50 group-hover:text-orange transition-colors duration-200">
+                    {label}
+                  </span>
+                  <div className="w-16 h-16 rounded-full bg-forest/10 flex items-center justify-center text-forest group-hover:bg-orange group-hover:text-white transition-all duration-200">
+                    {icon}
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </AnimatedSection>
       </section>
