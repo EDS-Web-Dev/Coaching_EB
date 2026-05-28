@@ -74,7 +74,7 @@ export default function AProposPage() {
   return (
     <>
       {/* Page hero */}
-      <section className="relative pt-32 pb-40 text-center overflow-hidden">
+      <section className="relative pt-40 pb-52 text-center overflow-hidden">
         <div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/images/Tizi%20N%27Oucheg.jpg')", backgroundPosition: "center 70%" }} />
         <AnimatedSection className="relative z-10 max-w-2xl mx-auto px-4">
           <span className="inline-block font-montserrat text-2xl font-black uppercase tracking-widest text-orange mb-4">
@@ -86,8 +86,8 @@ export default function AProposPage() {
         </AnimatedSection>
       </section>
 
-      {/* Photo centrée à cheval entre hero et section bio */}
-      <div className="flex justify-center -mt-24 relative z-10 mb-0">
+      {/* Photo superposée entre hero et bio — z-20 pour passer au-dessus des deux sections */}
+      <div className="relative flex justify-center -mt-40 z-20">
         <AnimatedSection delay={0.15}>
           <div className="relative">
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80">
@@ -106,9 +106,12 @@ export default function AProposPage() {
         </AnimatedSection>
       </div>
 
-      {/* Bio */}
-      <section className="pt-12 pb-24 bg-off-white">
-        <AnimatedSection className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
+      {/* Bio — remonte derrière la photo pour couvrir la zone blanche */}
+      <section className="relative -mt-40 pb-24 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/quisuisje.JPG')" }} />
+        <div className="absolute inset-0 bg-white/80" />
+
+        <AnimatedSection className="relative z-10 pt-48 max-w-2xl mx-auto px-4 sm:px-6 text-center">
           <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-orange">
             Qui je suis ?
           </span>

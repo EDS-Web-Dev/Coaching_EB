@@ -21,8 +21,10 @@ const itemVariants = {
 
 export default function TestimonialsSlider() {
   return (
-    <section className="py-24 bg-forest topo-texture overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section className="relative py-24 overflow-hidden">
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/coms.jpg')" }} />
+      <div className="absolute inset-0 bg-forest/80" />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Header */}
         <motion.div
