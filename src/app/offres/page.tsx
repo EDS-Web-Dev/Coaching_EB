@@ -13,7 +13,7 @@ export default function OffresPage() {
   return (
     <>
       {/* Page hero */}
-      <section className="relative min-h-[40vh] flex items-center justify-center text-center overflow-hidden">
+      <section className="relative min-h-[55vh] flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/images/montagnes.JPG')", backgroundPosition: "center 15%" }} />
         <div className="relative z-10 max-w-2xl mx-auto px-4">
           <h1 className="font-oswald font-bold text-orange text-5xl sm:text-6xl">
