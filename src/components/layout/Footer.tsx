@@ -130,8 +130,8 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
           <span>© 2026 KTL Coaching — Tous droits réservés</span>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-white/70 transition-colors">Mentions légales</a>
-            <a href="#" className="hover:text-white/70 transition-colors">Confidentialité</a>
+            <Link href="/mentions-legales" className="hover:text-white/70 transition-colors">Mentions légales</Link>
+            <Link href="/confidentialite" className="hover:text-white/70 transition-colors">Confidentialité</Link>
           </div>
           <span>
             Site développé par{" "}
