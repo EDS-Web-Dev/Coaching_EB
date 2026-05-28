@@ -125,33 +125,3 @@ export const quotes = [
   { text: "Never run faster than your guardian angel can fly.", author: null },
   { text: "If your dreams don't scare you, they are not big enough.", author: "Ellen Johnson Sirleaf" },
 ];
-
-export const blogPosts = [
-  {
-    slug: "periodisation-trail-ultra",
-    title: "La périodisation en trail ultra : planifier son année",
-    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    date: "15 Avril 2024",
-    readTime: "7 min",
-    category: "Entraînement",
-    image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&q=80",
-  },
-  {
-    slug: "nutrition-course-montagne",
-    title: "Nutrition en course de montagne : ce qu'on ne vous dit pas",
-    excerpt: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    date: "2 Avril 2024",
-    readTime: "5 min",
-    category: "Nutrition",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80",
-  },
-  {
-    slug: "retour-blessure-genou",
-    title: "Retour à la course après une blessure au genou",
-    excerpt: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-    date: "18 Mars 2024",
-    readTime: "9 min",
-    category: "Santé",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
-  },
-];
