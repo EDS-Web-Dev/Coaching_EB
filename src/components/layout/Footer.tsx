@@ -9,9 +9,8 @@ const navLinks = [
 ];
 
 const packLinks = [
-  { href: "/offres#sente", label: "Pack Sente" },
-  { href: "/offres#crete", label: "Pack Crête" },
-  { href: "/offres#sommet", label: "Pack Sommet" },
+  { href: "/offres?tab=distance#formules", label: "Pack À Distance" },
+  { href: "/offres?tab=presentiel#formules", label: "Pack Présentiel" },
   { href: "/contact", label: "Programme Sur Mesure" },
   { href: "/offres#entreprise", label: "Coaching Entreprise" },
 ];
@@ -83,7 +82,7 @@ export default function Footer() {
           </div>
 
           {/* Navigation */}
-          <div>
+          <div className="lg:pl-8">
             <h4 className="font-oswald text-sm font-semibold uppercase tracking-widest text-white mb-4">
               Navigation
             </h4>

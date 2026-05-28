@@ -29,34 +29,19 @@ export default function EnterpriseSection() {
     <section id="entreprise" className="py-24 bg-forest topo-texture">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <span className="inline-block font-montserrat text-xs font-bold uppercase tracking-widest text-orange mb-4">
-              Entreprises & Équipes
-            </span>
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
-              <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-white">
-                COACHING ENTREPRISE
-              </h2>
-            </div>
-            <p className="font-montserrat text-white/70 text-sm leading-relaxed ml-5">
-              Le sport comme levier de performance collective. J&apos;accompagne vos équipes avec des programmes sur mesure alliant trail, cohésion et bien-être au travail.
-            </p>
+        <div className="mb-16">
+          <span className="inline-block font-montserrat text-xs font-bold uppercase tracking-widest text-orange mb-4">
+            Entreprises & Équipes
+          </span>
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
+            <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-white">
+              COACHING ENTREPRISE
+            </h2>
           </div>
-
-          <div className="flex flex-wrap gap-6 lg:justify-end">
-            {[
-              { value: "50+", label: "Entreprises accompagnées" },
-              { value: "500+", label: "Collaborateurs coachés" },
-              { value: "100%", label: "Sur mesure" },
-            ].map(({ value, label }) => (
-              <div key={label} className="text-center">
-                <div className="font-oswald text-4xl font-bold text-orange">{value}</div>
-                <div className="font-montserrat text-xs uppercase tracking-widest text-white/50 mt-1">{label}</div>
-              </div>
-            ))}
-          </div>
+          <p className="font-montserrat text-white/70 text-sm leading-relaxed ml-5">
+            Le sport comme levier de performance collective. J&apos;accompagne vos équipes avec des programmes sur mesure alliant trail, cohésion et bien-être au travail.
+          </p>
         </div>
 
         {/* Formats */}
