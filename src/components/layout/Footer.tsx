@@ -9,7 +9,7 @@ const navLinks = [
 ];
 
 const packLinks = [
-  { href: "/offres?tab=distance#formules", label: "Pack À Distance" },
+  { href: "/offres?tab=distance#formules", label: "Pack Semi-marathon & Marathon" },
   { href: "/offres?tab=presentiel#formules", label: "Pack Présentiel" },
   { href: "/contact", label: "Programme Sur Mesure" },
   { href: "/offres#entreprise", label: "Coaching Entreprise" },

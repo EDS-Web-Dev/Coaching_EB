@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { Check, Wifi, MapPin } from "lucide-react";
+import { Check, Timer, MapPin } from "lucide-react";
 import { packs } from "@/lib/data";
 import clsx from "clsx";
 
 function PackIcon({ icon }: { icon: string }) {
   const cls = "w-8 h-8 text-orange";
-  if (icon === "wifi") return <Wifi className={cls} strokeWidth={1.5} />;
+  if (icon === "timer") return <Timer className={cls} strokeWidth={1.5} />;
   return <MapPin className={cls} strokeWidth={1.5} />;
 }
 
@@ -41,7 +41,7 @@ function PricingGridInner() {
         <div className="flex justify-center mb-12">
           <div className="inline-flex bg-white border border-gray-200 rounded-full p-1 shadow-sm">
             {[
-              { key: "distance", label: "À Distance" },
+              { key: "distance", label: "Semi-marathon & Marathon" },
               { key: "presentiel", label: "Présentiel" },
             ].map(({ key, label }) => (
               <button
@@ -67,9 +67,14 @@ function PricingGridInner() {
               <PackIcon icon={pack.icon} />
             </div>
 
-            <h3 className="font-oswald font-bold text-3xl uppercase text-forest mb-3">
+            <h3 className="font-oswald font-bold text-3xl uppercase text-forest mb-2">
               {pack.name}
             </h3>
+            {pack.subtitle && (
+              <p className="font-montserrat text-sm font-semibold text-orange uppercase tracking-widest mb-3">
+                {pack.subtitle}
+              </p>
+            )}
             <p className="font-montserrat text-anthracite/60 leading-relaxed mb-8">
               {pack.description}
             </p>
