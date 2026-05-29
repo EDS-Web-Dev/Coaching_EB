@@ -39,15 +39,16 @@ export const testimonials = [
 export const packs = [
   {
     type: "distance",
-    name: "Pack À Distance",
-    icon: "wifi",
-    description: "Un suivi complet depuis n'importe où dans le monde. Idéal pour progresser à ton rythme avec un accompagnement personnalisé.",
+    name: "Pack Semi-marathon & Marathon",
+    icon: "timer",
+    subtitle: "Durée : 10 à 12 semaines",
+    description: "Un suivi complet depuis n'importe où dans le monde.",
     features: [
       "Plan d'entraînement personnalisé et évolutif",
-      "Suivi hebdomadaire via application dédiée",
+      "Suivi hebdomadaire",
       "Messagerie directe (réponse sous 24h)",
       "1 appel bilan mensuel (30 min)",
-      "Analyse des données de course",
+      "Analyse des données de course aprés chaque séance",
       "Conseils nutrition & récupération",
       "Adaptation du plan en continu selon tes retours",
     ],
