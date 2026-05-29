@@ -74,8 +74,8 @@ export default function AProposPage() {
   return (
     <>
       {/* Page hero */}
-      <section className="relative pt-40 pb-52 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/images/Tizi%20N%27Oucheg.jpg')", backgroundPosition: "center 70%" }} />
+      <section className="relative h-[500px] flex items-center justify-center text-center overflow-hidden">
+        <Image src="/images/Tizi N'Oucheg.jpg" alt="" fill className="object-cover object-[center_70%]" priority />
         <AnimatedSection className="relative z-10 max-w-2xl mx-auto px-4">
           <span className="inline-block font-montserrat text-2xl font-black uppercase tracking-widest text-orange mb-4">
             La philosophie du Coach
@@ -155,7 +155,7 @@ export default function AProposPage() {
                 },
                 {
                   label: "Strava",
-                  href: "#",
+                  href: "https://www.strava.com/athletes/37327428",
                   icon: (
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
                       <path d="M15 3l-4 9h3l-4 9 9-12h-4z" strokeLinejoin="round" />
