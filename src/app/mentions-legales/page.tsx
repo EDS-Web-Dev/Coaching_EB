@@ -4,7 +4,7 @@ import CtaStrip from "@/components/home/CtaStrip";
 
 export const metadata: Metadata = {
   title: "Mentions Légales",
-  description: "Mentions légales du site KTL Coaching.",
+  description: "Mentions légales du site KTL Running Coach.",
 };
 
 const sections = [

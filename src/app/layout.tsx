@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    siteName: "Coach Eric",
+    siteName: "KTL Running Coach",
   },
 };
 
