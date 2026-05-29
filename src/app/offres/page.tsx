@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PricingGrid from "@/components/offers/PricingGrid";
 import EnterpriseSection from "@/components/offers/EnterpriseSection";
 import FaqAccordion from "@/components/offers/FaqAccordion";
@@ -13,8 +14,8 @@ export default function OffresPage() {
   return (
     <>
       {/* Page hero */}
-      <section className="relative min-h-[55vh] flex items-center justify-center text-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/images/montagnes.JPG')", backgroundPosition: "center 15%" }} />
+      <section className="relative h-[500px] flex items-center justify-center text-center overflow-hidden">
+        <Image src="/images/montagnes.JPG" alt="" fill className="object-cover object-top" priority />
         <div className="relative z-10 max-w-2xl mx-auto px-4">
           <h1 className="font-oswald font-bold text-orange text-5xl sm:text-6xl">
             NOS OFFRES

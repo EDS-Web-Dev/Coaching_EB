@@ -29,7 +29,7 @@ const socialLinks = [
   },
   {
     label: "Strava",
-    href: "#",
+    href: "https://www.strava.com/athletes/37327428",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
         <path d="M15 3l-4 9h3l-4 9 9-12h-4z" strokeLinejoin="round" />
@@ -73,6 +73,8 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange transition-colors duration-200 text-white"
                 >
                   {icon}

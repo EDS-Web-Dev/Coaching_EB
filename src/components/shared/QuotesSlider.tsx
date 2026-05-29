@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { quotes } from "@/lib/data";
 import clsx from "clsx";
@@ -68,37 +67,19 @@ export default function QuotesSlider() {
           </AnimatePresence>
         </div>
 
-        {/* Navigation */}
-        <div className="flex items-center justify-center gap-6 mt-10">
-          <button
-            onClick={() => goTo(current - 1, -1)}
-            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-all duration-200"
-            aria-label="Précédent"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-
-          <div className="flex gap-2">
-            {quotes.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => goTo(i, i > current ? 1 : -1)}
-                className={clsx(
-                  "h-1 rounded-full transition-all duration-300",
-                  i === current ? "bg-orange w-8" : "bg-white/20 w-4 hover:bg-white/40"
-                )}
-                aria-label={`Citation ${i + 1}`}
-              />
-            ))}
-          </div>
-
-          <button
-            onClick={() => goTo(current + 1, 1)}
-            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-all duration-200"
-            aria-label="Suivant"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
+        {/* Navigation — points uniquement */}
+        <div className="flex items-center justify-center gap-2 mt-10">
+          {quotes.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => goTo(i, i > current ? 1 : -1)}
+              className={clsx(
+                "h-1 rounded-full transition-all duration-300",
+                i === current ? "bg-orange w-8" : "bg-white/20 w-4 hover:bg-white/40"
+              )}
+              aria-label={`Citation ${i + 1}`}
+            />
+          ))}
         </div>
 
       </div>
