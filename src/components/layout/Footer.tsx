@@ -58,7 +58,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Mountain className="w-6 h-6 text-orange" strokeWidth={1.5} />
               <span className="font-oswald text-lg font-bold uppercase tracking-wider text-white">
-                KTL<span className="text-orange"> Coaching</span>
+                KTL<span className="text-orange"> Running Coach</span>
               </span>
             </Link>
             <p className="text-sm leading-relaxed mb-3 max-w-xs">

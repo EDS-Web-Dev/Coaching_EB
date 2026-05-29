@@ -48,10 +48,10 @@ export default function Navbar() {
             <Mountain className="w-7 h-7 text-orange" strokeWidth={1.5} />
             <div className="flex flex-col leading-tight">
               <span className="font-oswald text-xl font-bold uppercase tracking-wider text-white">
-                KTL <span className="text-orange">Coaching</span>
+                KTL <span className="text-orange">Running Coach</span>
               </span>
               <span className="font-montserrat text-xs text-white font-bold tracking-widest italic">
-                Kiffe ta life
+                Kiffe Ta Life
               </span>
             </div>
           </Link>
