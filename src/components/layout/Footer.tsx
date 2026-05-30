@@ -130,7 +130,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
-          <span>© 2026 KTL Coaching — Tous droits réservés</span>
+          <span>© 2026 KTL Running Coach — Tous droits réservés</span>
           <div className="flex gap-4">
             <Link href="/mentions-legales" className="hover:text-white/70 transition-colors">Mentions légales</Link>
             <Link href="/confidentialite" className="hover:text-white/70 transition-colors">Confidentialité</Link>
