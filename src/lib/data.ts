@@ -98,7 +98,7 @@ export const packs = [
     type: "presentiel",
     name: "Séance présentielle",
     icon: "users",
-    subtitle: "Durée : mensuel",
+    subtitle: "Durée : 1h ou forfait 10 séances",
     description: "Un coaching terrain au plus près de toi. Des séances encadrées pour corriger, progresser et repousser tes limites ensemble.",
     features: [
       "Séances d'entraînement encadrées sur le terrain",
@@ -111,24 +111,24 @@ export const packs = [
 
 export const faqItems = [
   {
-    q: "Comment se déroule le premier mois de coaching ?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+    q: "Va t’il y avoir un entretien pré-coaching ?",
+    a: "Oui, il y aura bien un entretien téléphonique durant lequel nous parlerons de vos besoins et attentes.",
   },
   {
     q: "Est-ce que le coaching convient si je sors d'une blessure ?",
-    a: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.",
+    a: "Oui, tout à fait, mais seuelement après accord de votre médecin ou kiné.",
   },
   {
     q: "Quelle application utilisez-vous pour le suivi ?",
-    a: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim.",
+    a: "J'utilise habituellement GARMIN, mais si vous avez une autre marque de montre, je m'adapte.",
   },
   {
     q: "Peut-on changer de pack en cours de route ?",
-    a: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit.",
+    a: "Oui, on peut changer de formule à n'importe quel moment, après discussions.",
   },
   {
     q: "Y a-t-il un engagement de durée minimum ?",
-    a: "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.",
+    a: "Uniquement pour le pack mensuel.",
   },
 ];
 
