@@ -90,7 +90,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5">
               {navLinks.map((l) => (
-                <li key={l.href}>
+                <li key={l.label}>
                   <Link href={l.href} className="text-sm hover:text-orange transition-colors duration-200">
                     {l.label}
                   </Link>
@@ -106,7 +106,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5">
               {packLinks.map((l) => (
-                <li key={l.href}>
+                <li key={l.label}>
                   <Link href={l.href} className="text-sm hover:text-orange transition-colors duration-200">
                     {l.label}
                   </Link>
