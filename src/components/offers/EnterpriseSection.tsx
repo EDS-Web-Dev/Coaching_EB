@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Users, Trophy, Heart, Mic } from "lucide-react";
+import { Users, Trophy } from "lucide-react";
 
 const formats = [
   {
@@ -11,16 +11,6 @@ const formats = [
     icon: Trophy,
     title: "Séminaire Trail",
     description: "Journée ou week-end en nature pour renforcer les liens entre collaborateurs sur des parcours adaptés.",
-  },
-  {
-    icon: Heart,
-    title: "Ateliers Bien-être",
-    description: "Programmes de remise en forme et gestion du stress pour améliorer la performance au travail.",
-  },
-  {
-    icon: Mic,
-    title: "Conférences & Keynotes",
-    description: "Interventions sur la performance, la résilience et le dépassement de soi appliqués au monde professionnel.",
   },
 ];
 
@@ -40,12 +30,12 @@ export default function EnterpriseSection() {
             </h2>
           </div>
           <p className="font-montserrat text-white/70 text-sm leading-relaxed ml-5">
-            Le sport comme levier de performance collective. J&apos;accompagne vos équipes avec des programmes sur mesure alliant trail, cohésion et bien-être au travail.
+            Le sport comme levier de performance collective. J&apos;accompagne vos équipes avec des programmes sur mesure alliant course à pied, trail, cohésion et bien-être au travail.
           </p>
         </div>
 
         {/* Formats */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
           {formats.map((f) => (
             <div
               key={f.title}

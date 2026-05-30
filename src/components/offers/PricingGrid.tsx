@@ -1,31 +1,23 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useState } from "react";
+import { Suspense } from "react";
 import Link from "next/link";
-import { Check, Timer, MapPin } from "lucide-react";
+import { Check, Timer, Mountain, CalendarDays, Users } from "lucide-react";
 import { packs } from "@/lib/data";
 import clsx from "clsx";
 
 function PackIcon({ icon }: { icon: string }) {
   const cls = "w-8 h-8 text-orange";
   if (icon === "timer") return <Timer className={cls} strokeWidth={1.5} />;
-  return <MapPin className={cls} strokeWidth={1.5} />;
+  if (icon === "mountain") return <Mountain className={cls} strokeWidth={1.5} />;
+  if (icon === "calendar") return <CalendarDays className={cls} strokeWidth={1.5} />;
+  return <Users className={cls} strokeWidth={1.5} />;
 }
 
 function PricingGridInner() {
-  const searchParams = useSearchParams();
-  const tabParam = searchParams.get("tab");
-  const [activeTab, setActiveTab] = useState<"distance" | "presentiel">(
-    tabParam === "presentiel" ? "presentiel" : "distance"
-  );
-
-  useEffect(() => {
-    if (tabParam === "presentiel") setActiveTab("presentiel");
-    else if (tabParam === "distance") setActiveTab("distance");
-  }, [tabParam]);
-
-  const pack = packs.find((p) => p.type === activeTab)!;
+  const [activeIndex, setActiveIndex] = useState(0);
+  const pack = packs[activeIndex];
 
   return (
     <section id="formules" className="py-24 bg-off-white">
@@ -38,26 +30,21 @@ function PricingGridInner() {
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-white border border-gray-200 rounded-full p-1 shadow-sm">
-            {[
-              { key: "distance", label: "Semi-marathon & Marathon" },
-              { key: "presentiel", label: "Présentiel" },
-            ].map(({ key, label }) => (
-              <button
-                key={key}
-                onClick={() => setActiveTab(key as "distance" | "presentiel")}
-                className={clsx(
-                  "font-montserrat font-bold text-sm uppercase tracking-widest px-8 py-3 rounded-full transition-all duration-200",
-                  activeTab === key
-                    ? "bg-orange text-white shadow-md"
-                    : "text-anthracite/60 hover:text-anthracite"
-                )}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          {packs.map((p, i) => (
+            <button
+              key={i}
+              onClick={() => setActiveIndex(i)}
+              className={clsx(
+                "font-montserrat font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full transition-all duration-200 border",
+                activeIndex === i
+                  ? "bg-orange text-white border-orange shadow-md"
+                  : "bg-white text-anthracite/60 border-gray-200 hover:text-anthracite"
+              )}
+            >
+              {p.name}
+            </button>
+          ))}
         </div>
 
         {/* Pack card */}
@@ -104,8 +91,6 @@ function PricingGridInner() {
     </section>
   );
 }
-
-import { Suspense } from "react";
 
 export default function PricingGrid() {
   return (
