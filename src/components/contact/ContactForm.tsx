@@ -5,12 +5,13 @@ import { useState } from "react";
 type FormState = {
   nom: string;
   email: string;
+  telephone: string;
   objectif: string;
   message: string;
 };
 
 const initial: FormState = {
-  nom: "", email: "", objectif: "", message: "",
+  nom: "", email: "", telephone: "", objectif: "", message: "",
 };
 
 export default function ContactForm() {
@@ -82,6 +83,21 @@ export default function ContactForm() {
               className="w-full px-4 py-3 border border-gray-200 rounded-[12px] font-montserrat text-sm text-anthracite bg-off-white focus:outline-none focus:border-forest focus:ring-2 focus:ring-forest/10 transition-all"
             />
           </div>
+        </div>
+
+        {/* Téléphone */}
+        <div>
+          <label className="block font-montserrat text-xs font-bold uppercase tracking-widest text-forest mb-1.5">
+            Téléphone
+          </label>
+          <input
+            name="telephone"
+            type="tel"
+            value={form.telephone}
+            onChange={handleChange}
+            placeholder="A communiquer si vous souhaitez être contacté par téléphone ou par whatsapp"
+            className="w-full px-4 py-3 border border-gray-200 rounded-[12px] font-montserrat text-sm text-anthracite bg-off-white focus:outline-none focus:border-forest focus:ring-2 focus:ring-forest/10 transition-all"
+          />
         </div>
 
         {/* Objectif Principal */}

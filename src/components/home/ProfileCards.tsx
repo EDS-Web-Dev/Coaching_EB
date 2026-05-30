@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Users, ArrowRight } from "lucide-react";
 
+
 const profiles = [
   {
     id: "debutant",
@@ -35,10 +36,9 @@ export default function ProfileCards() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {profiles.map((p) => (
-            <Link
+            <div
               key={p.id}
-              href={p.href}
-              className="group block bg-white rounded-[12px] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-b-4 border-forest"
+              className="bg-white rounded-[12px] overflow-hidden shadow-md border-b-4 border-forest"
             >
               <div className="p-6 text-center">
                 <h3 className="font-oswald text-xl font-bold text-forest mb-2">
@@ -48,7 +48,7 @@ export default function ProfileCards() {
                   {p.subtitle}
                 </p>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
 
