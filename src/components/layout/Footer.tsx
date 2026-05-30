@@ -5,13 +5,13 @@ const navLinks = [
   { href: "/", label: "Accueil" },
   { href: "/a-propos", label: "À Propos" },
   { href: "/offres", label: "Nos Offres" },
-  { href: "/contact", label: "Contact" },
 ];
 
 const packLinks = [
-  { href: "/offres?tab=distance#formules", label: "Pack Semi-marathon & Marathon" },
-  { href: "/offres?tab=presentiel#formules", label: "Pack Présentiel" },
-  { href: "/contact", label: "Programme Sur Mesure" },
+  { href: "/offres#formules", label: "Prépa Semi-marathon & Marathon" },
+  { href: "/offres#formules", label: "Prépa Trail" },
+  { href: "/offres#formules", label: "Pack Mensuel" },
+  { href: "/offres#formules", label: "Séance Présentielle" },
   { href: "/offres#entreprise", label: "Coaching Entreprise" },
 ];
 
