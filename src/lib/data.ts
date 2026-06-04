@@ -51,6 +51,7 @@ export const packs = [
       "Analyse des données de course aprés chaque séance",
       "Conseils nutrition & récupération",
       "Adaptation du plan en continu selon tes retours",
+      "Conseil stratégie de course",
     ],
     cta: "Je me lance",
   },
@@ -58,7 +59,7 @@ export const packs = [
     type: "distance",
     name: "Prépa Trail",
     icon: "mountain",
-    subtitle: "Durée : à déterminer elon objectif",
+    subtitle: "Durée : à déterminer selon objectif",
     description: "Un suivi complet depuis n'importe où dans le monde.",
     features: [
       "Plan d'entraînement personnalisé et évolutif accès trail",
@@ -80,17 +81,13 @@ export const packs = [
     subtitle: "Durée : mensuel",
     description: "Un coaching terrain au plus près de toi. Des séances encadrées pour corriger, progresser et repousser tes limites ensemble.",
     features: [
-      "Séances d'entraînement encadrées sur le terrain",
       "Amélioration foulée",
       "Amélioration VMA",
       "Reprise après arret prolongé",
       "Entretien entre 2 obljectifs",
       "Débutants",
-      "Coaching technique running & trail",
       "Plan d'entraînement personnalisé",
       "Suivi des performances et ajustements",
-      "Conseils nutrition & prévention des blessures",
-      "Préparation mentale & stratégie de course",
     ],
     cta: "Je me lance",
   },
@@ -103,7 +100,6 @@ export const packs = [
     features: [
       "Séances d'entraînement encadrées sur le terrain",
       "Coaching technique running & trail",
-      "Plan d'entraînement personnalisé",
     ],
     cta: "Je me lance",
   },
@@ -116,7 +112,7 @@ export const faqItems = [
   },
   {
     q: "Est-ce que le coaching convient si je sors d'une blessure ?",
-    a: "Oui, tout à fait, mais seuelement après accord de votre médecin ou kiné.",
+    a: "Oui, tout à fait, mais seulement après accord de votre médecin ou kiné.",
   },
   {
     q: "Quelle application utilisez-vous pour le suivi ?",
