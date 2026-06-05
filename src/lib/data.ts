@@ -10,7 +10,7 @@ export const testimonials = [
    author:"Jihane R",
    meta:"",
    initials:"JR",
-   rating:"5",
+   rating: 5,
   },
   {
     text: "Éric m’a notamment accompagné dans la préparation d’un semi-marathon puis d’un marathon. Dès le départ, il a su construire un programme parfaitement adapté à mon niveau, tout en l’ajustant au fil des semaines en fonction de mon évolution et de mes sensations. Grâce à son suivi précis, j’ai pu progresser constamment sans jamais tomber dans le surentraînement ou la saturation. Éric est un coach extrêmement attentif, toujours à l’écoute de ses athlètes, et impliqué dans chaque séance. Mais au-delà du coach, il y a surtout l’humain : celui qui croit sincèrement en nous, qui nous pousse à prendre confiance en nous-mêmes et à nous dépasser à travers le running. Avoir Éric à ses côtés pour préparer de tels objectifs est une vraie chance. Mon rapport à la course à pied a complètement changé depuis que je suis suivi par lui, et je ne le remercierai jamais assez pour l’impact qu’il a eu sur ma pratique et ma confiance en moi.",
