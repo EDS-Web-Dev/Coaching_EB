@@ -1,5 +1,32 @@
 export const testimonials = [
   {
+    text: "Eric est un coach qui tient ses promesses: il met tout en œuvre pour que nous atteignons nos objectifs. Ses entraînements sont exigeants, mais toujours menés dans la bonne humeur et toujours dans l’esprit de « kiffer sa Life ». Il sait transmettre son amour de la course à pied et du trail, et fait preuve d’une grande écoute. Mais s’il ne fallait retenir qu’une seule qualité parmi toutes celles qui font sa force, ce serait sa capacité à nous projeter vers des objectifs que nous n’aurions même pas osé nous fixer nous-mêmes. Il nous aide à voir plus loin, plus grand, et finit souvent par nous convaincre que nous sommes capables de bien plus que ce que nous imaginions.",
+    author: "Radia CL.",
+    meta: "",
+    initials: "RCL",
+    rating: 5,
+  },
+  {text:"Il y a quelques années, je débutais à peine la course à pied. C'est Eric qui m'a fait aimer le running. Et ce qui n'était qu'un simple sport est devenu, au fil des kilomètres parcourus à ses côtés, une véritable passion, un mode de vie, une discipline, une philosophie. Là où, avant, je ne voyais qu'une activité physique, il m'a montré un chemin : celui de la résilience, du courage, du dépassement de soi. Le jour où j'ai eu la folie de penser que je pourrais peut-être courir un marathon, c'est naturellement vers lui que je me suis tournée pour quelques conseils. Il m'a donné bien plus : un vrai programme, des séances hebdomadaires adaptées à mon rythme, à mes capacités, à mes objectifs. Pour mon premier marathon, je voulais simplement finir. J'ai ensuite cherché à améliorer mon temps, et à chaque nouvelle course, Eric prenait le temps d'analyser, de comprendre, de m'aider à me projeter vers un objectif ambitieux mais réalisable. C'est là toute sa force : il fait croire ses coachés en eux-mêmes, en des capacités qu'ils ne soupçonnent même pas. Ses programmes ont aussi un immense avantage : ils sont remarquablement bien construits. Préparation spécifique, séances de renforcement, progressivité… on arrive le jour de la course physiquement prêt, et surtout sans s'être blessé en chemin. Grâce à Eric, j'ai fait des courses dont je n'osais même pas rêver. Mes 3h30 au marathon, c'est grâce à lui. Ma 3ᵉ place au semi-marathon de Casablanca, c'est grâce à lui. Mes 87 km de trail, c'est grâce à lui. Et les 100 km de trail que je rêve secrètement de faire un jour, ce sera encore grâce à lui. Mais au-delà de son expertise technique et de sa connaissance fine du run et du trail, Eric est un coach au grand cœur. Ce qui m'a le plus portée dans mes préparations, ce sont ses mots, ses messages que j'attendais après chaque séance. Il est coach mental autant que coach physique. Il a su m'aider à dépasser mes doutes, à vaincre ma peur du vide quand je me suis lancée en trail, à croire en moi. Avec lui, c'est simple : tous les rêves deviennent possibles. J'ajouterai qu'il est rigoureux, présent, dans un suivi très rapproché. Il s'est adapté avec patience à mon emploi du temps compliqué pour ajuster les séances. Mais quand il le faut, il sait aussi se montrer ferme, toujours avec une immense bienveillance. Merci Eric. Pour les kilomètres, pour les chronos, et surtout pour toutes les émotions vécues durant mes courses.",
+   author:"Jihane R",
+   meta:"",
+   initials:"JR",
+   rating:"5",
+  },
+  {
+    text: "Éric m’a notamment accompagné dans la préparation d’un semi-marathon puis d’un marathon. Dès le départ, il a su construire un programme parfaitement adapté à mon niveau, tout en l’ajustant au fil des semaines en fonction de mon évolution et de mes sensations. Grâce à son suivi précis, j’ai pu progresser constamment sans jamais tomber dans le surentraînement ou la saturation. Éric est un coach extrêmement attentif, toujours à l’écoute de ses athlètes, et impliqué dans chaque séance. Mais au-delà du coach, il y a surtout l’humain : celui qui croit sincèrement en nous, qui nous pousse à prendre confiance en nous-mêmes et à nous dépasser à travers le running. Avoir Éric à ses côtés pour préparer de tels objectifs est une vraie chance. Mon rapport à la course à pied a complètement changé depuis que je suis suivi par lui, et je ne le remercierai jamais assez pour l’impact qu’il a eu sur ma pratique et ma confiance en moi.",
+    author: "Manon S.",
+    meta: "Préparation Semi-marathon puis Marathon",
+    initials: "MS",
+    rating: 5,
+  },
+  {
+    text: "J'ai été suivi par Eric sur plusieurs objectifs de running différents. Le premier a été de retrouver un rythme de course agréable après plus d'un an et demi d'arrêt, avec pour objectif un marathon en 4h, réussi haut la main ! Ensuite, l'objectif était de réussir un RP sur semi-marathon en 1h45, également atteint, et surtout sans douleur ! Eric m'a accompagné après chaque sortie afin de m'aider à progresser, éviter les douleurs et améliorer ma FC. Le suivi s'est fait à distance, mais avec un échange constant, beaucoup de conseils et d'encouragements. Je le recommande pour tous vos objectifs : il saura adapter vos programmes à votre niveau et vous accompagner vers vos réussites.",
+    author: "Mélanie B.",
+    meta: "Marathon 4h & Semi en 1h45",
+    initials: "MB",
+    rating: 5,
+  },
+  {
     text: "Salam Éric, merci encore pour ton coaching ! C'était ma première expérience en trail et honnêtement tu as réussi à me mettre en confiance dès le début. Les séances théoriques, pratiques et les entraînements organisés avant le trail ont vraiment fait la différence. On sent la passion, le sérieux et le vrai accompagnement derrière tout ça. Grâce à toi, j'ai découvert le trail dans les meilleures conditions et ça m'a donné envie de continuer 😅",
     author: "Jawad A.",
     meta: "Sika Maroc — Trail Lalla Takerkoust 2026",
@@ -13,13 +40,7 @@ export const testimonials = [
     initials: "ME",
     rating: 5,
   },
-  {
-    text: "J'ai été suivi par Eric sur plusieurs objectifs de running différents. Le premier a été de retrouver un rythme de course agréable après plus d'un an et demi d'arrêt, avec pour objectif un marathon en 4h, réussi haut la main ! Ensuite, l'objectif était de réussir un RP sur semi-marathon en 1h45, également atteint, et surtout sans douleur ! Eric m'a accompagné après chaque sortie afin de m'aider à progresser, éviter les douleurs et améliorer ma FC. Le suivi s'est fait à distance, mais avec un échange constant, beaucoup de conseils et d'encouragements. Je le recommande pour tous vos objectifs : il saura adapter vos programmes à votre niveau et vous accompagner vers vos réussites.",
-    author: "Mélanie B.",
-    meta: "Marathon 4h & Semi en 1h45",
-    initials: "MB",
-    rating: 5,
-  },
+
   {
     text: "Commencer le trail me faisait un peu peur, mais Eric a su me mettre en confiance immédiatement. Son coaching sur-mesure m'a permis de progresser à mon rythme, sans me blesser et en y prenant un plaisir fou. Grâce à son écoute et ses conseils, je me sens aujourd'hui capable de franchir de nouveaux sommets. Merci Eric !.",
     author: "Saad I.",
@@ -28,10 +49,17 @@ export const testimonials = [
     rating: 5,
   },
   {
-    text: "Éric m’a notamment accompagné dans la préparation d’un semi-marathon puis d’un marathon. Dès le départ, il a su construire un programme parfaitement adapté à mon niveau, tout en l’ajustant au fil des semaines en fonction de mon évolution et de mes sensations. Grâce à son suivi précis, j’ai pu progresser constamment sans jamais tomber dans le surentraînement ou la saturation. Éric est un coach extrêmement attentif, toujours à l’écoute de ses athlètes, et impliqué dans chaque séance. Mais au-delà du coach, il y a surtout l’humain : celui qui croit sincèrement en nous, qui nous pousse à prendre confiance en nous-mêmes et à nous dépasser à travers le running. Avoir Éric à ses côtés pour préparer de tels objectifs est une vraie chance. Mon rapport à la course à pied a complètement changé depuis que je suis suivi par lui, et je ne le remercierai jamais assez pour l’impact qu’il a eu sur ma pratique et ma confiance en moi.",
-    author: "Manon S.",
-    meta: "Préparation Semi-marathon puis Marathon",
-    initials: "MS",
+    text: "Quand j’ai rejoint la section running du CAFC, mon objectif était clair : réussir mon premier marathon. Éric m’a accompagné dès le début avec un coaching vraiment top. Au-delà de ses grandes connaissances techniques, il sait surtout adapter son accompagnement à la personne qu’il a en face de lui. Ses conseils étaient toujours précis, ses relances intelligentes, et il assurait un vrai suivi tout au long de la préparation. Grâce à lui, je ne me suis jamais blessé pendant toute ma préparation, ce qui est assez remarquable sur un projet aussi exigeant qu’un marathon. Éric ne se contente pas de donner des plans d’entraînement : il transmet de la confiance, de la méthode et une vraie passion pour la course à pied. Son sérieux, son écoute et son expérience m’ont permis d’aller au bout de mon défi dans les meilleures conditions. Je recommande Éric à toute personne souhaitant progresser en course à pied, que ce soit pour préparer une première course ou viser un objectif ambitieux.",
+    author: "Omar S.",
+    meta: "Marathon de Malaga 2026",
+    initials: "OS",
+    rating: 5,
+  },
+  {
+    text: "Un grand merci au coach Eric pour son accompagnement dans la préparation du Trail de Takerkoust (21 km avec 500 m de dénivelé positif). Grâce à ses séances variées et adaptées, mêlant gammes, fractionnés en côte et sorties longues, nous avons pu progresser efficacement et arriver prêts le jour de la course. Son expertise, ses conseils et sa motivation ont été précieux tout au long de cette préparation. Je le recommande vivement à tous ceux qui souhaitent atteindre leurs objectifs en course à pied et en trail.",
+    author: "Mohamed Amine C.",
+    meta: "Trail Lalla Takerkoust 2026",
+    initials: "MAC",
     rating: 5,
   },
 ];
