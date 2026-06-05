@@ -1,23 +1,27 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { testimonials } from "@/lib/data";
 import clsx from "clsx";
 
 const PER_PAGE = 3;
-const AUTOPLAY_MS = 15000;
+const AUTOPLAY_MS = 45000;
 const totalPages = Math.ceil(testimonials.length / PER_PAGE);
 
 export default function TestimonialsSlider() {
   const [page, setPage] = useState(0);
   const [direction, setDirection] = useState(1);
+  const sectionRef = useRef<HTMLElement>(null);
 
-  const goTo = (next: number) => {
+  const goTo = (next: number, scroll = false) => {
     const bounded = (next + totalPages) % totalPages;
     setDirection(bounded >= page ? 1 : -1);
     setPage(bounded);
+    if (scroll) {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   useEffect(() => {
@@ -37,7 +41,7 @@ export default function TestimonialsSlider() {
   };
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section ref={sectionRef} className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/coms.jpg')" }} />
       <div className="absolute inset-0 bg-forest/80" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
@@ -100,7 +104,7 @@ export default function TestimonialsSlider() {
         {/* Navigation */}
         <div className="flex items-center justify-center gap-6 mt-10">
           <button
-            onClick={() => goTo(page - 1)}
+            onClick={() => goTo(page - 1, true)}
             className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-all duration-200"
             aria-label="Précédent"
           >
@@ -122,7 +126,7 @@ export default function TestimonialsSlider() {
           </div>
 
           <button
-            onClick={() => goTo(page + 1)}
+            onClick={() => goTo(page + 1, true)}
             className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-all duration-200"
             aria-label="Suivant"
           >
