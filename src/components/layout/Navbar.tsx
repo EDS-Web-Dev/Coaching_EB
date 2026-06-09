@@ -17,7 +17,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === "/";
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 60);
@@ -30,7 +29,7 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
-  const navBg = scrolled || !isHome
+  const navBg = scrolled
     ? "bg-forest/97 backdrop-blur-md shadow-lg"
     : "bg-transparent";
 
@@ -39,7 +38,7 @@ export default function Navbar() {
       <header
         className={clsx(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          scrolled || !isHome ? "py-1" : "py-2",
+          scrolled ? "py-1" : "py-2",
           navBg
         )}
       >
@@ -48,7 +47,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center group">
             <div style={{ width: 200, height: 95, overflow: "hidden", display: "flex", alignItems: "center" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/logo.svg" alt="KTL Running Coach" width={200} height={55} style={{ objectFit: "cover", display: "block", flexShrink: 0 }} />
+              <img src="/images/logo2.svg" alt="KTL Running Coach" width={200} height={55} style={{ objectFit: "cover", display: "block", flexShrink: 0 }} />
             </div>
           </Link>
 
