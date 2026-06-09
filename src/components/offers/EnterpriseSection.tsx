@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Users, Trophy } from "lucide-react";
+import { Users, Trophy, Flag } from "lucide-react";
 
 const formats = [
   {
@@ -11,6 +11,11 @@ const formats = [
     icon: Trophy,
     title: "Séminaire Trail",
     description: "Journée ou week-end en nature pour renforcer les liens entre collaborateurs sur des parcours adaptés.",
+  },
+  {
+    icon: Flag,
+    title: "Accompagnement & Préparation à des courses",
+    description: "Séances de groupes et formations théoriques.",
   },
 ];
 
@@ -35,7 +40,7 @@ export default function EnterpriseSection() {
         </div>
 
         {/* Formats */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
           {formats.map((f) => (
             <div
               key={f.title}
