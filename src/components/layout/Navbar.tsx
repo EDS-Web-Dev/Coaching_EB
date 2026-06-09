@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Mountain } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import clsx from "clsx";
 
 const links = [
@@ -44,15 +45,9 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <Mountain className="w-7 h-7 text-orange" strokeWidth={1.5} />
-            <div className="flex flex-col leading-tight">
-              <span className="font-oswald text-xl font-bold uppercase tracking-wider text-white">
-                KTL <span className="text-orange">Running Coach</span>
-              </span>
-              <span className="font-montserrat text-xs text-white font-bold tracking-widest italic">
-                Kiffe Ta Life
-              </span>
+          <Link href="/" className="flex items-center group">
+            <div className="w-[110px] h-[60px] overflow-hidden flex items-center">
+              <Image src="/images/logo-ktl.svg" alt="KTL Running Coach" width={110} height={110} className="w-full flex-shrink-0" />
             </div>
           </Link>
 

@@ -12,7 +12,6 @@ const sections = [
     title: "1. Responsable du traitement",
     content: [
       "**Eric Bitsch** — Coach Trail & Running",
-      "**Email :** contact@ktlcoaching.com",
       "**Localisation :** Casablanca, Maroc",
     ],
   },
@@ -50,7 +49,7 @@ const sections = [
       "• **Droit de rectification** : corriger des données inexactes",
       "• **Droit de suppression** : demander l'effacement de vos données",
       "• **Droit d'opposition** : vous opposer au traitement de vos données",
-      "Pour exercer ces droits, contactez-nous à : **contact@ktlcoaching.com**",
+      "Pour exercer ces droits, contactez-nous via le formulaire de contact du site.",
     ],
   },
   {
