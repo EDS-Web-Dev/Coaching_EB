@@ -50,7 +50,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-forest-dark text-white/70">
+    <footer className="bg-forest text-white/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
@@ -58,7 +58,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-4">
               <div style={{ width: 200, height: 95, overflow: "hidden", display: "flex", alignItems: "center" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/logo.svg" alt="KTL Running Coach" width={200} height={55} style={{ objectFit: "cover", display: "block", flexShrink: 0 }} />
+                <img src="/images/logo2.svg" alt="KTL Running Coach" width={200} height={55} style={{ objectFit: "cover", display: "block", flexShrink: 0 }} />
               </div>
             </Link>
             <p className="text-sm leading-relaxed mb-3 max-w-xs">
