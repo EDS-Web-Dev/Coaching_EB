@@ -23,25 +23,44 @@ export default function ContactForm() {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
+  const [error, setError] = useState<string | null>(null);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
+    setError(null);
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
     setLoading(false);
-    setSubmitted(true);
+
+    if (res.ok) {
+      setSubmitted(true);
+    } else {
+      setError("Une erreur est survenue. Veuillez réessayer ou nous contacter directement.");
+    }
   };
 
   if (submitted) {
     return (
       <div className="bg-white rounded-[24px] p-10 shadow-xl text-center">
-        <div className="w-16 h-16 bg-forest/10 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span className="text-3xl">🏔️</span>
+        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
+          <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
         </div>
         <h3 className="font-oswald text-2xl font-bold text-forest uppercase mb-2">
           Message envoyé !
         </h3>
-        <p className="font-montserrat text-sm text-anthracite/60">
-          Merci {form.nom}. Je reviens vers vous sous 24h pour organiser votre appel découverte.
+        <p className="font-montserrat text-sm text-anthracite/70 leading-relaxed mb-4">
+          Merci <span className="font-semibold text-forest">{form.nom}</span>, ton message a bien été reçu.
+        </p>
+        <p className="font-montserrat text-sm text-anthracite/50 leading-relaxed">
+          Éric te recontactera sous <span className="font-semibold text-anthracite/70">24h</span> pour organiser votre appel découverte.
         </p>
       </div>
     );
@@ -138,6 +157,10 @@ export default function ContactForm() {
         <p className="font-montserrat text-xs text-anthracite/40">
           * Champs obligatoires. Vos données restent confidentielles.
         </p>
+
+        {error && (
+          <p className="font-montserrat text-xs text-red-500">{error}</p>
+        )}
 
         <button
           type="submit"
