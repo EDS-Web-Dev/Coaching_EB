@@ -4,7 +4,7 @@ import Link from "next/link";
 const navLinks = [
   { href: "/", label: "Accueil" },
   { href: "/a-propos", label: "À Propos" },
-  { href: "/offres", label: "Nos Offres" },
+  { href: "/offres", label: "Mes Offres" },
 ];
 
 const packLinks = [

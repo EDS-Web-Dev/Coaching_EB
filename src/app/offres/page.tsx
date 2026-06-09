@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/offers/FaqAccordion";
 import CtaStrip from "@/components/home/CtaStrip";
 
 export const metadata: Metadata = {
-  title: "Nos Offres",
+  title: "Mes Offres",
   description: "Découvrez nos packs de coaching Trail & Running : Pack Sente, Pack Crête et Pack Sommet.",
 };
 
@@ -18,7 +18,7 @@ export default function OffresPage() {
         <Image src="/images/montagnes.JPG" alt="" fill className="object-cover object-top" priority />
         <div className="relative z-10 max-w-2xl mx-auto px-4">
           <h1 className="font-oswald font-bold text-orange text-5xl sm:text-6xl">
-            NOS OFFRES
+            MES OFFRES
           </h1>
         </div>
       </section>

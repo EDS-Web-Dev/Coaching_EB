@@ -10,7 +10,7 @@ import clsx from "clsx";
 const links = [
   { href: "/", label: "Accueil" },
   { href: "/a-propos", label: "À Propos" },
-  { href: "/offres", label: "Nos Offres" },
+  { href: "/offres", label: "Mes Offres" },
 ];
 
 export default function Navbar() {
