@@ -47,7 +47,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <div className="w-[110px] h-[60px] overflow-hidden flex items-center">
-              <Image src="/images/logo-ktl.svg" alt="KTL Running Coach" width={110} height={110} className="w-full flex-shrink-0" />
+              <Image src="/images/logo-ktl.svg" alt="KTL Running Coach" width={110} height={110} className="w-full flex-shrink-0" unoptimized />
             </div>
           </Link>
 
