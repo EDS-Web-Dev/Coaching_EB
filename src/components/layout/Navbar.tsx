@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
+
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
@@ -46,9 +46,8 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="w-[110px] h-[60px] overflow-hidden flex items-center">
-              <Image src="/images/logo-ktl.svg" alt="KTL Running Coach" width={110} height={110} className="w-full flex-shrink-0" unoptimized />
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/logo-ktl.svg" alt="KTL Running Coach" width={110} height={60} style={{ objectFit: "contain", display: "block" }} />
           </Link>
 
           {/* Desktop nav */}
