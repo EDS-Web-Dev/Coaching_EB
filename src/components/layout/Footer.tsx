@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mountain } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/", label: "Accueil" },
@@ -55,11 +55,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <Mountain className="w-6 h-6 text-orange" strokeWidth={1.5} />
-              <span className="font-oswald text-lg font-bold uppercase tracking-wider text-white">
-                KTL<span className="text-orange"> Running Coach</span>
-              </span>
+            <Link href="/" className="inline-block mb-4">
+              <Image src="/images/logo-ktl.svg" alt="KTL Running Coach" width={110} height={45} className="object-contain" />
             </Link>
             <p className="text-sm leading-relaxed mb-3 max-w-xs">
               Coaching Trail & Running personnalisé. De la reprise en douceur à l&apos;ultra-performance, votre potentiel n&apos;attend que vous.

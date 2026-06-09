@@ -15,7 +15,6 @@ const sections = [
       "**Nom :** Eric Bitsch",
       "**Activité :** Coach Trail & Running indépendant",
       "**Adresse :** Casablanca, Maroc",
-      "**Email :** contact@ktlcoaching.com",
     ],
   },
   {
@@ -40,7 +39,7 @@ const sections = [
       "Dans le cadre de l'utilisation du formulaire de contact, des données personnelles peuvent être collectées (nom, email, message).",
       "Ces données sont utilisées uniquement pour répondre à vos demandes et ne sont jamais transmises à des tiers.",
       "Conformément à la loi marocaine 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et de suppression de vos données.",
-      "Pour exercer ce droit, contactez-nous à : **contact@ktlcoaching.com**",
+      "Pour exercer ce droit, contactez-nous via le formulaire de contact du site.",
     ],
   },
   {
