@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+
 
 const navLinks = [
   { href: "/", label: "Accueil" },
@@ -56,7 +56,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <Image src="/images/logo-ktl.svg" alt="KTL Running Coach" width={110} height={45} className="object-contain" unoptimized />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/logo-ktl.svg" alt="KTL Running Coach" width={110} height={45} style={{ objectFit: "contain", display: "block" }} />
             </Link>
             <p className="text-sm leading-relaxed mb-3 max-w-xs">
               Coaching Trail & Running personnalisé. De la reprise en douceur à l&apos;ultra-performance, votre potentiel n&apos;attend que vous.
