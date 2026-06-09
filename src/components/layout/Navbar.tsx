@@ -47,7 +47,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/logo-ktl.svg" alt="KTL Running Coach" width={110} height={60} style={{ objectFit: "contain", display: "block" }} />
+            <img src="/images/logo.svg" alt="KTL Running Coach" width={110} height={60} style={{ objectFit: "contain", display: "block" }} />
           </Link>
 
           {/* Desktop nav */}
