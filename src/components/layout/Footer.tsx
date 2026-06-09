@@ -55,7 +55,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-4">
+            <Link href="/" className="block mb-4 flex justify-center">
               <div style={{ width: 200, height: 95, overflow: "hidden", display: "flex", alignItems: "center" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/images/logo2.svg" alt="KTL Running Coach" width={200} height={55} style={{ objectFit: "cover", display: "block", flexShrink: 0 }} />
