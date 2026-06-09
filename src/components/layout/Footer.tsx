@@ -56,8 +56,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/logo.svg" alt="KTL Running Coach" width={110} height={45} style={{ objectFit: "contain", display: "block" }} />
+              <div style={{ width: 200, height: 95, overflow: "hidden", display: "flex", alignItems: "center" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/logo.svg" alt="KTL Running Coach" width={200} height={55} style={{ objectFit: "cover", display: "block", flexShrink: 0 }} />
+              </div>
             </Link>
             <p className="text-sm leading-relaxed mb-3 max-w-xs">
               Coaching Trail & Running personnalisé. De la reprise en douceur à l&apos;ultra-performance, votre potentiel n&apos;attend que vous.

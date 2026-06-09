@@ -37,7 +37,7 @@ export default function Hero() {
       />
 
       {/* Main content */}
-      <div className="relative z-10 flex-1 flex items-center max-w-7xl mx-auto px-4 sm:px-6 w-full pt-28 pb-8">
+      <div className="relative z-10 flex-1 flex items-center max-w-7xl mx-auto px-4 sm:px-6 w-full pt-36 pb-8">
         <div className="max-w-3xl">
 
           {/* Badge localisation */}

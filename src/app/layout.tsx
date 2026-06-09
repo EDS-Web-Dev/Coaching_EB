@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   description:
     "Coach Trail & Running personnalisé basé au Maroc. Programmes pour débutants, reprise après blessure et performance ultra. Dépassez vos limites, quel que soit le terrain.",
   keywords: ["coaching trail", "running coach", "ultra trail", "programme course", "coaching sportif", "coach trail Maroc", "coach run Maroc", "coach running Maroc", "trail Maroc", "coaching trail Maroc"],
+  icons: {
+    icon: "/images/logo-ktl.svg",
+    shortcut: "/images/logo-ktl.svg",
+    apple: "/images/logo-ktl.svg",
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
