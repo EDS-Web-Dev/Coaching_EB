@@ -45,9 +45,9 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div style={{ overflow: "hidden", height: 118 }}>
+            <div style={{ overflow: "hidden", height: 118, transform: "translateZ(0)", WebkitTransform: "translateZ(0)" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/logohead.svg" alt="KTL Running Coach" style={{ height: 180, width: "auto", display: "block", marginTop: -35 }} />
+              <img src="/images/logohead.svg" alt="KTL Running Coach" style={{ height: 180, width: "auto", display: "block", marginTop: -35, transform: "translateZ(0)", WebkitTransform: "translateZ(0)" }} />
             </div>
           </Link>
 
