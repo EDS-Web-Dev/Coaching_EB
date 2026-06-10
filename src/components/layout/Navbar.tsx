@@ -45,8 +45,10 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/logohead.svg" alt="KTL Running Coach" style={{ height: 60, width: "auto", display: "block" }} />
+            <div style={{ overflow: "hidden", height: 118 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/logohead.svg" alt="KTL Running Coach" style={{ height: 180, width: "auto", display: "block", marginTop: -35 }} />
+            </div>
           </Link>
 
           {/* Desktop nav */}
