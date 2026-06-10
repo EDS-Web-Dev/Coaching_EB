@@ -242,8 +242,9 @@ export default function AProposPage() {
                     <div className="relative flex items-start gap-4">
                       <div className="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-orange border-2 border-white shadow" />
                       {p.logo && (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img src={p.logo} alt={p.title} className="h-12 w-auto object-contain flex-shrink-0 rounded" />
+                        <div className="relative h-12 w-20 flex-shrink-0">
+                          <Image src={p.logo} alt={p.title} fill className="object-contain rounded" sizes="80px" />
+                        </div>
                       )}
                       <div className="flex-1">
                         <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-widest mb-1">
