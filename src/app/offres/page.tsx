@@ -6,8 +6,13 @@ import FaqAccordion from "@/components/offers/FaqAccordion";
 import CtaStrip from "@/components/home/CtaStrip";
 
 export const metadata: Metadata = {
-  title: "Mes Offres",
-  description: "Découvrez nos packs de coaching Trail & Running : Pack Sente, Pack Crête et Pack Sommet.",
+  title: "Mes Offres — Coaching Trail & Running",
+  description: "Découvrez les programmes de coaching Trail & Running : préparation semi-marathon, marathon, trail, pack mensuel et séances en présentiel. Suivi personnalisé au Maroc.",
+  openGraph: {
+    title: "Mes Offres — Coaching Trail & Running au Maroc",
+    description: "Préparation marathon, semi-marathon, trail. Suivi à distance ou en présentiel. Plans d'entraînement personnalisés adaptés à votre niveau.",
+    url: "https://ktl-running.com/offres",
+  },
 };
 
 export default function OffresPage() {
