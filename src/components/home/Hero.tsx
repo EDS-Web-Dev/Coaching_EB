@@ -94,7 +94,7 @@ export default function Hero() {
           {/* CTAs */}
           <div
             className={cls(
-              "flex flex-col sm:flex-row gap-4 ml-6 transition-all duration-700 delay-300",
+              "flex flex-col sm:flex-row gap-4 sm:ml-6 items-center sm:items-start transition-all duration-700 delay-300",
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             )}
           >

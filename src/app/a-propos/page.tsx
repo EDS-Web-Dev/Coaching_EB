@@ -36,11 +36,11 @@ const values: { title: string; description: string; icon: LucideIcon }[] = [
 ];
 
 const palmares = [
-  { year: "2016-2017-2019", title: "Marathon de Paris", detail: "42,195 km" },
-  { year: "2019", title: "Marathon de New-York", detail: "42,195 km" },
-  { year: "2025", title: "Traversée Nord de l'Echappée Belle", detail: "Trail · 96km · 7200 D+" },
-  { year: "2025", title: "Grand Raid de la Réunion", detail: "Trail · 198km · 11 000m D+" },
-  { year: "2026", title: "Tamuda Bay Eco-triathlon", detail: "Distance Olympique" },
+  { year: "2016-2017-2019", title: "Marathon de Paris", detail: "42,195 km", logo: "/images/Marathon de paris 2016.jfif" },
+  { year: "2019", title: "Marathon de New-York", detail: "42,195 km", logo: "/images/logomarathonnewyork.webp" },
+  { year: "2025", title: "Traversée Nord de l'Echappée Belle", detail: "Trail · 96km · 7200 D+", logo: "/images/logoechapeebelle.jfif" },
+  { year: "2025", title: "Grand Raid de la Réunion", detail: "Trail · 198km · 11 000m D+", logo: "/images/logograndraid.png" },
+  { year: "2026", title: "Tamuda Bay Eco-triathlon", detail: "Distance Olympique", logo: "/images/logotamudatriathlon.jpeg" },
 ];
 
 const formations = [
@@ -66,8 +66,9 @@ const parcours = [
   { year: "2015", title: "Premier trail", desc: "NOMADS RUN - 21km" },
   { year: "2016", title: "Premier marathon", desc: "Marathon de Paris" },
   { year: "2018", title: "Première course de désert", desc: "Race Desert Marathon - 3 étapes - 100km." },
+  { year: "2025", title: "Premier Ultra Trail", desc: "Grand Raid de la Réunion - 198km · 11 000m D+" },
   { year: "2026", title: "Premier Triathlon", desc: "Tamuda Bay Eco-Triathlon." },
-  { year: "2026", title: "Création Coach Eric Coaching", desc: "" },
+  { year: "2026", title: "Création KTL Running & Trail Coaching", desc: "" },
 ];
 
 export default function AProposPage() {
@@ -194,34 +195,6 @@ export default function AProposPage() {
         </AnimatedSection>
       </section>
 
-      <QuotesSlider />
-
-      {/* Values */}
-      <section className="py-24 bg-forest topo-texture">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <AnimatedSection className="flex items-center gap-4 mb-12">
-            <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
-            <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-white">MES VALEURS</h2>
-          </AnimatedSection>
-          <AnimatedStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((v) => {
-              const Icon = v.icon;
-              return (
-                <AnimatedStaggerItem key={v.title}>
-                  <div className="bg-white/8 border border-white/12 rounded-[12px] p-6 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1 h-full">
-                    <div className="w-10 h-10 rounded-xl bg-orange/20 flex items-center justify-center mb-4">
-                      <Icon className="w-5 h-5 text-orange" strokeWidth={1.5} />
-                    </div>
-                    <h3 className="font-oswald font-bold text-white text-xl uppercase mb-2">{v.title}</h3>
-                    <p className="font-montserrat text-white/60 text-sm leading-relaxed">{v.description}</p>
-                  </div>
-                </AnimatedStaggerItem>
-              );
-            })}
-          </AnimatedStagger>
-        </div>
-      </section>
-
       {/* Palmarès + Parcours */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/images/fondpalmares.jpg')", backgroundPosition: "30% center" }} />
@@ -261,15 +234,21 @@ export default function AProposPage() {
               <div className="relative pl-6 border-l-2 space-y-8" style={{ borderImage: "linear-gradient(to bottom, #FF7043, #1B4332) 1" }}>
                 {palmares.map((p) => (
                   <AnimatedSection key={p.title} direction="right">
-                    <div className="relative">
+                    <div className="relative flex items-start gap-4">
                       <div className="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-orange border-2 border-white shadow" />
-                      <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-widest mb-1">
-                        {p.year}
+                      {p.logo && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={p.logo} alt={p.title} className="h-12 w-auto object-contain flex-shrink-0 rounded" />
+                      )}
+                      <div className="flex-1">
+                        <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-widest mb-1">
+                          {p.year}
+                        </div>
+                        <h4 className="font-oswald font-semibold text-forest uppercase text-base mb-1">
+                          {p.title}
+                        </h4>
+                        {p.detail && <p className="font-montserrat text-sm text-anthracite/60">{p.detail}</p>}
                       </div>
-                      <h4 className="font-oswald font-semibold text-forest uppercase text-base mb-1">
-                        {p.title}
-                      </h4>
-                      {p.detail && <p className="font-montserrat text-sm text-anthracite/60">{p.detail}</p>}
                     </div>
                   </AnimatedSection>
                 ))}
@@ -278,6 +257,34 @@ export default function AProposPage() {
           </div>
         </div>
       </section>
+
+      {/* Values */}
+      <section className="py-24 bg-forest topo-texture">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <AnimatedSection className="flex items-center gap-4 mb-12">
+            <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
+            <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-white">MES VALEURS</h2>
+          </AnimatedSection>
+          <AnimatedStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map((v) => {
+              const Icon = v.icon;
+              return (
+                <AnimatedStaggerItem key={v.title}>
+                  <div className="bg-white/8 border border-white/12 rounded-[12px] p-6 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1 h-full">
+                    <div className="w-10 h-10 rounded-xl bg-orange/20 flex items-center justify-center mb-4">
+                      <Icon className="w-5 h-5 text-orange" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="font-oswald font-bold text-white text-xl uppercase mb-2">{v.title}</h3>
+                    <p className="font-montserrat text-white/60 text-sm leading-relaxed">{v.description}</p>
+                  </div>
+                </AnimatedStaggerItem>
+              );
+            })}
+          </AnimatedStagger>
+        </div>
+      </section>
+
+      <QuotesSlider />
 
       {/* Formations */}
       <section className="py-24 bg-off-white">

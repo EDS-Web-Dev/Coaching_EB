@@ -118,7 +118,7 @@ export default function VMACalculator() {
 
           <button
             onClick={calculate}
-            className="w-full flex items-center justify-center gap-2 bg-orange hover:bg-orange-hover text-white font-montserrat font-bold text-sm uppercase tracking-widest py-4 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-orange/30 mb-6"
+            className="w-full flex items-center justify-center gap-2 bg-orange hover:bg-orange-hover text-white font-montserrat font-bold text-sm uppercase tracking-wide sm:tracking-widest py-4 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-orange/30 mb-6"
           >
             <Calculator className="w-4 h-4" />
             Calculer mes allures
