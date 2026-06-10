@@ -88,7 +88,7 @@ export async function POST(req: Request) {
   }
 
   // Email de confirmation à l'utilisateur
-  await resend.emails.send({
+  const { error: confirmError } = await resend.emails.send({
     from: "KTL Running Coach <contact@ktl-running.com>",
     to: email,
     replyTo: "ktl.running@gmail.com",
@@ -122,6 +122,10 @@ export async function POST(req: Request) {
       </div>
     `,
   });
+
+  if (confirmError) {
+    console.error("Erreur email confirmation:", confirmError);
+  }
 
   return NextResponse.json({ success: true });
 }
