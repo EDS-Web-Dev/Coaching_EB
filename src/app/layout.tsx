@@ -59,6 +59,54 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://ktl-running.com/#eric-bitsch",
+      name: "Éric Bitsch",
+      jobTitle: "Coach Trail & Running",
+      description:
+        "Coach Trail & Running passionné basé au Maroc, finisher de la Diagonale des Fous (Grand Raid de la Réunion 2025), marathonien et ultra-traileur avec plus de 13 ans d'expérience.",
+      url: "https://ktl-running.com/a-propos",
+      sameAs: [
+        "https://www.instagram.com/ericbitsch/",
+        "https://www.strava.com/athletes/37327428",
+        "https://www.youtube.com/@ericbitsch7489",
+      ],
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://ktl-running.com/#business",
+      name: "KTL Running Coach",
+      description:
+        "Coaching Trail & Running personnalisé au Maroc. Préparation marathon, semi-marathon, trail et ultra-trail. Suivi à distance ou en présentiel.",
+      url: "https://ktl-running.com",
+      founder: { "@id": "https://ktl-running.com/#eric-bitsch" },
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "MA",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        url: "https://ktl-running.com/contact",
+      },
+      sameAs: [
+        "https://www.instagram.com/ericbitsch/",
+        "https://www.strava.com/athletes/37327428",
+        "https://www.youtube.com/@ericbitsch7489",
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Programmes de coaching Trail & Running",
+        url: "https://ktl-running.com/offres",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -67,6 +115,10 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${oswald.variable} ${montserrat.variable}`}>
       <body className="flex flex-col min-h-screen antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
