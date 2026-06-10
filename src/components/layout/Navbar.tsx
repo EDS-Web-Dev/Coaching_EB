@@ -58,7 +58,7 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 className={clsx(
-                  "font-montserrat text-xs font-semibold uppercase tracking-widest transition-colors duration-200 relative group",
+                  "font-montserrat text-sm font-semibold uppercase tracking-widest transition-colors duration-200 relative group",
                   pathname === l.href ? "text-white" : "text-white/75 hover:text-white"
                 )}
               >
