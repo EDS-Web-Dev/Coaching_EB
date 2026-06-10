@@ -3,8 +3,13 @@ import Image from "next/image";
 import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Contactez Coach Eric pour démarrer votre programme de coaching Trail & Running personnalisé.",
+  title: "Contact — Démarrer mon coaching Trail & Running",
+  description: "Contactez Éric Bitsch pour démarrer votre programme de coaching Trail & Running personnalisé. Entretien découverte gratuit. Réponse sous 24h.",
+  openGraph: {
+    title: "Contact — KTL Running Coach",
+    description: "Démarrez votre coaching Trail & Running personnalisé. Entretien découverte gratuit. Réponse sous 24h.",
+    url: "https://ktl-running.com/contact",
+  },
 };
 
 export default function ContactPage() {

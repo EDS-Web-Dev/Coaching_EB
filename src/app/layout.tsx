@@ -21,12 +21,19 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "Coach Eric — Coach Trail & Running",
-    template: "%s | Coach Eric",
+    default: "KTL Running Coach — Coach Trail & Running au Maroc",
+    template: "%s | KTL Running Coach",
   },
   description:
-    "Coach Trail & Running personnalisé basé au Maroc. Programmes pour débutants, reprise après blessure et performance ultra. Dépassez vos limites, quel que soit le terrain.",
-  keywords: ["coaching trail", "running coach", "ultra trail", "programme course", "coaching sportif", "coach trail Maroc", "coach run Maroc", "coach running Maroc", "trail Maroc", "coaching trail Maroc"],
+    "Coach Trail & Running personnalisé basé au Maroc. Préparation marathon, semi-marathon, trail et ultra-trail. Suivi à distance ou en présentiel. Kiffe Ta Life.",
+  keywords: [
+    "coach running Maroc", "coach trail Maroc", "coaching course à pied Maroc",
+    "préparation marathon Maroc", "préparation trail Maroc", "coach running Casablanca",
+    "programme course à pied", "coaching ultra trail", "KTL Running Coach", "Eric Bitsch coach",
+  ],
+  authors: [{ name: "Éric Bitsch" }],
+  creator: "Éric Bitsch",
+  metadataBase: new URL("https://ktl-running.com"),
   icons: {
     icon: "/images/logo-ktl.svg",
     shortcut: "/images/logo-ktl.svg",
@@ -36,6 +43,19 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     siteName: "KTL Running Coach",
+    title: "KTL Running Coach — Coach Trail & Running au Maroc",
+    description: "Coach Trail & Running personnalisé basé au Maroc. Préparation marathon, semi-marathon, trail et ultra-trail. Suivi à distance ou en présentiel.",
+    url: "https://ktl-running.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "KTL Running Coach — Coach Trail & Running au Maroc",
+    description: "Coach Trail & Running personnalisé basé au Maroc. Préparation marathon, semi-marathon, trail et ultra-trail.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
   },
 };
 

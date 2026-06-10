@@ -8,8 +8,13 @@ import { AnimatedStagger, AnimatedStaggerItem } from "@/components/shared/Animat
 import QuotesSlider from "@/components/shared/QuotesSlider";
 
 export const metadata: Metadata = {
-  title: "À Propos",
-  description: "Découvrez votre coach Trail & Running certifié, sa philosophie et son parcours sportif.",
+  title: "À Propos — Éric Bitsch, Coach Trail & Running",
+  description: "Découvrez Éric Bitsch, coach Trail & Running passionné basé au Maroc. Finisher de la Diagonale des Fous, marathonien et ultra-traileur avec 13 ans d'expérience.",
+  openGraph: {
+    title: "À Propos — Éric Bitsch, Coach Trail & Running au Maroc",
+    description: "Finisher de la Diagonale des Fous, marathonien et ultra-traileur. Éric Bitsch partage sa passion du running et du trail à travers un coaching personnalisé.",
+    url: "https://ktl-running.com/a-propos",
+  },
 };
 
 const values: { title: string; description: string; icon: LucideIcon }[] = [
