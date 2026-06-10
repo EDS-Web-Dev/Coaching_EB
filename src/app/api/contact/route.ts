@@ -27,7 +27,7 @@ export async function POST(req: Request) {
       <div style="font-family:Georgia,serif;max-width:600px;margin:0 auto;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e8e8e8">
 
         <!-- Header -->
-        <div style="background:#1B3A2D;padding:32px 40px;text-align:center">
+        <div style="background:#1B4332;padding:32px 40px;text-align:center">
           <p style="margin:0 0 4px;font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#E87722">KTL Running Coach</p>
           <h1 style="margin:0;font-family:Arial,sans-serif;font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ffffff">Nouvelle demande</h1>
         </div>
@@ -47,7 +47,7 @@ export async function POST(req: Request) {
               </tr>
               <tr>
                 <td style="padding:10px 0;border-bottom:1px solid #e8e8e8;font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#E87722">Email</td>
-                <td style="padding:10px 0;border-bottom:1px solid #e8e8e8;font-family:Arial,sans-serif;font-size:14px"><a href="mailto:${email}" style="color:#1B3A2D;font-weight:600;text-decoration:none">${email}</a></td>
+                <td style="padding:10px 0;border-bottom:1px solid #e8e8e8;font-family:Arial,sans-serif;font-size:14px"><a href="mailto:${email}" style="color:#1B4332;font-weight:600;text-decoration:none">${email}</a></td>
               </tr>
               <tr>
                 <td style="padding:10px 0;border-bottom:1px solid #e8e8e8;font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#E87722">Téléphone</td>
@@ -97,7 +97,7 @@ export async function POST(req: Request) {
       <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;background:#ffffff;border-radius:0;overflow:hidden">
 
         <!-- Header vert foncé avec bande orange -->
-        <div style="background:#1B3A2D;padding:0">
+        <div style="background:#1B4332;padding:0">
           <div style="height:4px;background:#E87722"></div>
           <div style="padding:32px 40px;text-align:center">
             <p style="margin:0 0 6px;font-size:10px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:#E87722">
@@ -116,11 +116,11 @@ export async function POST(req: Request) {
         <div style="padding:40px 40px 32px">
 
           <!-- Salutation -->
-          <p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#1B3A2D;text-transform:uppercase;letter-spacing:1px">
+          <p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#1B4332;text-transform:uppercase;letter-spacing:1px">
             Bonjour ${nom},
           </p>
           <p style="margin:0 0 28px;font-size:14px;color:#555;line-height:1.8">
-            Merci pour ta demande de coaching ! J'ai bien reçu ton message et je reviendrai vers toi dans les <strong style="color:#1B3A2D">24 heures</strong> pour organiser notre entretien découverte.
+            Merci pour ta demande de coaching ! J'ai bien reçu ton message et je reviendrai vers toi dans les <strong style="color:#1B4332">24 heures</strong> pour organiser notre entretien découverte.
           </p>
 
           <!-- Séparateur orange -->
@@ -161,12 +161,12 @@ export async function POST(req: Request) {
 
         <!-- Signature -->
         <div style="padding:24px 40px;border-top:1px solid #ebebeb">
-          <p style="margin:0;font-size:13px;color:#1B3A2D;font-weight:700">Éric Bitsch</p>
+          <p style="margin:0;font-size:13px;color:#1B4332;font-weight:700">Éric Bitsch</p>
           <p style="margin:2px 0 0;font-size:11px;color:#999;letter-spacing:1px;text-transform:uppercase">Coach Trail & Running — KTL Running Coach</p>
         </div>
 
         <!-- Footer -->
-        <div style="background:#1B3A2D;padding:16px 40px;text-align:center">
+        <div style="background:#1B4332;padding:16px 40px;text-align:center">
           <p style="margin:0;font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase">
             ktl-running.com
           </p>
