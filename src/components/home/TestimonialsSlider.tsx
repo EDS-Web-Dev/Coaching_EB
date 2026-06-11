@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { testimonials } from "@/lib/data";
@@ -8,6 +8,61 @@ import clsx from "clsx";
 
 const PER_PAGE = 3;
 const totalPages = Math.ceil(testimonials.length / PER_PAGE);
+
+type Testimonial = typeof testimonials[0];
+
+function TestimonialCard({ t }: { t: Testimonial }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isClamped, setIsClamped] = useState(false);
+  const textRef = useRef<HTMLQuoteElement>(null);
+
+  useEffect(() => {
+    const el = textRef.current;
+    if (el) {
+      setIsClamped(el.scrollHeight > el.clientHeight);
+    }
+  }, []);
+
+  return (
+    <div className="bg-white/8 border border-white/10 rounded-[12px] p-6 hover:bg-white/12 transition-all duration-300 flex flex-col h-full">
+      <div className="flex gap-1 mb-4">
+        {Array.from({ length: t.rating }).map((_, si) => (
+          <Star key={si} className="w-3.5 h-3.5 fill-orange text-orange" />
+        ))}
+      </div>
+
+      <div className="flex-1 mb-6">
+        <blockquote
+          ref={textRef}
+          className={clsx(
+            "font-montserrat text-white/80 text-sm leading-relaxed",
+            !isExpanded && "line-clamp-10"
+          )}
+        >
+          &ldquo;{t.text}&rdquo;
+        </blockquote>
+        {isClamped && (
+          <button
+            onClick={() => setIsExpanded((v) => !v)}
+            className="mt-2 font-montserrat text-xs font-semibold text-orange hover:text-orange/80 transition-colors duration-200"
+          >
+            {isExpanded ? "Voir moins ↑" : "En voir plus ↓"}
+          </button>
+        )}
+      </div>
+
+      <div className="flex items-center gap-3 pt-4 border-t border-white/10">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange/60 to-orange flex items-center justify-center flex-shrink-0">
+          <span className="font-oswald font-bold text-white text-xs">{t.initials}</span>
+        </div>
+        <div>
+          <div className="font-oswald font-bold text-white uppercase tracking-wide text-sm">{t.author}</div>
+          <div className="font-montserrat text-xs text-white/50">{t.meta}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function TestimonialsSlider() {
   const [page, setPage] = useState(0);
@@ -69,31 +124,10 @@ export default function TestimonialsSlider() {
                 animate="center"
                 exit="exit"
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-                className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start"
               >
                 {visible.map((t, i) => (
-                  <div
-                    key={i}
-                    className="bg-white/8 border border-white/10 rounded-[12px] p-6 hover:bg-white/12 transition-all duration-300 flex flex-col h-full"
-                  >
-                    <div className="flex gap-1 mb-4">
-                      {Array.from({ length: t.rating }).map((_, si) => (
-                        <Star key={si} className="w-3.5 h-3.5 fill-orange text-orange" />
-                      ))}
-                    </div>
-                    <blockquote className="font-montserrat text-white/80 text-sm leading-relaxed flex-1 mb-6">
-                      &ldquo;{t.text}&rdquo;
-                    </blockquote>
-                    <div className="flex items-center gap-3 pt-4 border-t border-white/10">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange/60 to-orange flex items-center justify-center flex-shrink-0">
-                        <span className="font-oswald font-bold text-white text-xs">{t.initials}</span>
-                      </div>
-                      <div>
-                        <div className="font-oswald font-bold text-white uppercase tracking-wide text-sm">{t.author}</div>
-                        <div className="font-montserrat text-xs text-white/50">{t.meta}</div>
-                      </div>
-                    </div>
-                  </div>
+                  <TestimonialCard key={i} t={t} />
                 ))}
               </motion.div>
             </AnimatePresence>
