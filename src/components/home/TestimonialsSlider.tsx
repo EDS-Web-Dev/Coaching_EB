@@ -143,19 +143,39 @@ export default function TestimonialsSlider() {
           </button>
         </div>
 
-        {/* Dots de navigation */}
-        <div className="flex items-center justify-center gap-2 mt-10">
-          {Array.from({ length: totalPages }).map((_, i) => (
-            <button
-              key={i}
-              onClick={() => goTo(i)}
-              className={clsx(
-                "h-1 rounded-full transition-all duration-300",
-                i === page ? "bg-orange w-8" : "bg-white/20 w-4 hover:bg-white/40"
-              )}
-              aria-label={`Page ${i + 1}`}
-            />
-          ))}
+        {/* Dots de navigation + flèches sur mobile */}
+        <div className="flex items-center justify-center gap-4 mt-10">
+          {/* Flèche gauche — mobile uniquement */}
+          <button
+            onClick={() => goTo(page - 1)}
+            className="lg:hidden w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-all duration-200"
+            aria-label="Précédent"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          <div className="flex gap-2">
+            {Array.from({ length: totalPages }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goTo(i)}
+                className={clsx(
+                  "h-1 rounded-full transition-all duration-300",
+                  i === page ? "bg-orange w-8" : "bg-white/20 w-4 hover:bg-white/40"
+                )}
+                aria-label={`Page ${i + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Flèche droite — mobile uniquement */}
+          <button
+            onClick={() => goTo(page + 1)}
+            className="lg:hidden w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-all duration-200"
+            aria-label="Suivant"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
 
       </div>
