@@ -7,16 +7,28 @@ import { testimonials } from "@/lib/data";
 import clsx from "clsx";
 
 const PER_PAGE = 3;
+const LONG_TEXT_THRESHOLD = 400;
 const totalPages = Math.ceil(testimonials.length / PER_PAGE);
 
 export default function TestimonialsSlider() {
   const [page, setPage] = useState(0);
   const [direction, setDirection] = useState(1);
+  const [expanded, setExpanded] = useState<Set<number>>(new Set());
 
   const goTo = (next: number) => {
     const bounded = (next + totalPages) % totalPages;
     setDirection(bounded >= page ? 1 : -1);
     setPage(bounded);
+    setExpanded(new Set());
+  };
+
+  const toggleExpanded = (idx: number) => {
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(idx)) next.delete(idx);
+      else next.add(idx);
+      return next;
+    });
   };
 
   const visible = testimonials.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
@@ -71,30 +83,52 @@ export default function TestimonialsSlider() {
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                 className="grid grid-cols-1 md:grid-cols-3 gap-6"
               >
-                {visible.map((t, i) => (
-                  <div
-                    key={i}
-                    className="bg-white/8 border border-white/10 rounded-[12px] p-6 hover:bg-white/12 transition-all duration-300 flex flex-col h-full"
-                  >
-                    <div className="flex gap-1 mb-4">
-                      {Array.from({ length: t.rating }).map((_, si) => (
-                        <Star key={si} className="w-3.5 h-3.5 fill-orange text-orange" />
-                      ))}
-                    </div>
-                    <blockquote className="font-montserrat text-white/80 text-sm leading-relaxed flex-1 mb-6">
-                      &ldquo;{t.text}&rdquo;
-                    </blockquote>
-                    <div className="flex items-center gap-3 pt-4 border-t border-white/10">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange/60 to-orange flex items-center justify-center flex-shrink-0">
-                        <span className="font-oswald font-bold text-white text-xs">{t.initials}</span>
+                {visible.map((t, i) => {
+                  const isExpanded = expanded.has(i);
+                  const isLong = t.text.length > LONG_TEXT_THRESHOLD;
+
+                  return (
+                    <div
+                      key={i}
+                      className="bg-white/8 border border-white/10 rounded-[12px] p-6 hover:bg-white/12 transition-all duration-300 flex flex-col h-full"
+                    >
+                      <div className="flex gap-1 mb-4">
+                        {Array.from({ length: t.rating }).map((_, si) => (
+                          <Star key={si} className="w-3.5 h-3.5 fill-orange text-orange" />
+                        ))}
                       </div>
-                      <div>
-                        <div className="font-oswald font-bold text-white uppercase tracking-wide text-sm">{t.author}</div>
-                        <div className="font-montserrat text-xs text-white/50">{t.meta}</div>
+
+                      <div className="flex-1 mb-6">
+                        <blockquote
+                          className={clsx(
+                            "font-montserrat text-white/80 text-sm leading-relaxed",
+                            !isExpanded && isLong && "line-clamp-10"
+                          )}
+                        >
+                          &ldquo;{t.text}&rdquo;
+                        </blockquote>
+                        {isLong && (
+                          <button
+                            onClick={() => toggleExpanded(i)}
+                            className="mt-2 font-montserrat text-xs font-semibold text-orange hover:text-orange/80 transition-colors duration-200"
+                          >
+                            {isExpanded ? "Voir moins ↑" : "En voir plus ↓"}
+                          </button>
+                        )}
+                      </div>
+
+                      <div className="flex items-center gap-3 pt-4 border-t border-white/10">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange/60 to-orange flex items-center justify-center flex-shrink-0">
+                          <span className="font-oswald font-bold text-white text-xs">{t.initials}</span>
+                        </div>
+                        <div>
+                          <div className="font-oswald font-bold text-white uppercase tracking-wide text-sm">{t.author}</div>
+                          <div className="font-montserrat text-xs text-white/50">{t.meta}</div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </motion.div>
             </AnimatePresence>
           </div>
