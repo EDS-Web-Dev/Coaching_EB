@@ -5,6 +5,7 @@ import CtaStrip from "@/components/home/CtaStrip";
 export const metadata: Metadata = {
   title: "Politique de Confidentialité",
   description: "Politique de confidentialité et protection des données du site KTL Running Coach.",
+  robots: { index: false, follow: false },
 };
 
 const sections = [
