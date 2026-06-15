@@ -46,7 +46,6 @@ const palmares = [
   { year: "2019", title: "Marathon de New-York", detail: "42,195 km", logo: "/images/logomarathonnewyork.webp" },
   { year: "2025", title: "Traversée Nord de l'Echappée Belle", detail: "Trail · 96km · 7200 D+", logo: "/images/logoechapeebelle.jpg" },
   { year: "2025", title: "Grand Raid de la Réunion", detail: "Trail · 198km · 11 000m D+", logo: "/images/logograndraid.png" },
-  { year: "2026", title: "Tamuda Bay Eco-triathlon", detail: "Distance Olympique", logo: "/images/logotamudatriathlon.jpeg" },
 ];
 
 
