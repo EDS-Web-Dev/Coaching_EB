@@ -62,7 +62,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm leading-relaxed mb-3 max-w-xs">
-              Coaching Trail & Running personnalisé. De la reprise en douceur à l&apos;ultra-performance, votre potentiel n&apos;attend que vous.
+              Coaching Trail & Running personnalisé. Du démarrage en douceur à l&apos;ultra-performance, votre potentiel n&apos;attend que vous.
             </p>
             <p className="text-xs text-white/40 mb-5 flex items-center gap-1">
               📍 Basé au <span className="text-white/70 font-semibold">Maroc</span>

@@ -25,10 +25,7 @@ export default function EnterpriseSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="mb-16">
-          <span className="inline-block font-montserrat text-xs font-bold uppercase tracking-widest text-orange mb-4">
-            Entreprises & Équipes
-          </span>
-          <div className="flex items-center gap-4 mb-4">
+<div className="flex items-center gap-4 mb-4">
             <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
             <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-white">
               COACHING ENTREPRISE

@@ -49,7 +49,7 @@ export default function Hero() {
           >
             <span className="w-2 h-2 rounded-full bg-orange animate-pulse" />
             <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-white bg-forest-dark/50 backdrop-blur-sm rounded-full px-3 py-1">
-              📍 Coaching Trail & Running — Basé au{" "}
+              📍 <span className="text-orange">Éric</span> — Coaching Trail & Running — Basé au{" "}
               <span className="text-orange">Maroc</span>
             </span>
           </div>
@@ -88,7 +88,7 @@ export default function Hero() {
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             )}
           >
-            Coaching personnalisé pour traileurs et runners, de la reprise en douceur à l&apos;ultra-performance.
+            Coaching personnalisé pour traileurs et runners, du démarrage en douceur à l&apos;ultra-performance.
           </p>
 
           {/* CTAs */}
