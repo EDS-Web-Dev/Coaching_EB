@@ -5,6 +5,7 @@ import CtaStrip from "@/components/home/CtaStrip";
 export const metadata: Metadata = {
   title: "Calculateur VMA",
   description: "Calculez votre VMA et obtenez vos allures d'entraînement personnalisées gratuitement.",
+  robots: { index: false, follow: false },
 };
 
 export default function CalculateurVMAPage() {
