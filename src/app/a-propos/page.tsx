@@ -49,15 +49,6 @@ const palmares = [
   { year: "2026", title: "Tamuda Bay Eco-triathlon", detail: "Distance Olympique", logo: "/images/logotamudatriathlon.jpeg" },
 ];
 
-const parcours = [
-  { year: "2013", title: "Premier semi marathon", desc: "Semi Marathon de Casablanca." },
-  { year: "2015", title: "Premier trail", desc: "NOMADS RUN - 21km" },
-  { year: "2016", title: "Premier marathon", desc: "Marathon de Paris" },
-  { year: "2018", title: "Première course de désert", desc: "Race Desert Marathon - 3 étapes - 100km." },
-  { year: "2025", title: "Premier Ultra Trail", desc: "Grand Raid de la Réunion - 198km · 11 000m D+" },
-  { year: "2026", title: "Premier Triathlon", desc: "Tamuda Bay Eco-Triathlon." },
-  { year: "2026", title: "Création KTL Running & Trail Coaching", desc: "" },
-];
 
 export default function AProposPage() {
   return (
@@ -183,66 +174,37 @@ export default function AProposPage() {
         </AnimatedSection>
       </section>
 
-      {/* Palmarès + Parcours */}
+      {/* Palmarès */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/images/fondpalmares.jpg')", backgroundPosition: "30% center" }} />
         <div className="absolute inset-0 bg-white/70" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Timeline parcours */}
-            <div className="lg:pl-[25%]">
-              <AnimatedSection className="flex items-center gap-4 mb-10">
-                <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
-                <h2 className="font-oswald text-3xl font-bold text-forest">PARCOURS</h2>
-              </AnimatedSection>
-              <div className="relative pl-6 border-l-2 space-y-8" style={{ borderImage: "linear-gradient(to bottom, #FF7043, #1B4332) 1" }}>
-                {parcours.map((item) => (
-                  <AnimatedSection key={item.title} direction="left">
-                    <div className="relative">
-                      <div className="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-orange border-2 border-white shadow" />
-                      <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-widest mb-1">
-                        {item.year}
-                      </div>
-                      <h4 className="font-oswald font-semibold text-forest uppercase text-base mb-1">
-                        {item.title}
-                      </h4>
-                      {item.desc && <p className="font-montserrat text-sm text-anthracite/60">{item.desc}</p>}
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6">
+          <AnimatedSection className="flex items-center gap-4 mb-10">
+            <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
+            <h2 className="font-oswald text-3xl font-bold text-forest">PALMARÈS</h2>
+          </AnimatedSection>
+          <div className="relative pl-6 border-l-2 space-y-8" style={{ borderImage: "linear-gradient(to bottom, #FF7043, #1B4332) 1" }}>
+            {palmares.map((p) => (
+              <AnimatedSection key={p.title} direction="right">
+                <div className="relative flex items-start gap-4">
+                  <div className="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-orange border-2 border-white shadow" />
+                  {p.logo && (
+                    <div className="relative h-12 w-20 flex-shrink-0">
+                      <Image src={p.logo} alt={p.title} fill className="object-contain rounded" sizes="80px" />
                     </div>
-                  </AnimatedSection>
-                ))}
-              </div>
-            </div>
-
-            {/* Palmarès */}
-            <div className="lg:pl-[30%]">
-              <AnimatedSection className="flex items-center gap-4 mb-10">
-                <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
-                <h2 className="font-oswald text-3xl font-bold text-forest">PALMARÈS</h2>
-              </AnimatedSection>
-              <div className="relative pl-6 border-l-2 space-y-8" style={{ borderImage: "linear-gradient(to bottom, #FF7043, #1B4332) 1" }}>
-                {palmares.map((p) => (
-                  <AnimatedSection key={p.title} direction="right">
-                    <div className="relative flex items-start gap-4">
-                      <div className="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-orange border-2 border-white shadow" />
-                      {p.logo && (
-                        <div className="relative h-12 w-20 flex-shrink-0">
-                          <Image src={p.logo} alt={p.title} fill className="object-contain rounded" sizes="80px" />
-                        </div>
-                      )}
-                      <div className="flex-1">
-                        <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-widest mb-1">
-                          {p.year}
-                        </div>
-                        <h4 className="font-oswald font-semibold text-forest uppercase text-base mb-1">
-                          {p.title}
-                        </h4>
-                        {p.detail && <p className="font-montserrat text-sm text-anthracite/60">{p.detail}</p>}
-                      </div>
+                  )}
+                  <div className="flex-1">
+                    <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-widest mb-1">
+                      {p.year}
                     </div>
-                  </AnimatedSection>
-                ))}
-              </div>
-            </div>
+                    <h4 className="font-oswald font-semibold text-forest uppercase text-base mb-1">
+                      {p.title}
+                    </h4>
+                    {p.detail && <p className="font-montserrat text-sm text-anthracite/60">{p.detail}</p>}
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
