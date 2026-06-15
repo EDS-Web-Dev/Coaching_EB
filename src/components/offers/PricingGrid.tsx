@@ -29,7 +29,7 @@ function PricingGridInner() {
   const pack = packs[activeIndex];
 
   return (
-    <section id="formules" className="py-24 bg-off-white">
+    <section id="formules" className="py-24 bg-off-white scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center gap-4 mb-10">
           <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
