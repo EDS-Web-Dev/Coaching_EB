@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Target, Flame, Users, TrendingUp, GraduationCap, CheckCheck, type LucideIcon } from "lucide-react";
+import { Target, Flame, Users, TrendingUp, type LucideIcon } from "lucide-react";
 import CtaStrip from "@/components/home/CtaStrip";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import { AnimatedStagger, AnimatedStaggerItem } from "@/components/shared/AnimatedStagger";
+
 import QuotesSlider from "@/components/shared/QuotesSlider";
 
 export const metadata: Metadata = {
@@ -46,24 +47,6 @@ const palmares = [
   { year: "2025", title: "Traversée Nord de l'Echappée Belle", detail: "Trail · 96km · 7200 D+", logo: "/images/logoechapeebelle.jpg" },
   { year: "2025", title: "Grand Raid de la Réunion", detail: "Trail · 198km · 11 000m D+", logo: "/images/logograndraid.png" },
   { year: "2026", title: "Tamuda Bay Eco-triathlon", detail: "Distance Olympique", logo: "/images/logotamudatriathlon.jpeg" },
-];
-
-const formations = [
-  {
-    provider: "France Université Numérique",
-    courses: [
-      "L'entraînement en trail et ultra trail — épisode 1",
-      "L'entraînement en trail et ultra trail — épisode 2",
-    ],
-  },
-  {
-    provider: "Pierre Joly",
-    courses: ["Les bases de la préparation mentale"],
-  },
-  {
-    provider: "Nolio",
-    courses: ["Développement de la force et de la pliométrie chez le coureur"],
-  },
 ];
 
 const parcours = [
@@ -291,43 +274,6 @@ export default function AProposPage() {
       </section>
 
       <QuotesSlider />
-
-      {/* Formations */}
-      <section className="py-24 bg-off-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <AnimatedSection className="flex items-center gap-4 mb-12">
-            <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
-            <div>
-              <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-forest">FORMATIONS</h2>
-              <p className="font-montserrat text-sm text-anthracite/50 mt-1">Formations en ligne effectuées</p>
-            </div>
-          </AnimatedSection>
-          <AnimatedStagger className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {formations.map((f) => (
-              <AnimatedStaggerItem key={f.provider}>
-                <div className="bg-white border border-gray-100 rounded-[12px] p-6 shadow-sm h-full">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-9 h-9 rounded-lg bg-forest/10 flex items-center justify-center flex-shrink-0">
-                      <GraduationCap className="w-4 h-4 text-forest" strokeWidth={1.5} />
-                    </div>
-                    <h3 className="font-oswald font-bold text-forest text-base uppercase leading-tight">
-                      {f.provider}
-                    </h3>
-                  </div>
-                  <ul className="space-y-3">
-                    {f.courses.map((course) => (
-                      <li key={course} className="flex items-start gap-2">
-                        <CheckCheck className="w-4 h-4 text-orange flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                        <span className="font-montserrat text-sm text-anthracite/70 leading-snug">{course}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </AnimatedStaggerItem>
-            ))}
-          </AnimatedStagger>
-        </div>
-      </section>
 
       <CtaStrip />
     </>
