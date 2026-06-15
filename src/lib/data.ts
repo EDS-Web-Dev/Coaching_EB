@@ -126,7 +126,7 @@ export const packs = [
       "Amélioration foulée",
       "Amélioration VMA",
       "Reprise après arret prolongé",
-      "Entretien entre 2 obljectifs",
+      "Entretien entre 2 objectifs",
       "Débutants",
       "Plan d'entraînement personnalisé",
       "Suivi des performances et ajustements",
@@ -137,17 +137,22 @@ export const packs = [
     type: "presentiel",
     name: "Séance présentielle",
     icon: "users",
-    subtitle: "Durée : 1h ou forfait 10 séances",
+    subtitle: "Durée : 1h ou forfait 10 séances*",
     description: "Un coaching terrain au plus près de toi. Des séances encadrées pour corriger, progresser et repousser tes limites ensemble.",
     features: [
       "Séances d'entraînement encadrées sur le terrain",
       "Coaching technique running & trail",
     ],
+    footnote: "* Validité de 3 mois",
     cta: "Je me lance",
   },
 ];
 
 export const faqItems = [
+  {
+    q: "Comment se passe le paiement ?",
+    a: "Le paiement s’effectue au début du mois.",
+  },
   {
     q: "Va t’il y avoir un entretien pré-coaching ?",
     a: "Oui, il y aura bien un entretien téléphonique durant lequel nous parlerons de vos besoins et attentes.",

@@ -166,7 +166,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu"
           >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <Menu className="w-6 h-6" />
           </button>
         </div>
       </header>
@@ -174,20 +174,48 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         className={clsx(
-          "fixed inset-0 z-40 bg-forest-dark flex flex-col items-center justify-center gap-8 transition-opacity duration-300 lg:hidden",
+          "fixed inset-0 z-[60] bg-forest-dark flex flex-col transition-opacity duration-300 lg:hidden",
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >
+        {/* Logo + bouton fermer — fixe en haut */}
+        <div className="flex-shrink-0 flex items-center justify-between px-4 py-2">
+          <Link href="/" onClick={() => setMobileOpen(false)}>
+            <div style={{ overflow: "hidden", height: 118, transform: "translateZ(0)" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/logo.png" alt="KTL Running Coach" style={{ height: 180, width: "auto", display: "block", marginTop: -35 }} />
+            </div>
+          </Link>
+          <button
+            className="text-orange p-1"
+            onClick={() => setMobileOpen(false)}
+            aria-label="Fermer le menu"
+          >
+            <X className="w-7 h-7" />
+          </button>
+        </div>
+
+        {/* Liens — scrollable */}
+        <div className="flex-1 overflow-y-auto flex flex-col items-center justify-center gap-8 py-8">
         {links.map((l) =>
           l.sub ? (
             <div key={l.href} className="flex flex-col items-center gap-4">
-              <button
-                className="flex items-center gap-2 font-oswald text-2xl font-bold uppercase tracking-widest text-white hover:text-orange transition-colors"
-                onClick={() => setMobileSubOpen(!mobileSubOpen)}
-              >
-                {l.label}
-                <ChevronDown className={clsx("w-5 h-5 transition-transform duration-200", mobileSubOpen ? "rotate-180" : "")} />
-              </button>
+              <div className="flex items-center gap-3">
+                <Link
+                  href={l.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="font-oswald text-2xl font-bold uppercase tracking-widest text-white hover:text-orange transition-colors"
+                >
+                  {l.label}
+                </Link>
+                <button
+                  onClick={() => setMobileSubOpen(!mobileSubOpen)}
+                  aria-label="Afficher les offres"
+                  className="text-white hover:text-orange transition-colors"
+                >
+                  <ChevronDown className={clsx("w-5 h-5 transition-transform duration-200", mobileSubOpen ? "rotate-180" : "")} />
+                </button>
+              </div>
               {mobileSubOpen && (
                 <div className="flex flex-col items-center gap-3">
                   {l.sub.map((s) => (
@@ -221,6 +249,7 @@ export default function Navbar() {
         >
           Se lancer →
         </Link>
+        </div>
       </div>
     </>
   );

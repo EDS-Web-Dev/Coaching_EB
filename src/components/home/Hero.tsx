@@ -49,7 +49,7 @@ export default function Hero() {
           >
             <span className="w-2 h-2 rounded-full bg-orange animate-pulse" />
             <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-white bg-forest-dark/50 backdrop-blur-sm rounded-full px-3 py-1">
-              📍 <span className="text-orange">Éric</span> — Coaching Trail & Running — Basé au{" "}
+              📍 Coaching Trail & Running — Basé au{" "}
               <span className="text-orange">Maroc</span>
             </span>
           </div>
@@ -65,17 +65,14 @@ export default function Hero() {
             <span className="flex items-start gap-5">
               <span className="w-1.5 bg-orange rounded-full mt-2 flex-shrink-0 self-stretch" />
               <span>
-                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-                  DÉPASSEZ
+                <span className="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl whitespace-nowrap">
+                  KTL = <span className="text-orange">KIFFE TA LIFE</span>
                 </span>
-                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-                  VOS LIMITES,
+                <span className="block text-lg sm:text-2xl md:text-3xl mt-3 font-semibold leading-snug max-w-xl">
+                  C&apos;est mon crédo et celui que je veux partager avec vous.
                 </span>
-                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-orange">
-                  QUEL QUE
-                </span>
-                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-orange">
-                  SOIT LE TERRAIN.
+                <span className="block text-2xl sm:text-3xl md:text-4xl text-orange mt-2">
+                  ERIC
                 </span>
               </span>
             </span>

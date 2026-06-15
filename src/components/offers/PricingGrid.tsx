@@ -77,7 +77,7 @@ function PricingGridInner() {
 
             <hr className="border-gray-100 mb-8" />
 
-            <ul className="space-y-4 mb-10">
+            <ul className="space-y-4 mb-6">
               {pack.features.map((f) => (
                 <li key={f} className="flex items-start gap-3 font-montserrat text-sm text-anthracite/80">
                   <span className="w-5 h-5 bg-orange/15 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -87,6 +87,10 @@ function PricingGridInner() {
                 </li>
               ))}
             </ul>
+
+            {"footnote" in pack && pack.footnote && (
+              <p className="font-montserrat text-xs text-anthracite/50 italic mb-6">{pack.footnote}</p>
+            )}
 
             <Link
               href="/contact"

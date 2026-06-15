@@ -18,7 +18,7 @@ const profiles = [
   {
     id: "performance",
     title: "CONFIRMÉ",
-    subtitle: "Exploser vos chronos en Trail & Ultra.",
+    subtitle: "Repoussez vos limites, en trail & sur route.",
     href: "/offres#sommet",
   },
 ];

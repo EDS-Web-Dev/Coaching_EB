@@ -97,23 +97,20 @@ export default function AProposPage() {
 
             {/* Colonne gauche — Bio */}
             <AnimatedSection direction="left">
-              <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-orange">
-                Qui je suis ?
-              </span>
-              <h2 className="font-oswald font-bold text-forest text-4xl sm:text-5xl mt-2 mb-6 leading-snug">
-                Coach autodidacte, passionné avant tout
+              <h2 className="font-oswald font-bold text-forest text-4xl sm:text-5xl mb-6 leading-snug">
+                Qui est Eric ?
               </h2>
               <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
-                Je cours depuis maintenant plus de 13 ans. Pourtant, au départ, je détestais la course à pied… jusqu&apos;à ce qu&apos;elle devienne une véritable passion.
+                Sportif depuis toujours, coureur depuis 13 ans - ma passion pour la course n&apos;a fait que grandir au fil des kilomètres, des sentiers de montagne et des routes.
               </p>
               <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
-                J&apos;ai commencé par des 10 km, puis des semi-marathons, avant de me lancer sur marathon. Progressivement, j&apos;ai évolué vers le trail, jusqu&apos;à devenir ultra-traileur et atteindre un objectif marquant : être finisher de la mythique Diagonale des Fous en 2025.
+                Ce qui m&apos;anime, c&apos;est ce moment où l&apos;effort devient plaisir, où chaque kilomètre parcouru rapproche d&apos;une version de soi dont on est fier. Porter son dossard et franchir une ligne d&apos;arrivée, ce sont des instants magiques. Et c&apos;est pour les partager, pour permettre à d&apos;autres de les vivre, que je suis devenu coach sportif.
               </p>
               <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
-                Au fil des années, ma passion m&apos;a poussé à me former en continu : écoute de podcasts spécialisés, formations en ligne, apprentissage constant… sans oublier l&apos;expérience acquise sur le terrain, aussi bien sur route qu&apos;en trail.
+                Ma formation, c&apos;est le terrain. Des milliers de kilomètres, dont la mythique Diagonale des Fous, des podcasts, des lectures, des centaines d&apos;heures passées à comprendre, décortiquer et progresser pour définir ma méthode : l&apos;envie comme point de départ, la rigueur comme boussole, et le kiff comme carburant.
               </p>
               <p className="font-montserrat text-anthracite/70 leading-relaxed mb-8">
-                C&apos;est naturellement que j&apos;ai commencé à accompagner des proches et des amis. Leurs progrès et leurs retours positifs m&apos;ont donné envie d&apos;aller plus loin et aujourd&apos;hui, je mets mon expérience à ton service pour t&apos;aider à atteindre tes objectifs, quels qu&apos;ils soient.
+                Aujourd&apos;hui j&apos;accompagne des coureurs de tous niveaux. Premier 10 km, semi-marathon, marathon, ultra - peu importe où tu en es, on avance ensemble vers ton objectif. Avec une seule conviction : tant que le kiff est là, tout est possible.
               </p>
             </AnimatedSection>
 
