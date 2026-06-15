@@ -59,9 +59,6 @@ export default function ProfileCards() {
               <Users className="w-7 h-7 text-orange" strokeWidth={1.5} />
             </div>
             <div>
-              <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-orange block mb-1">
-                Entreprises & Équipes
-              </span>
               <h3 className="font-oswald font-bold text-white text-2xl uppercase">
                 COACHING POUR LES ENTREPRISES
               </h3>
