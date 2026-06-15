@@ -86,125 +86,127 @@ export default function AProposPage() {
         </AnimatedSection>
       </div>
 
-      {/* Bio — remonte derrière la photo pour couvrir la zone blanche */}
+      {/* Bio + Palmarès — bloc 2 colonnes */}
       <section className="relative -mt-40 pb-24 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/quisuisje.JPG')" }} />
-        <div className="absolute inset-0 bg-white/80" />
+        <div className="absolute inset-0 bg-white/85" />
 
-        <AnimatedSection className="relative z-10 pt-48 max-w-2xl mx-auto px-4 sm:px-6 text-center">
-          <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-orange">
-            Qui je suis ?
-          </span>
-          <h2 className="font-oswald font-bold text-forest text-4xl sm:text-5xl mt-2 mb-6 leading-snug">
-            Coach autodidacte, passionné avant tout
-          </h2>
-          <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
-            Je cours depuis maintenant plus de 13 ans. Pourtant, au départ, je détestais la course à pied… jusqu&apos;à ce qu&apos;elle devienne une véritable passion.
-          </p>
-          <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
-            J&apos;ai commencé par des 10 km, puis des semi-marathons, avant de me lancer sur marathon. Progressivement, j&apos;ai évolué vers le trail, jusqu&apos;à devenir ultra-traileur et atteindre un objectif marquant : être finisher de la mythique Diagonale des Fous en 2025.
-          </p>
-          <p className="font-montserrat text-anthracite/70 leading-relaxed mb-8">
-            Au fil des années, ma passion m&apos;a poussé à me former en continu : écoute de podcasts spécialisés, formations en ligne, apprentissage constant… sans oublier l&apos;expérience acquise sur le terrain, aussi bien sur route qu&apos;en trail.
-          </p>
-          <p className="font-montserrat text-anthracite/70 leading-relaxed mb-8">
-            C&apos;est naturellement que j&apos;ai commencé à accompagner des proches et des amis. Leurs progrès et leurs retours positifs m&apos;ont donné envie d&apos;aller plus loin et aujourd&apos;hui, je mets mon expérience à ton service pour t&apos;aider à atteindre tes objectifs, quels qu&apos;ils soient.
-          </p>
+        <div className="relative z-10 pt-52 max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-          <div className="flex flex-col items-center gap-6">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hover text-white font-montserrat font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-orange/30"
-            >
-              Travailler avec moi →
-            </Link>
+            {/* Colonne gauche — Bio */}
+            <AnimatedSection direction="left">
+              <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-orange">
+                Qui je suis ?
+              </span>
+              <h2 className="font-oswald font-bold text-forest text-4xl sm:text-5xl mt-2 mb-6 leading-snug">
+                Coach autodidacte, passionné avant tout
+              </h2>
+              <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
+                Je cours depuis maintenant plus de 13 ans. Pourtant, au départ, je détestais la course à pied… jusqu&apos;à ce qu&apos;elle devienne une véritable passion.
+              </p>
+              <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
+                J&apos;ai commencé par des 10 km, puis des semi-marathons, avant de me lancer sur marathon. Progressivement, j&apos;ai évolué vers le trail, jusqu&apos;à devenir ultra-traileur et atteindre un objectif marquant : être finisher de la mythique Diagonale des Fous en 2025.
+              </p>
+              <p className="font-montserrat text-anthracite/70 leading-relaxed mb-4">
+                Au fil des années, ma passion m&apos;a poussé à me former en continu : écoute de podcasts spécialisés, formations en ligne, apprentissage constant… sans oublier l&apos;expérience acquise sur le terrain, aussi bien sur route qu&apos;en trail.
+              </p>
+              <p className="font-montserrat text-anthracite/70 leading-relaxed mb-8">
+                C&apos;est naturellement que j&apos;ai commencé à accompagner des proches et des amis. Leurs progrès et leurs retours positifs m&apos;ont donné envie d&apos;aller plus loin et aujourd&apos;hui, je mets mon expérience à ton service pour t&apos;aider à atteindre tes objectifs, quels qu&apos;ils soient.
+              </p>
 
-            {/* Réseaux sociaux */}
-            <div className="flex items-center gap-8 pt-2">
-              {[
-                {
-                  label: "Instagram",
-                  href: "https://www.instagram.com/ericbitsch/",
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
-                      <rect x="2" y="2" width="20" height="20" rx="5" />
-                      <circle cx="12" cy="12" r="4" />
-                      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
-                    </svg>
-                  ),
-                },
-                {
-                  label: "Strava",
-                  href: "https://www.strava.com/athletes/37327428",
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
-                      <path d="M15 3l-4 9h3l-4 9 9-12h-4z" strokeLinejoin="round" />
-                    </svg>
-                  ),
-                },
-                {
-                  label: "YouTube",
-                  href: "https://www.youtube.com/@ericbitsch7489",
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
-                      <rect x="2" y="5" width="20" height="14" rx="3" />
-                      <polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none" />
-                    </svg>
-                  ),
-                },
-              ].map(({ label, href, icon }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="flex flex-col items-center gap-2 group"
+              <div className="flex flex-col items-start gap-6">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-orange hover:bg-orange-hover text-white font-montserrat font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-orange/30"
                 >
-                  <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-anthracite/50 group-hover:text-orange transition-colors duration-200">
-                    {label}
-                  </span>
-                  <div className="w-16 h-16 rounded-full bg-forest/10 flex items-center justify-center text-forest group-hover:bg-orange group-hover:text-white transition-all duration-200">
-                    {icon}
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </AnimatedSection>
-      </section>
+                  Travailler avec moi →
+                </Link>
 
-      {/* Palmarès */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/images/fondpalmares.jpg')", backgroundPosition: "30% center" }} />
-        <div className="absolute inset-0 bg-white/70" />
-        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6">
-          <AnimatedSection className="flex items-center gap-4 mb-10">
-            <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
-            <h2 className="font-oswald text-3xl font-bold text-forest">PALMARÈS</h2>
-          </AnimatedSection>
-          <div className="relative pl-6 border-l-2 space-y-8" style={{ borderImage: "linear-gradient(to bottom, #FF7043, #1B4332) 1" }}>
-            {palmares.map((p) => (
-              <AnimatedSection key={p.title} direction="right">
-                <div className="relative flex items-start gap-4">
-                  <div className="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-orange border-2 border-white shadow" />
-                  {p.logo && (
-                    <div className="relative h-12 w-20 flex-shrink-0">
-                      <Image src={p.logo} alt={p.title} fill className="object-contain rounded" sizes="80px" />
-                    </div>
-                  )}
-                  <div className="flex-1">
-                    <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-widest mb-1">
-                      {p.year}
-                    </div>
-                    <h4 className="font-oswald font-semibold text-forest uppercase text-base mb-1">
-                      {p.title}
-                    </h4>
-                    {p.detail && <p className="font-montserrat text-sm text-anthracite/60">{p.detail}</p>}
-                  </div>
+                <div className="flex items-center gap-8 pt-2">
+                  {[
+                    {
+                      label: "Instagram",
+                      href: "https://www.instagram.com/ericbitsch/",
+                      icon: (
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
+                          <rect x="2" y="2" width="20" height="20" rx="5" />
+                          <circle cx="12" cy="12" r="4" />
+                          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+                        </svg>
+                      ),
+                    },
+                    {
+                      label: "Strava",
+                      href: "https://www.strava.com/athletes/37327428",
+                      icon: (
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
+                          <path d="M15 3l-4 9h3l-4 9 9-12h-4z" strokeLinejoin="round" />
+                        </svg>
+                      ),
+                    },
+                    {
+                      label: "YouTube",
+                      href: "https://www.youtube.com/@ericbitsch7489",
+                      icon: (
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
+                          <rect x="2" y="5" width="20" height="14" rx="3" />
+                          <polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none" />
+                        </svg>
+                      ),
+                    },
+                  ].map(({ label, href, icon }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                      className="flex flex-col items-center gap-2 group"
+                    >
+                      <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-anthracite/50 group-hover:text-orange transition-colors duration-200">
+                        {label}
+                      </span>
+                      <div className="w-16 h-16 rounded-full bg-forest/10 flex items-center justify-center text-forest group-hover:bg-orange group-hover:text-white transition-all duration-200">
+                        {icon}
+                      </div>
+                    </a>
+                  ))}
                 </div>
-              </AnimatedSection>
-            ))}
+              </div>
+            </AnimatedSection>
+
+            {/* Colonne droite — Palmarès */}
+            <AnimatedSection direction="right" className="lg:pl-8">
+              <div className="flex items-center gap-4 mb-10">
+                <div className="w-1 h-10 bg-orange rounded-full flex-shrink-0" />
+                <h2 className="font-oswald text-3xl font-bold text-forest">PALMARÈS</h2>
+              </div>
+              <div className="relative pl-6 border-l-2 space-y-8" style={{ borderImage: "linear-gradient(to bottom, #FF7043, #1B4332) 1" }}>
+                {palmares.map((p) => (
+                  <AnimatedSection key={p.title} direction="right">
+                    <div className="relative flex items-start gap-4">
+                      <div className="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-orange border-2 border-white shadow" />
+                      {p.logo && (
+                        <div className="relative h-12 w-20 flex-shrink-0">
+                          <Image src={p.logo} alt={p.title} fill className="object-contain rounded" sizes="80px" />
+                        </div>
+                      )}
+                      <div className="flex-1">
+                        <div className="font-montserrat text-xs font-bold text-orange uppercase tracking-widest mb-1">
+                          {p.year}
+                        </div>
+                        <h4 className="font-oswald font-semibold text-forest uppercase text-base mb-1">
+                          {p.title}
+                        </h4>
+                        {p.detail && <p className="font-montserrat text-sm text-anthracite/60">{p.detail}</p>}
+                      </div>
+                    </div>
+                  </AnimatedSection>
+                ))}
+              </div>
+            </AnimatedSection>
+
           </div>
         </div>
       </section>
