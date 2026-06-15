@@ -66,7 +66,7 @@ export default function Hero() {
               <span className="w-1.5 bg-orange rounded-full mt-2 flex-shrink-0 self-stretch" />
               <span>
                 <span className="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl whitespace-nowrap">
-                  KTL = <span className="text-orange">KIFFE TA LIFE</span>
+                  KTL = <span className="text-orange">KIFF TA LIFE</span>
                 </span>
                 <span className="block text-lg sm:text-2xl md:text-3xl mt-3 font-semibold leading-snug max-w-xl">
                   C&apos;est mon crédo et celui que je veux partager avec vous.
