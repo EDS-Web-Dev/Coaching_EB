@@ -81,6 +81,7 @@ export default function PhotosPage() {
                   width={800}
                   height={600}
                   className="w-full h-auto hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
               </div>
             ))}
