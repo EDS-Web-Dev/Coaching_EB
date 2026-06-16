@@ -5,6 +5,7 @@ const navLinks = [
   { href: "/", label: "Accueil" },
   { href: "/a-propos", label: "À Propos" },
   { href: "/offres", label: "Mes Offres" },
+  { href: "/medias", label: "Médias" },
 ];
 
 const packLinks = [
@@ -52,7 +53,7 @@ export default function Footer() {
   return (
     <footer className="bg-forest text-white/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="block mb-4 flex justify-center">
@@ -115,17 +116,46 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Médias */}
+          <div>
+            <h4 className="font-oswald text-sm font-semibold uppercase tracking-widest text-white mb-4">
+              Médias
+            </h4>
+            <ul className="space-y-2.5">
+              {[
+                { href: "/medias/recits", label: "Récits de courses" },
+                { href: "/medias/podcasts", label: "Podcasts" },
+                { href: "/medias/photos", label: "Photos" },
+              ].map((l) => (
+                <li key={l.label}>
+                  <Link href={l.href} className="text-sm hover:text-orange transition-colors duration-200">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Contact */}
           <div>
             <h4 className="font-oswald text-sm font-semibold uppercase tracking-widest text-white mb-4">
               Contact
             </h4>
-            <Link
-              href="/contact"
-              className="inline-block bg-orange text-white font-montserrat font-bold text-xs uppercase tracking-widest px-4 py-2 rounded-full hover:bg-orange-hover transition-colors"
-            >
-              Envoyer un message →
-            </Link>
+            <ul className="space-y-4">
+              <li>
+                <Link href="/contact" className="text-sm hover:text-orange transition-colors duration-200">
+                  Formulaire de contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="inline-block bg-orange text-white font-montserrat font-bold text-xs uppercase tracking-widest px-5 py-2.5 rounded-full hover:bg-orange-hover transition-colors"
+                >
+                  Se lancer →
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 

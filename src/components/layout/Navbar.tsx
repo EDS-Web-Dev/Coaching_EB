@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -15,6 +15,15 @@ type NavLink =
 const links: NavLink[] = [
   { href: "/", label: "Accueil" },
   { href: "/a-propos", label: "À Propos" },
+  {
+    href: "/medias",
+    label: "Médias",
+    sub: [
+      { href: "/medias/recits", label: "Récits de courses" },
+      { href: "/medias/podcasts", label: "Podcasts" },
+      { href: "/medias/photos", label: "Photos" },
+    ],
+  },
   {
     href: "/offres",
     label: "Mes Offres",
@@ -32,8 +41,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSubOpen, setMobileSubOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -46,16 +54,6 @@ export default function Navbar() {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
-
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setDropdownOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   const navBg = scrolled
     ? "bg-forest/97 backdrop-blur-md shadow-lg"
@@ -85,10 +83,9 @@ export default function Navbar() {
               l.sub ? (
                 <div
                   key={l.href}
-                  ref={dropdownRef}
                   className="relative"
-                  onMouseEnter={() => setDropdownOpen(true)}
-                  onMouseLeave={() => setDropdownOpen(false)}
+                  onMouseEnter={() => setDropdownOpen(l.href)}
+                  onMouseLeave={() => setDropdownOpen(null)}
                 >
                   <Link
                     href={l.href}
@@ -99,7 +96,7 @@ export default function Navbar() {
                   >
                     {l.label}
                     <ChevronDown
-                      className={clsx("w-3.5 h-3.5 transition-transform duration-200", dropdownOpen ? "rotate-180" : "")}
+                      className={clsx("w-3.5 h-3.5 transition-transform duration-200", dropdownOpen === l.href ? "rotate-180" : "")}
                     />
                     <span
                       className={clsx(
@@ -113,7 +110,7 @@ export default function Navbar() {
                   <div
                     className={clsx(
                       "absolute top-full left-1/2 -translate-x-1/2 pt-3 min-w-[200px] transition-all duration-200",
-                      dropdownOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
+                      dropdownOpen === l.href ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
                     )}
                   >
                     <div className="bg-forest/97 backdrop-blur-md rounded-xl shadow-xl overflow-hidden border border-white/10">
@@ -123,7 +120,7 @@ export default function Navbar() {
                           <Link
                             href={s.href}
                             className="block px-5 py-3 font-montserrat text-xs font-semibold uppercase tracking-widest text-white/75 hover:text-white hover:bg-white/10 transition-colors duration-150"
-                            onClick={() => setDropdownOpen(false)}
+                            onClick={() => setDropdownOpen(null)}
                           >
                             {s.label}
                           </Link>
