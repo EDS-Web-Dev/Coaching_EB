@@ -58,7 +58,7 @@ Un week-end par mois à la montagne avec les UB pour bouffer du dénivelé.
 
 Les distances montent :
 • Avril 2025 : mon premier 90 km et 4 500 m de dénivelé positif à Amizmiz.
-• Août 2025 : mon premier 96 km 7 200 m de dénivelé positif à l'Échappée Belle en Savoie.
+• Août 2025 : mon premier 96 km et 7 200 m de dénivelé positif à l'Échappée Belle en Savoie.
 
 Chaque sortie est une marche vers ce rêve fou. Chaque goutte de sueur, un pas de plus vers la Redoute.
 
