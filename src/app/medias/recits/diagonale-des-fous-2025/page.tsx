@@ -144,18 +144,18 @@ J'ai vécu des moments exceptionnels pendant cette course et je veux que ça res
 export default function DiagonalePage() {
   return (
     <>
+      {/* Spacer under fixed navbar */}
+      <div className="h-[80px] bg-forest" />
+
       {/* Hero */}
-      <section className="relative h-[450px] flex items-end overflow-hidden">
+      <section className="relative h-[420px] flex items-end overflow-hidden">
         <Image src="/images/logograndraid.png" alt="" fill className="object-contain object-center bg-forest p-16" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/60 to-transparent" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 pb-12 w-full">
-          <Link href="/medias/recits" className="inline-flex items-center gap-2 font-montserrat text-xs font-bold uppercase tracking-widest text-white/50 hover:text-orange transition-colors mb-4">
-            <ArrowLeft className="w-3.5 h-3.5" /> Récits de courses
-          </Link>
-          <span className="block font-montserrat text-xs font-bold uppercase tracking-widest text-orange mb-2">
+<span className="block font-montserrat text-xs font-bold uppercase tracking-widest text-orange mb-2">
             Ultra-trail · 198 km · 11 000m D+ · Octobre 2025
           </span>
-          <h1 className="font-oswald font-bold text-white text-4xl sm:text-5xl md:text-6xl leading-tight">
+          <h1 className="font-oswald font-bold text-white text-4xl sm:text-5xl md:text-6xl leading-tight mb-4">
             RÉCIT DE MA<br />DIAGONALE DES FOUS 2025
           </h1>
         </div>
@@ -164,6 +164,10 @@ export default function DiagonalePage() {
       {/* Article */}
       <article className="py-16 bg-off-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
+
+          <Link href="/medias/recits" className="inline-flex items-center gap-2 font-montserrat text-xs font-bold uppercase tracking-widest text-orange hover:text-orange-hover transition-colors mb-8">
+            <ArrowLeft className="w-3.5 h-3.5" /> Récits
+          </Link>
 
           {/* Intro badge */}
           <div className="flex items-center gap-3 mb-12 pb-8 border-b border-gray-200">
@@ -213,12 +217,6 @@ export default function DiagonalePage() {
             <p className="font-oswald font-bold text-orange text-xl mt-4">— Éric Bitsch</p>
           </div>
 
-          {/* Back link */}
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/medias/recits" className="inline-flex items-center gap-2 font-montserrat text-sm font-bold uppercase tracking-widest text-orange hover:underline">
-              <ArrowLeft className="w-4 h-4" /> Retour aux récits
-            </Link>
-          </div>
         </div>
       </article>
 

@@ -40,7 +40,7 @@ const links: NavLink[] = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileSubOpen, setMobileSubOpen] = useState(false);
+  const [mobileSubOpen, setMobileSubOpen] = useState<string | null>(null);
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const pathname = usePathname();
 
@@ -206,20 +206,20 @@ export default function Navbar() {
                   {l.label}
                 </Link>
                 <button
-                  onClick={() => setMobileSubOpen(!mobileSubOpen)}
-                  aria-label="Afficher les offres"
+                  onClick={() => setMobileSubOpen(mobileSubOpen === l.href ? null : l.href)}
+                  aria-label="Afficher le sous-menu"
                   className="text-white hover:text-orange transition-colors"
                 >
-                  <ChevronDown className={clsx("w-5 h-5 transition-transform duration-200", mobileSubOpen ? "rotate-180" : "")} />
+                  <ChevronDown className={clsx("w-5 h-5 transition-transform duration-200", mobileSubOpen === l.href ? "rotate-180" : "")} />
                 </button>
               </div>
-              {mobileSubOpen && (
+              {mobileSubOpen === l.href && (
                 <div className="flex flex-col items-center gap-3">
                   {l.sub.map((s) => (
                     <Link
                       key={s.href}
                       href={s.href}
-                      onClick={() => { setMobileOpen(false); setMobileSubOpen(false); }}
+                      onClick={() => { setMobileOpen(false); setMobileSubOpen(null); }}
                       className="font-montserrat text-sm font-semibold uppercase tracking-widest text-orange hover:text-white transition-colors"
                     >
                       {s.label}

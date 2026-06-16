@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ExternalLink, Mic } from "lucide-react";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import CtaStrip from "@/components/home/CtaStrip";
@@ -24,15 +25,10 @@ const podcasts = [
 export default function PodcastsPage() {
   return (
     <>
-      <section className="relative py-28 bg-forest topo-texture text-center">
-        <div className="max-w-2xl mx-auto px-4">
-          <Link href="/medias" className="inline-flex items-center gap-2 font-montserrat text-xs font-bold uppercase tracking-widest text-white/50 hover:text-orange transition-colors mb-6">
-            <ArrowLeft className="w-3.5 h-3.5" /> Médias
-          </Link>
-          <span className="block font-montserrat text-xs font-bold uppercase tracking-widest text-orange mb-3">
-            Au micro
-          </span>
-          <h1 className="font-oswald font-bold text-white text-5xl sm:text-6xl">
+      <section className="relative h-[500px] flex items-center justify-center text-center overflow-hidden">
+        <Image src="/images/medias/podcast.jpeg" alt="" fill className="object-cover object-center" priority />
+        <div className="relative z-10 max-w-2xl mx-auto px-4">
+          <h1 className="font-oswald font-bold text-orange text-5xl sm:text-6xl" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.9)" }}>
             PODCASTS
           </h1>
         </div>
@@ -40,6 +36,9 @@ export default function PodcastsPage() {
 
       <section className="py-24 bg-off-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <Link href="/medias" className="inline-flex items-center gap-2 font-montserrat text-xs font-bold uppercase tracking-widest text-orange hover:text-orange-hover transition-colors mb-8">
+            <ArrowLeft className="w-3.5 h-3.5" /> Médias
+          </Link>
           <div className="space-y-6">
             {podcasts.map((p) => (
               <AnimatedSection key={p.title}>

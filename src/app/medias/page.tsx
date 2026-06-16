@@ -19,7 +19,7 @@ const categories = [
     description: "Des aventures racontées depuis l'intérieur — la préparation, la course, les émotions.",
     icon: BookOpen,
     count: "1 article",
-    image: "/images/Tizi N'Oucheg.jpg",
+    image: "/images/medias/recit.jpeg",
   },
   {
     href: "/medias/podcasts",
@@ -27,7 +27,7 @@ const categories = [
     description: "Éric au micro — des discussions autour du trail, du running et de la performance.",
     icon: Mic,
     count: "1 épisode",
-    image: "/images/montagnes.JPG",
+    image: "/images/medias/podcast.jpeg",
   },
   {
     href: "/medias/photos",
@@ -35,21 +35,17 @@ const categories = [
     description: "Les moments forts en images, des sentiers de montagne aux lignes d'arrivée.",
     icon: Camera,
     count: "Bientôt disponible",
-    image: "/images/paysage.jpg",
+    image: "/images/medias/photomedia.jpeg",
   },
 ];
 
 export default function MediasPage() {
   return (
     <>
-      <section className="relative h-[400px] flex items-center justify-center text-center overflow-hidden">
-        <Image src="/images/montagnes.JPG" alt="" fill className="object-cover object-top" priority />
-        <div className="absolute inset-0 bg-black/50" />
-        <AnimatedSection className="relative z-10 max-w-2xl mx-auto px-4">
-          <span className="inline-block font-montserrat text-xs font-bold uppercase tracking-widest text-orange mb-4">
-            Univers KTL
-          </span>
-          <h1 className="font-oswald font-bold text-white text-5xl sm:text-6xl">
+      <section className="relative h-[500px] flex items-center justify-center text-center overflow-hidden">
+        <Image src="/images/amizmiz.JPG" alt="" fill className="object-cover object-right md:object-center" priority />
+<AnimatedSection className="relative z-10 max-w-2xl mx-auto px-4 text-center">
+          <h1 className="font-oswald font-bold text-orange text-5xl sm:text-6xl" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.9)" }}>
             MÉDIAS
           </h1>
         </AnimatedSection>
@@ -88,6 +84,57 @@ export default function MediasPage() {
               );
             })}
           </AnimatedStagger>
+
+          <div className="flex justify-center items-center gap-8 mt-16 pt-12 border-t border-gray-200">
+            {[
+              {
+                label: "Instagram",
+                href: "https://www.instagram.com/ericbitsch/",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-7 h-7">
+                    <rect x="2" y="2" width="20" height="20" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+                  </svg>
+                ),
+              },
+              {
+                label: "Strava",
+                href: "https://www.strava.com/athletes/37327428",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-7 h-7">
+                    <path d="M13 3l-4 9h3l-4 9 9-12h-4z" strokeLinejoin="round" />
+                  </svg>
+                ),
+              },
+              {
+                label: "YouTube",
+                href: "https://www.youtube.com/@ericbitsch7489",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-7 h-7">
+                    <rect x="2" y="5" width="20" height="14" rx="3" />
+                    <polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none" />
+                  </svg>
+                ),
+              },
+            ].map(({ label, href, icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="flex flex-col items-center gap-2 group"
+              >
+                <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-orange">
+                  {label}
+                </span>
+                <div className="w-14 h-14 rounded-full bg-forest/10 flex items-center justify-center text-forest group-hover:bg-orange group-hover:text-white transition-all duration-200">
+                  {icon}
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 

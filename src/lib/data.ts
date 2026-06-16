@@ -121,7 +121,7 @@ export const packs = [
     name: "Pack Mensuel",
     icon: "calendar",
     subtitle: "Durée : mensuel",
-    description: "Un coaching terrain au plus près de toi. Des séances encadrées pour corriger, progresser et repousser tes limites ensemble.",
+    description: "Un coaching adapté pour s'entretenir, corriger, progresser et repousser ses limites ensemble.",
     features: [
       "Amélioration foulée",
       "Amélioration VMA",
@@ -139,7 +139,7 @@ export const packs = [
     name: "Séance présentielle",
     icon: "users",
     subtitle: "Durée : 1h ou forfait 10 séances*",
-    description: "Un coaching terrain au plus près de toi. Des séances encadrées pour corriger, progresser et repousser tes limites ensemble.",
+    description: "Un coaching terrain au plus près de toi. Des séances encadrées pour corriger, progresser et repousser ses limites ensemble.",
     features: [
       "Séances d'entraînement encadrées sur le terrain",
       "Coaching technique running & trail",
@@ -150,6 +150,10 @@ export const packs = [
 ];
 
 export const faqItems = [
+  {
+    q: "Quels sont les tarifs ?",
+    a: "Contactez moi pour en discuter.",
+  },
   {
     q: "Comment se passe le paiement ?",
     a: "Le paiement s’effectue au début du mois.",

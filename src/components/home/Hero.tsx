@@ -49,8 +49,7 @@ export default function Hero() {
           >
             <span className="w-2 h-2 rounded-full bg-orange animate-pulse" />
             <span className="font-montserrat text-xs font-bold uppercase tracking-widest text-white bg-forest-dark/50 backdrop-blur-sm rounded-full px-3 py-1">
-              📍 Coaching Trail & Running — Basé au{" "}
-              <span className="text-orange">Maroc</span>
+              📍 Coaching Trail & Running — Basé à <span className="text-orange">Casablanca</span> au <span className="text-orange">Maroc</span>
             </span>
           </div>
 
