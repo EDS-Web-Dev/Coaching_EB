@@ -103,7 +103,7 @@ export const packs = [
     subtitle: "Durée : à déterminer selon objectif",
     description: "Un suivi complet depuis n'importe où dans le monde.",
     features: [
-      "Plan d'entraînement personnalisé et évolutif avec accès trail",
+      "Plan d'entraînement personnalisé et évolutif accès trail",
       "Séance PMA",
       "Ajout de séance vélo",
       "Suivi téléphonique au besoin",
