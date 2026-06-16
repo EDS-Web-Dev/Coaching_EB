@@ -130,6 +130,7 @@ export const packs = [
       "Débutants",
       "Plan d'entraînement personnalisé",
       "Suivi des performances et ajustements",
+      "Une séance présentielle",
     ],
     cta: "Je me lance",
   },
