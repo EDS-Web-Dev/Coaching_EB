@@ -10,5 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/contact`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },
     { url: `${base}/mentions-legales`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/confidentialite`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
+    { url: `${base}/medias`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/medias/recits/diagonale-des-fous-2025`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.6 },
   ];
 }

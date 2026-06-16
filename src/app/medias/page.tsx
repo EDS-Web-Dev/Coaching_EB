@@ -9,7 +9,7 @@ import CtaStrip from "@/components/home/CtaStrip";
 export const metadata: Metadata = {
   title: "Médias",
   description: "Récits de courses, podcasts et photos d'Éric Bitsch, coach Trail & Running.",
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 };
 
 const categories = [
@@ -34,7 +34,7 @@ const categories = [
     label: "Photos de courses",
     description: "Les moments forts en images, des sentiers de montagne aux lignes d'arrivée.",
     icon: Camera,
-    count: "Bientôt disponible",
+    count: "42 photos",
     image: "/images/medias/photomedia.jpeg",
   },
 ];
