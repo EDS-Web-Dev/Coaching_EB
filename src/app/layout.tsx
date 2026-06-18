@@ -59,9 +59,8 @@ export const metadata: Metadata = {
     description: "Coach Trail & Running personnalisé basé au Maroc. Préparation marathon, semi-marathon, trail et ultra-trail.",
   },
   robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true },
+    index: false,
+    follow: false,
   },
 };
 

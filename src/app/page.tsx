@@ -9,6 +9,7 @@ import QuotesSlider from "@/components/shared/QuotesSlider";
 export const metadata: Metadata = {
   title: "KTL Running Coach — Coach Trail & Running au Maroc",
   description: "Coach Trail & Running personnalisé au Maroc. Prépare ton marathon, semi-marathon ou ton premier trail avec un suivi individuel, des plans adaptés et un coach passionné.",
+  robots: { index: true, follow: true },
   openGraph: {
     title: "KTL Running Coach — Coach Trail & Running au Maroc",
     description: "Prépare ton marathon, semi-marathon ou ton premier trail avec un suivi individuel et des plans adaptés.",
