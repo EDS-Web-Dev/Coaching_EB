@@ -127,7 +127,7 @@ export const packs = [
       "Amélioration VMA",
       "Reprise après arrêt prolongé",
       "Entretien entre 2 objectifs",
-      "Débutants",
+      "Débuter la course à pied",
       "Plan d'entraînement personnalisé",
       "Suivi des performances et ajustements",
       "Une séance présentielle",
