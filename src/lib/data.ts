@@ -82,7 +82,7 @@ export const packs = [
     name: "Prépa Semi-marathon & Marathon",
     icon: "timer",
     subtitle: "Durée : 10 à 12 semaines",
-    description: "Un suivi complet depuis n'importe où dans le monde.",
+    description: "Un suivi complet où que tu sois dans le monde.",
     features: [
       "Plan d'entraînement personnalisé et évolutif",
       "Suivi téléphonique au besoin",
@@ -101,7 +101,7 @@ export const packs = [
     name: "Prépa Trail",
     icon: "mountain",
     subtitle: "Durée : à déterminer selon objectif",
-    description: "Un suivi complet depuis n'importe où dans le monde.",
+    description: "Un suivi complet où que tu sois dans le monde.",
     features: [
       "Plan d'entraînement personnalisé et évolutif accès trail",
       "Séance PMA",
@@ -127,7 +127,6 @@ export const packs = [
       "Amélioration VMA",
       "Reprise après arrêt prolongé",
       "Entretien entre 2 objectifs",
-      "Débuter la course à pied",
       "Plan d'entraînement personnalisé",
       "Suivi des performances et ajustements",
       "Une séance présentielle",
