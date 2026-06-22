@@ -7,7 +7,7 @@ import CtaStrip from "@/components/home/CtaStrip";
 export const metadata: Metadata = {
   title: "Récit de ma Diagonale des Fous 2025",
   description: "Quatre ans et demi de préparation pour finisher la mythique Diagonale des Fous 2025. Le récit d'Éric Bitsch.",
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false },
 };
 
 const sections = [

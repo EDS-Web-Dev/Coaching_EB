@@ -9,7 +9,7 @@ import CtaStrip from "@/components/home/CtaStrip";
 export const metadata: Metadata = {
   title: "Médias",
   description: "Récits de courses, podcasts et photos d'Éric Bitsch, coach Trail & Running.",
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false },
 };
 
 const categories = [
