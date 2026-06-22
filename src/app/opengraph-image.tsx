@@ -70,14 +70,14 @@ export default async function Image() {
           <div
             style={{
               color: "#FF7043",
-              fontSize: 80,
+              fontSize: 68,
               fontWeight: 900,
               letterSpacing: 6,
               textTransform: "uppercase",
               lineHeight: 1,
             }}
           >
-            KTL RUNNING COACH
+            KTL RUNNING &amp; TRAIL COACH
           </div>
 
           {/* Subtitle */}
