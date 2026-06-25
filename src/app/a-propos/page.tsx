@@ -45,7 +45,7 @@ const palmares = [
   { year: "2016-2017-2019", title: "Marathon de Paris", detail: "42,195 km", logo: "/images/marathon-paris.jpg" },
   { year: "2019", title: "Marathon de New-York", detail: "42,195 km", logo: "/images/logomarathonnewyork.webp" },
   { year: "2025", title: "Traversée Nord de l'Echappée Belle", detail: "Trail · 96km · 7200 D+", logo: "/images/logoechapeebelle.jpg" },
-  { year: "2025", title: "Grand Raid de la Réunion", detail: "Trail · 198km · 11 000m D+", logo: "/images/logograndraid.png" },
+  { year: "2025", title: "Grand Raid de la Réunion", detail: "Trail · 175km · 10 500m D+", logo: "/images/logograndraid.png" },
 ];
 
 
