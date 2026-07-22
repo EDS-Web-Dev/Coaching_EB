@@ -1,16 +1,21 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      { hostname: "images.unsplash.com" },
-      { hostname: "www.serfaus-fiss-ladis.at" },
-      { hostname: "www.bone-joint.com" },
-      { hostname: "static.wixstatic.com" },
-      { hostname: "www.mountaineering.scot" },
-      { hostname: "images.findarace.com" },
-      { hostname: "images.uk.findarace.com" },
-    ],
+  poweredByHeader: false,
+  turbopack: {
+    root: __dirname,
+  },
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+        ],
+      },
+    ];
   },
 };
 
