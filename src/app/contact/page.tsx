@@ -26,7 +26,7 @@ export default function ContactPage() {
       </section>
 
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/casablanca.jpg')" }} />
+        <Image src="/images/casablanca.jpg" alt="" fill sizes="100vw" className="object-cover object-center" />
         <div className="absolute inset-0 bg-white/80" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mx-auto">

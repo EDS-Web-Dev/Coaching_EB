@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { testimonials } from "@/lib/data";
@@ -84,7 +85,7 @@ export default function TestimonialsSlider() {
 
   return (
     <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/coms.jpg')" }} />
+      <Image src="/images/coms.jpg" alt="" fill sizes="100vw" className="object-cover object-center" />
       <div className="absolute inset-0 bg-forest/80" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
 

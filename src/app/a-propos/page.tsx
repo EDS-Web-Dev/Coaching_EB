@@ -88,7 +88,7 @@ export default function AProposPage() {
 
       {/* Bio + Palmarès — bloc 2 colonnes */}
       <section className="relative -mt-40 pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/quisuisje.JPG')" }} />
+        <Image src="/images/quisuisje.JPG" alt="" fill sizes="100vw" className="object-cover object-center" />
         <div className="absolute inset-0 bg-white/85" />
 
         <div className="relative z-10 pt-52 max-w-7xl mx-auto px-4 sm:px-6">

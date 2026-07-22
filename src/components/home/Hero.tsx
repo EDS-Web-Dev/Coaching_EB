@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -15,9 +16,13 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center scale-105"
-        style={{ backgroundImage: "url('/images/paysage.jpg')" }}
+      <Image
+        src="/images/paysage.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center scale-105"
       />
 
 
