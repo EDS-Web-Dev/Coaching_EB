@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import clsx from "clsx";
@@ -71,10 +72,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div style={{ overflow: "hidden", height: 118, transform: "translateZ(0)", WebkitTransform: "translateZ(0)" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/logo.png" alt="KTL Running Coach" style={{ height: 180, width: "auto", display: "block", marginTop: -35, transform: "translateZ(0)", WebkitTransform: "translateZ(0)" }} />
-            </div>
+            <Image src="/images/logo-mark.png" alt="KTL Running Coach" width={170} height={82} priority style={{ height: 82, width: "auto" }} />
           </Link>
 
           {/* Desktop nav */}
@@ -178,10 +176,7 @@ export default function Navbar() {
         {/* Logo + bouton fermer — fixe en haut */}
         <div className="flex-shrink-0 flex items-center justify-between px-4 py-2">
           <Link href="/" onClick={() => setMobileOpen(false)}>
-            <div style={{ overflow: "hidden", height: 118, transform: "translateZ(0)" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/logo.png" alt="KTL Running Coach" style={{ height: 180, width: "auto", display: "block", marginTop: -35 }} />
-            </div>
+            <Image src="/images/logo-mark.png" alt="KTL Running Coach" width={170} height={82} style={{ height: 82, width: "auto" }} />
           </Link>
           <button
             className="text-orange p-1"
