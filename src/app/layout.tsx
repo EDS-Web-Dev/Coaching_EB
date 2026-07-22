@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Oswald, Montserrat } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/shared/BackToTop";
@@ -128,6 +129,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <BackToTop />
+        <Analytics />
       </body>
     </html>
   );
