@@ -39,11 +39,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ktl-running.com"),
   icons: {
     icon: [
-      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48 64x64", type: "image/x-icon" },
       { url: "/images/logo-ktl.svg", type: "image/svg+xml" },
     ],
     shortcut: "/favicon.ico",
-    apple: "/images/logo.png",
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
   },
   openGraph: {
     type: "website",
