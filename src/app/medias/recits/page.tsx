@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
-import AnimatedSection from "@/components/shared/AnimatedSection";
 import { AnimatedStagger, AnimatedStaggerItem } from "@/components/shared/AnimatedStagger";
 import CtaStrip from "@/components/home/CtaStrip";
 

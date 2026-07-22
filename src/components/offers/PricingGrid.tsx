@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Suspense } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Check, Timer, Mountain, CalendarDays, Users } from "lucide-react";
@@ -18,13 +17,11 @@ function PackIcon({ icon }: { icon: string }) {
 
 function PricingGridInner() {
   const searchParams = useSearchParams();
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
+  const [activeIndex, setActiveIndex] = useState(() => {
     const pack = searchParams.get("pack");
     const idx = pack !== null ? parseInt(pack, 10) : 0;
-    if (!isNaN(idx) && idx >= 0 && idx < packs.length) setActiveIndex(idx);
-  }, [searchParams]);
+    return !isNaN(idx) && idx >= 0 && idx < packs.length ? idx : 0;
+  });
 
   const pack = packs[activeIndex];
 

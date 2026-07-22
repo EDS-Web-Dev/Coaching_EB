@@ -25,6 +25,7 @@ export default async function Image() {
         {/* Background image */}
         <img
           src={bgSrc}
+          alt=""
           style={{
             position: "absolute",
             inset: 0,

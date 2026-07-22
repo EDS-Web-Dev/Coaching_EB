@@ -4,12 +4,6 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const stats = [
-  { value: "150+", label: "Athlètes accompagnés" },
-  { value: "8 ans", label: "d'expérience" },
-  { value: "98%", label: "Taux de satisfaction" },
-];
-
 export default function Hero() {
   const [visible, setVisible] = useState(false);
 
